@@ -1,127 +1,129 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { SectionHeader } from "@/ui/SectionHeader";
-import { bioData, contactInfo } from "@/data/portfolioData";
-import { Brain, Code2, Database, Terminal, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Terminal } from "lucide-react";
+import { contactInfo } from "@/data/portfolioData";
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="relative py-20 sm:py-28 px-4 sm:px-8 md:px-12 bg-cream text-charcoal-900 border-b border-charcoal-900/10">
-      <div className="max-w-7xl mx-auto">
-        <SectionHeader
-          number="01"
-          category="BACKGROUND & ENGINEERING DIRECTION"
-          title="BRIDGING THEORY, DATA & SCALABLE CODE"
-          theme="light"
-          description="A look into my academic journey, core engineering interests, and technical philosophy as an AIML undergraduate."
-        />
+    <section id="about" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-charcoal-900 text-cream-100 overflow-hidden border-b border-white/10">
+      {/* Subtle ambient light */}
+      <div className="absolute top-1/2 left-[-10%] w-96 h-96 rounded-full bg-electricBlue/10 blur-[130px] pointer-events-none" />
 
-        {/* Editorial Pull Quote */}
-        <div className="mb-16 pb-12 border-b border-charcoal-900/10">
-          <blockquote className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-charcoal-900 leading-[1.15]">
-            “Motivated to transform mathematical models and raw datasets into tangible, high-impact systems that solve actual real-world problems.”
-          </blockquote>
+      <div className="max-w-7xl mx-auto">
+        {/* Section Identifier */}
+        <div className="flex items-center gap-3 mb-12 sm:mb-16 font-mono text-xs">
+          <span className="px-2.5 py-1 rounded bg-white/10 text-chartreuse font-bold">
+            01
+          </span>
+          <span className="uppercase tracking-widest text-slate-400">
+            // EDITORIAL PROFILE & PHILOSOPHY
+          </span>
         </div>
 
-        {/* Asymmetric 3-Column Editorial Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
-          {/* Column 1: Academic & Background (4 cols) */}
-          <div className="md:col-span-4 space-y-6">
-            <div className="flex items-center gap-2 font-mono text-xs font-bold text-vividOrange uppercase tracking-wider">
-              <Terminal className="w-4 h-4" />
-              <span>ACADEMIC FOUNDATION</span>
-            </div>
+        {/* Asymmetric Image-Led Editorial Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          {/* Left Column: Large Image Composition with Strong Color Blocking (5 cols) */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative w-full max-w-md mx-auto">
+              {/* Electric Blue Color Block Accent */}
+              <div className="absolute -top-3 -left-3 w-full h-full rounded-3xl bg-electricBlue/80" />
 
-            <h3 className="font-display text-2xl font-bold uppercase tracking-tight text-charcoal-900">
-              AIML at Bansal Institute
-            </h3>
+              {/* Secondary Lime Line Accent */}
+              <div className="absolute -bottom-3 -right-3 w-1/2 h-1/2 rounded-3xl border-2 border-chartreuse pointer-events-none" />
 
-            <p className="text-charcoal-700 leading-relaxed text-sm sm:text-base">
-              Currently pursuing my B.Tech in Artificial Intelligence & Machine Learning (2024–2028) at{" "}
-              <strong>Bansal Institute Of Science & Technology, Bhopal</strong>. Maintaining an academic
-              standing of <strong>7.11 CGPA</strong> through my 3rd semester.
-            </p>
+              {/* Editorial Portrait Container */}
+              <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-navy-950 shadow-2xl border border-white/15">
+                <Image
+                  src="/harshad-photo.jpeg"
+                  alt="Harshad Kewate — Profile"
+                  fill
+                  className="object-cover object-top filter contrast-[1.05]"
+                />
 
-            <p className="text-charcoal-700 leading-relaxed text-sm sm:text-base">
-              Before my undergraduate degree, I completed my Class XII (74%) and Class X (65%) at Govt.
-              Excellence School, Pandhurna, building deep curiosity in mathematics, physics, and computational thinking.
-            </p>
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/90 via-transparent to-transparent" />
 
-            <div className="p-4 rounded-xl bg-charcoal-900/5 border border-charcoal-900/10 font-mono text-xs text-charcoal-800 space-y-2">
-              <div className="font-bold uppercase tracking-wider text-charcoal-900">// ACADEMIC STANDING</div>
-              <div className="flex justify-between">
-                <span>Degree:</span>
-                <span className="font-bold">B.Tech AIML (2024-2028)</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Current CGPA:</span>
-                <span className="font-bold text-vividOrange">7.11 / 10.0</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Location:</span>
-                <span>Bhopal, MP, India</span>
+                <div className="absolute bottom-5 left-5 right-5 font-mono text-xs text-cream-100 flex items-center justify-between">
+                  <span className="font-bold text-chartreuse">HARSHAD KEWATE</span>
+                  <span className="text-slate-400">BHOPAL, IN</span>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Column 2: Technical Philosophy & Focus Areas (4 cols) */}
-          <div className="md:col-span-4 space-y-6">
-            <div className="flex items-center gap-2 font-mono text-xs font-bold text-electricBlue uppercase tracking-wider">
-              <Brain className="w-4 h-4" />
-              <span>TECHNICAL DIRECTIONS</span>
+          {/* Right Column: Bold Typography & Short Impact Blocks (7 cols) */}
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-4">
+              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[0.96]">
+                BRIDGING THEORY, <br />
+                <span className="text-electricBlue">DATA</span> & SCALABLE CODE.
+              </h2>
+
+              <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-xl">
+                AIML undergraduate at <strong>Bansal Institute Of Science & Technology, Bhopal</strong> (7.11 CGPA).
+                Driven by building machine learning models that solve genuine environmental and educational challenges.
+              </p>
             </div>
 
-            <h3 className="font-display text-2xl font-bold uppercase tracking-tight text-charcoal-900">
-              Focus & Research Areas
-            </h3>
+            {/* 3 Short Impact Blocks (Visual & Concise) */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              {/* Block 1 */}
+              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-2">
+                <div className="font-mono text-xs font-bold text-chartreuse uppercase">
+                  01 / MACHINE LEARNING
+                </div>
+                <div className="font-display font-bold text-lg text-white">Atmospheric AI</div>
+                <p className="font-sans text-xs text-slate-400 leading-relaxed">
+                  Modeling meteorological onset & break phases using 13 years of ECMWF ERA5 reanalysis at 0.25° resolution.
+                </p>
+              </div>
 
-            <p className="text-charcoal-700 leading-relaxed text-sm sm:text-base">
-              My engineering focus centers on applying machine learning to domain-rich datasets—such as atmospheric climate
-              observations with <strong>ECMWF ERA5</strong>—as well as speech-to-text multilingual translation pipelines and
-              robust web software.
-            </p>
+              {/* Block 2 */}
+              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-2">
+                <div className="font-mono text-xs font-bold text-vividOrange uppercase">
+                  02 / AUDIO & GENAI
+                </div>
+                <div className="font-display font-bold text-lg text-white">Speech Pipelines</div>
+                <p className="font-sans text-xs text-slate-400 leading-relaxed">
+                  Orchestrating Whisper STT, neural lecture translation, and voice synthesis for multilingual course access.
+                </p>
+              </div>
 
-            <ul className="space-y-3 font-mono text-xs sm:text-sm text-charcoal-800">
-              {bioData.focusAreas.map((area, idx) => (
-                <li key={idx} className="flex items-start gap-2.5 p-2.5 rounded-lg bg-charcoal-900/5">
-                  <span className="text-vividOrange font-bold">0{idx + 1}</span>
-                  <span className="font-sans font-medium">{area}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3: Engineering Track Record & Collaboration (4 cols) */}
-          <div className="md:col-span-4 space-y-6">
-            <div className="flex items-center gap-2 font-mono text-xs font-bold text-chartreuse-dark uppercase tracking-wider">
-              <Code2 className="w-4 h-4" />
-              <span>PRACTICAL EXECUTION</span>
+              {/* Block 3 */}
+              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-2">
+                <div className="font-mono text-xs font-bold text-electricBlue uppercase">
+                  03 / SYSTEMS LOGIC
+                </div>
+                <div className="font-display font-bold text-lg text-white">C++ & Algorithms</div>
+                <p className="font-sans text-xs text-slate-400 leading-relaxed">
+                  10+ custom algorithmic implementations with attention to memory efficiency and computational bounds.
+                </p>
+              </div>
             </div>
 
-            <h3 className="font-display text-2xl font-bold uppercase tracking-tight text-charcoal-900">
-              Hackathons & Logic Building
-            </h3>
+            {/* Concise Footer Callout */}
+            <div className="pt-2 flex items-center gap-4">
+              <a
+                href={contactInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-mono text-xs font-bold text-chartreuse hover:text-white transition-colors"
+              >
+                <span>VERIFY ON LINKEDIN</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
 
-            <p className="text-charcoal-700 leading-relaxed text-sm sm:text-base">
-              Believer in learning by shipping. I have developed <strong>10+ C++ programs and custom algorithms</strong> to
-              solidify low-level memory logic, pointer handling, and computational efficiency.
-            </p>
+              <span className="text-slate-600">•</span>
 
-            <p className="text-charcoal-700 leading-relaxed text-sm sm:text-base">
-              Participated in <strong>5+ hackathons and collaborative team sprints</strong>, turning ideas into working prototypes
-              under tight deadlines while coordinating full-stack integrations.
-            </p>
-
-            <div className="pt-2">
               <a
                 href={contactInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-mono text-xs font-bold px-4 py-2.5 rounded-full bg-charcoal-900 text-white hover:bg-vividOrange transition-colors"
+                className="inline-flex items-center gap-2 font-mono text-xs font-bold text-slate-300 hover:text-white transition-colors"
               >
-                <span>VISIT GITHUB REPOSITORY</span>
+                <span>VIEW GITHUB REPOS</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
