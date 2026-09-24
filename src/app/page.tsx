@@ -13,43 +13,92 @@ import { CertificationsSection } from "@/components/sections/CertificationsSecti
 import { EducationSection } from "@/components/sections/EducationSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/layout/Footer";
+import { FracturedDivider } from "@/components/ui/FracturedDivider";
 
 export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   return (
-    <main className="relative min-h-screen bg-navy-950 text-cream-100 selection:bg-vividOrange selection:text-white">
-      {/* Brand Preloader */}
+    <main className="relative min-h-screen bg-cream text-charcoal-900 selection:bg-vividOrange selection:text-white">
+      {/* Brand Cinematic Video Preloader */}
       <Preloader onComplete={() => setLoadingComplete(true)} />
 
-      {/* Desktop Custom Cursor */}
+      {/* Desktop Custom Magnetic Cursor */}
       <CustomCursor />
 
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Hero Section (Warm Cream & Bold Orange) */}
       <HeroSection />
 
-      {/* Marquee Banner */}
+      {/* Ticker Ribbon */}
       <MarqueeTicker />
 
-      {/* 01 // About Section (Cream Editorial) */}
+      {/* Fractured Border 1: Hero/Marquee -> About */}
+      <FracturedDivider
+        variant={1}
+        fillColor="#111215"
+        position="bottom"
+        accentColor="#FF4D00"
+      />
+
+      {/* 01 // About Section (Deep Charcoal & Electric Blue) */}
       <AboutSection />
 
-      {/* 02 // Projects Section (Navy & Charcoal Deep Dive) */}
+      {/* Fractured Border 2: About -> Projects */}
+      <FracturedDivider
+        variant={2}
+        fillColor="#F7F5EE"
+        position="bottom"
+        accentColor="#0055FF"
+      />
+
+      {/* 02 // Projects Section (Brighter Editorial Case Studies) */}
       <ProjectsSection />
 
-      {/* 03 // Skills Section (Interactive Stack Matrix) */}
+      {/* Fractured Border 3: Projects -> Tech Stack */}
+      <FracturedDivider
+        variant={3}
+        fillColor="#090E1A"
+        position="bottom"
+        accentColor="#D4FF00"
+      />
+
+      {/* 03 // Tech Stack Section (Interactive Floating Ecosystem) */}
       <SkillsSection />
 
-      {/* 04 // Certifications Section (Cream Industry Credentials) */}
+      {/* Fractured Border 4: Tech Stack -> Certifications */}
+      <FracturedDivider
+        variant={4}
+        fillColor="#F7F5EE"
+        position="bottom"
+        accentColor="#0055FF"
+      />
+
+      {/* 04 // Certifications Section (Warm Cream with Direct Viewable PDFs) */}
       <CertificationsSection />
 
-      {/* 05 // Education Section (Academics & Hackathons) */}
+      {/* Fractured Border 5: Certifications -> Education */}
+      <FracturedDivider
+        variant={5}
+        fillColor="#090E1A"
+        position="bottom"
+        accentColor="#FF4D00"
+      />
+
+      {/* 05 // Education Section (Deep Navy) */}
       <EducationSection />
 
-      {/* 06 // Contact Section (Vivid Orange Finale) */}
+      {/* Fractured Border 6: Education -> Contact */}
+      <FracturedDivider
+        variant={6}
+        fillColor="#FF4D00"
+        position="bottom"
+        accentColor="#D4FF00"
+      />
+
+      {/* 06 // Contact Section (Vivid Orange Finale with Direct Mailto) */}
       <ContactSection />
 
       {/* Footer */}

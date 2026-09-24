@@ -331,22 +331,71 @@ export const skillCategories: SkillCategory[] = [
 
 export const certifications: Certification[] = [
   {
-    id: "deloitte-data-analytics",
-    title: "Data Analytics Job Simulation",
-    issuer: "Deloitte",
-    organization: "Forage",
-    category: "Data & AI",
-    topics: ["Data Discovery", "Data Modeling", "Exploratory Analysis", "Strategic Insights"],
-    badgeColor: "#86BC25", // Deloitte Green
+    id: "harvard-cs50p",
+    title: "CS50's Introduction to Programming with Python",
+    issuer: "Harvard University",
+    organization: "CS50 / David J. Malan",
+    year: "2026",
+    category: "Software Engineering",
+    topics: ["Python Fundamentals", "Algorithmic Thinking", "OOP", "File I/O & Unit Testing"],
+    badgeColor: "#A51C30", // Harvard Crimson
+    fileUrl: "/certificates/harvard-cs50p.pdf",
   },
   {
     id: "deloitte-cyber",
     title: "Cyber Job Simulation",
     issuer: "Deloitte",
     organization: "Forage",
+    year: "August 2026",
     category: "Software Engineering",
     topics: ["Cybersecurity Fundamentals", "Threat Analysis", "Incident Response Protocols"],
+    badgeColor: "#86BC25", // Deloitte Green
+    fileUrl: "/certificates/deloitte-cyber.pdf",
+  },
+  {
+    id: "google-generative-ai",
+    title: "Introduction to Generative AI",
+    issuer: "Google Cloud",
+    organization: "Simplilearn SkillUp",
+    year: "May 2026",
+    category: "Data & AI",
+    topics: ["Foundation Models", "Large Language Models", "Transformer Principles", "Prompt Engineering"],
+    badgeColor: "#EA4335", // Google Red
+    fileUrl: "/certificates/google-cloud-genai.pdf",
+    certCode: "10288589",
+  },
+  {
+    id: "deloitte-data-analytics",
+    title: "Data Analytics Job Simulation",
+    issuer: "Deloitte",
+    organization: "Forage",
+    category: "Data & AI",
+    topics: ["Data Discovery", "Data Modeling", "Exploratory Analysis", "Strategic Insights"],
     badgeColor: "#000000",
+  },
+  {
+    id: "numpy-cert",
+    title: "Introduction to NumPy",
+    issuer: "Simplilearn SkillUp",
+    organization: "SkillUp Academy",
+    year: "March 2026",
+    category: "Data & AI",
+    topics: ["Vectorized Math", "Array Slicing", "Mathematical Operations"],
+    badgeColor: "#013243",
+    fileUrl: "/certificates/numpy-cert.pdf",
+    certCode: "9973254",
+  },
+  {
+    id: "pandas-cert",
+    title: "Python Pandas Basics Course",
+    issuer: "Simplilearn SkillUp",
+    organization: "SkillUp Academy",
+    year: "March 2026",
+    category: "Data & AI",
+    topics: ["DataFrames", "Data Cleaning", "Time-Series Aggregations"],
+    badgeColor: "#150458",
+    fileUrl: "/certificates/pandas-cert.pdf",
+    certCode: "9990351",
   },
   {
     id: "microsoft-cloud",
@@ -358,21 +407,12 @@ export const certifications: Certification[] = [
     badgeColor: "#00A4EF", // Microsoft Blue
   },
   {
-    id: "google-generative-ai",
-    title: "Introduction to Generative AI",
-    issuer: "Google Cloud",
-    organization: "Simplilearn SkillUp",
-    category: "Data & AI",
-    topics: ["Foundation Models", "Large Language Models", "Transformer Principles", "Prompt Engineering"],
-    badgeColor: "#EA4335", // Google Red
-  },
-  {
     id: "cisco-python",
     title: "Python Essential 1",
     issuer: "Cisco",
     organization: "Cisco Networking Academy",
     category: "Software Engineering",
-    topics: ["Core Syntax", "Data Structures", "Algorithmic Thinking", "OOP Principles"],
+    topics: ["Core Syntax", "Data Structures", "Algorithmic Logic", "OOP"],
     badgeColor: "#00BCEB", // Cisco Cyan
   },
 ];

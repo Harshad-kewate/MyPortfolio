@@ -41,6 +41,8 @@ export interface Certification {
   topics: string[];
   badgeColor: string;
   verifyUrl?: string;
+  fileUrl?: string;
+  certCode?: string;
 }
 
 export interface EducationItem {
