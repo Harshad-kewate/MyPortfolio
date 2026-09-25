@@ -116,9 +116,54 @@ const TechIcons: Record<string, React.ReactNode> = {
     </svg>
   ),
   Git: <GitBranch className="w-3.5 h-3.5 shrink-0" />,
+  KNN: (
+    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 shrink-0 stroke-current fill-none" strokeWidth="2" aria-hidden="true">
+      <circle cx="6" cy="6" r="2" fill="currentColor" />
+      <circle cx="18" cy="7" r="2" fill="currentColor" />
+      <circle cx="8" cy="18" r="2" fill="currentColor" />
+      <circle cx="17" cy="17" r="2" fill="currentColor" />
+      <circle cx="12" cy="12" r="2.5" strokeDasharray="2 2" />
+    </svg>
+  ),
+  "Scikit-learn": (
+    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 shrink-0 stroke-current fill-none" strokeWidth="2" aria-hidden="true">
+      <circle cx="6" cy="6" r="3" fill="currentColor" />
+      <circle cx="18" cy="9" r="3.5" fill="currentColor" />
+      <circle cx="10" cy="18" r="3" fill="currentColor" />
+      <line x1="6" y1="6" x2="18" y2="9" />
+      <line x1="6" y1="6" x2="10" y2="18" />
+    </svg>
+  ),
+  Pandas: (
+    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 shrink-0 fill-current" aria-hidden="true">
+      <path d="M8.5 3a2.5 2.5 0 0 0-2.5 2.5v13A2.5 2.5 0 0 0 8.5 21H10v-7H8v-2h2V9H8V7h2V3H8.5zm7 0H14v4h2v2h-2v3h2v2h-2v7h1.5a2.5 2.5 0 0 0 2.5-2.5v-13A2.5 2.5 0 0 0 15.5 3z" />
+    </svg>
+  ),
+  Flask: (
+    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 shrink-0 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M10 2v4a2 2 0 0 1-.5 1.4L4.2 14.8A4 4 0 0 0 7.3 21h9.4a4 4 0 0 0 3.1-6.2L14.5 7.4A2 2 0 0 1 14 6V2" />
+      <path d="M8.5 2h7" />
+      <path d="M7 16h10" />
+    </svg>
+  ),
+  React: (
+    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 shrink-0 fill-none stroke-current" strokeWidth="2" aria-hidden="true">
+      <ellipse cx="12" cy="12" rx="10" ry="4.5" />
+      <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)" />
+      <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(120 12 12)" />
+      <circle cx="12" cy="12" r="2" fill="currentColor" />
+    </svg>
+  ),
+  "JioSaavn API": (
+    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 shrink-0 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M9 18V5l12-2v13" />
+      <circle cx="6" cy="18" r="3" fill="currentColor" />
+      <circle cx="18" cy="16" r="3" fill="currentColor" />
+    </svg>
+  ),
 };
 
-// Verified Problem-Solution-Approach-Tech Data (strictly derived from Harshad's resume & verified code)
+// Verified Problem-Solution-Approach-Tech Data (strictly derived from Harshad's resume & verified project details)
 const PROJECT_DETAILS_DATA: Record<
   string,
   {
@@ -155,14 +200,23 @@ const PROJECT_DETAILS_DATA: Record<
       "Architected a responsive modern client with Vite and Tailwind CSS integrated with OpenStreetMap and Leaflet for visual farm and mandi location mapping, Firebase for secure phone authentication and session management, and a Node.js REST API for produce inventory indexing.",
     technologies: ["Vite", "Tailwind CSS", "OpenStreetMap / Leaflet", "Firebase", "Node.js", "Express.js"],
   },
-  "core-cpp-algorithms": {
+  "music-mood-recommendation": {
     problem:
-      "Complex computational problem-solving and systems engineering require deterministic memory allocation, pointer bounds, and space-time optimization that high-level abstractions conceal.",
+      "Selecting songs that match a listener's current emotional state or activity requires analyzing intrinsic audio characteristics rather than relying only on broad genre or artist tags.",
     solution:
-      "Engineered a systematic suite of 10+ custom C and C++ algorithmic modules implementing foundational data structures, search routines, and recursive optimizations from scratch.",
+      "A machine-learning based music recommendation system that predicts music mood and recommends suitable songs based on audio features.",
     approach:
-      "Implemented manual pointer bounds, dynamic arrays, recursive sorting algorithms, and rigorous space-time complexity benchmarks adhering to C++ standard conventions with detailed verification test cases.",
-    technologies: ["C++", "C", "Data Structures", "Algorithms", "Memory Pointers", "Git"],
+      "Uses music/audio features such as BPM, energy, valence and danceability. A KNN model is used for mood classification to predict moods such as Happy, Sad, Energetic and Calm. The Flask backend handles the ML/API functionality integrated with the JioSaavn API, while the React frontend provides the user interface.",
+    technologies: [
+      "Python",
+      "KNN",
+      "Scikit-learn",
+      "Pandas",
+      "Flask",
+      "React",
+      "Tailwind CSS",
+      "JioSaavn API",
+    ],
   },
 };
 
@@ -177,7 +231,7 @@ export const ProjectsSection: React.FC = () => {
   const monsoon = projects.find((p) => p.id === "monsoon-mitra");
   const polylingo = projects.find((p) => p.id === "polylingo-ai");
   const krishi = projects.find((p) => p.id === "krishi-cart");
-  const algo = projects.find((p) => p.id === "core-cpp-algorithms");
+  const musicMood = projects.find((p) => p.id === "music-mood-recommendation");
 
   return (
     <section id="work" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-[#FFF3E6] text-[#162A44] overflow-hidden">
@@ -575,8 +629,8 @@ export const ProjectsSection: React.FC = () => {
               </motion.div>
             )}
 
-            {/* PROJECT 04: ALGORITHMIC SYSTEMS (Deep Navy + Coral Accents) (5 cols) */}
-            {algo && (
+            {/* PROJECT 04: MUSIC MOOD RECOMMENDATION SYSTEM (Deep Navy + Coral Accents) (5 cols) */}
+            {musicMood && (
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -589,19 +643,19 @@ export const ProjectsSection: React.FC = () => {
                   <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
                     <div className="flex items-center gap-2">
                       <span className="px-3 py-1 rounded-full bg-[#F36F68] text-[#162A44] font-black">
-                        C++ & SYSTEMS
+                        ML & AUDIO
                       </span>
                       <span className="text-slate-400">04 / 04</span>
                     </div>
 
                     <button
                       type="button"
-                      onClick={() => toggleDetails("core-cpp-algorithms")}
+                      onClick={() => toggleDetails("music-mood-recommendation")}
                       className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full font-mono text-xs font-black bg-[#FFD84D] text-[#162A44] hover:bg-[#F36F68] border-2 border-white shadow-[2px_2px_0px_#F36F68] transition-all cursor-pointer"
-                      aria-expanded={expandedProjectId === "core-cpp-algorithms"}
+                      aria-expanded={expandedProjectId === "music-mood-recommendation"}
                     >
-                      <span>{expandedProjectId === "core-cpp-algorithms" ? "COLLAPSE DETAILS" : "VIEW DETAILS"}</span>
-                      {expandedProjectId === "core-cpp-algorithms" ? (
+                      <span>{expandedProjectId === "music-mood-recommendation" ? "COLLAPSE DETAILS" : "VIEW DETAILS"}</span>
+                      {expandedProjectId === "music-mood-recommendation" ? (
                         <ChevronUp className="w-3.5 h-3.5" />
                       ) : (
                         <ChevronDown className="w-3.5 h-3.5" />
@@ -610,22 +664,34 @@ export const ProjectsSection: React.FC = () => {
                   </div>
 
                   <h3 className="font-display text-2xl sm:text-3xl font-black uppercase tracking-tight text-white leading-tight">
-                    ALGORITHMIC LOGIC & DATA STRUCTURES
+                    MUSIC MOOD RECOMMENDATION SYSTEM
                   </h3>
 
                   <p className="text-slate-200 text-sm leading-relaxed font-normal">
-                    Collection of <strong>10+ custom C and C++ algorithmic implementations</strong> focused on recursion, low-level memory layout, pointer arithmetic, and computational efficiency.
+                    A machine-learning based music recommendation system that predicts music mood and recommends suitable songs based on audio features.
                   </p>
 
                   <div className="p-4 rounded-2xl bg-[#101820] border border-white/10 space-y-2 font-mono text-xs">
-                    <div className="text-[#FFD84D] font-bold">10+ VERIFIED CODE MODULES</div>
+                    <div className="flex items-center justify-between text-[#FFD84D] font-bold">
+                      <span>KNN MOOD CLASSIFIER</span>
+                      <span className="text-[10px] text-slate-300">AUDIO FEATURES</span>
+                    </div>
                     <div className="text-slate-300 text-[11px]">
-                      Search routines, dynamic memory allocation, recursive sorting, and space-time complexity benchmarks.
+                      Predicts Happy, Sad, Energetic and Calm moods using BPM, energy, valence and danceability via Flask backend and JioSaavn API.
                     </div>
                   </div>
 
                   <div className="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300">
-                    {["C++", "C", "Data Structures", "Algorithms", "Memory Pointers"].map((t) => (
+                    {[
+                      "Python",
+                      "KNN",
+                      "Scikit-learn",
+                      "Pandas",
+                      "Flask",
+                      "React",
+                      "Tailwind CSS",
+                      "JioSaavn API",
+                    ].map((t) => (
                       <span key={t} className="px-2.5 py-1 rounded-md bg-white/10 border border-white/15">
                         {t}
                       </span>
@@ -634,21 +700,21 @@ export const ProjectsSection: React.FC = () => {
 
                   {/* EXPANDABLE PROBLEM -> SOLUTION -> APPROACH -> TECH PANEL */}
                   <AnimatePresence>
-                    {expandedProjectId === "core-cpp-algorithms" && (
-                      <ProjectExpandableDrawer details={PROJECT_DETAILS_DATA["core-cpp-algorithms"]} theme="navy" />
+                    {expandedProjectId === "music-mood-recommendation" && (
+                      <ProjectExpandableDrawer details={PROJECT_DETAILS_DATA["music-mood-recommendation"]} theme="navy" />
                     )}
                   </AnimatePresence>
                 </div>
 
                 <div className="pt-8 border-t border-white/10 mt-8 flex items-center justify-between">
                   <button
-                    onClick={() => setActiveModalProject(algo)}
+                    onClick={() => setActiveModalProject(musicMood)}
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-mono text-xs font-bold bg-white/10 hover:bg-[#F36F68] hover:text-[#162A44] text-white transition-colors cursor-pointer"
                   >
                     <span>EXPLORE ARCHITECTURE</span>
                     <ArrowUpRight className="w-4 h-4" />
                   </button>
-                  <span className="font-mono text-xs text-slate-400">CORE LOGIC</span>
+                  <span className="font-mono text-xs text-slate-400">AUDIO ML</span>
                 </div>
               </motion.div>
             )}
