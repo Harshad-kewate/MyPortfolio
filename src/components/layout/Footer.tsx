@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
 
         {/* Center: Tech stack */}
         <div className="text-center text-slate-500 text-[11px]">
-          NEXT.JS 15 • REACT 19 • TAILWIND CSS • FRAMER MOTION
+          NEXT.JS 15 • TYPESCRIPT • TAILWIND CSS • FRAMER MOTION
         </div>
 
         {/* Right: Back to Top */}

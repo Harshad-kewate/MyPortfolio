@@ -91,10 +91,9 @@ export const projects: Project[] = [
       "Speech-to-text processing for automated subtitle creation and lecture transcription",
       "Multilingual audio translation pipeline with voice synthesis output",
       "AI Teacher Assistant feature for automated quiz and lesson plan generation",
-      "Clean responsive dashboard built with React and Tailwind CSS",
+      "Clean responsive dashboard built with modern component architecture and Tailwind CSS",
     ],
     technologies: [
-      "React",
       "Next.js",
       "Node.js",
       "OpenAI API",
@@ -122,7 +121,7 @@ export const projects: Project[] = [
     description:
       "An agriculture-based e-commerce platform connecting farmers directly with agricultural produce buyers, eliminating intermediary markups and enabling location-aware trade.",
     architectureHighlights: [
-      "Client-side React 19 application powered by Vite for instant Hot Module Replacement and bundle optimization",
+      "Client-side modern web application powered by Vite for instant Hot Module Replacement and bundle optimization",
       "OpenStreetMap and Leaflet geospatial integration for visual farm and mandi location mapping",
       "Firebase authentication layer securing farmer profiles, buyer logins, and session persistence",
       "Node.js and Express.js REST API providing fast product catalog indexing and search queries",
@@ -134,7 +133,6 @@ export const projects: Project[] = [
       "Mobile-responsive modern UI designed with Tailwind CSS",
     ],
     technologies: [
-      "React.js",
       "Vite",
       "Tailwind CSS",
       "Node.js",
@@ -195,9 +193,9 @@ export const skillCategories: SkillCategory[] = [
         context: "Foundational memory structures, pointer arithmetic, logic building",
       },
       {
-        name: "JavaScript (ES6+)",
-        tag: "Web Core",
-        context: "Modern asynchronous workflows, React client components, Node APIs",
+        name: "TypeScript",
+        tag: "Type Safety",
+        context: "Strict static typing, robust interfaces, and modern full-stack development",
         highlight: true,
       },
     ],
@@ -242,9 +240,9 @@ export const skillCategories: SkillCategory[] = [
     description: "Production UI development, server-rendered components, and REST services.",
     skills: [
       {
-        name: "React.js",
-        tag: "Component State",
-        context: "Interactive dashboards, reactive state machines, responsive interfaces",
+        name: "FastAPI",
+        tag: "High-Perf API",
+        context: "Asynchronous Python microservices, Pydantic data validation, OpenAPI docs",
         highlight: true,
       },
       {

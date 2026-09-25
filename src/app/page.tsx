@@ -7,6 +7,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { MarqueeTicker } from "@/components/sections/MarqueeTicker";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { EditorialConnector } from "@/components/ui/EditorialConnector";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { CertificationsSection } from "@/components/sections/CertificationsSection";
@@ -19,7 +20,7 @@ export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   return (
-    <main className="relative min-h-screen bg-cream text-charcoal-900 selection:bg-vividOrange selection:text-white">
+    <main className="relative min-h-screen bg-[#F7F5EE] text-charcoal-900 selection:bg-vividOrange selection:text-white">
       {/* Brand Cinematic Video Preloader */}
       <Preloader onComplete={() => setLoadingComplete(true)} />
 
@@ -29,77 +30,72 @@ export default function Home() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section (Warm Cream & Bold Orange) */}
+      {/* Hero Section (Warm Cream & Bold Typography) */}
       <HeroSection />
 
-      {/* Ticker Ribbon */}
+      {/* Ticker Ribbon: High-voltage chartreuse separator */}
       <MarqueeTicker />
 
-      {/* Fractured Border 1: Hero/Marquee -> About */}
-      <FracturedDivider
-        variant={1}
-        fillColor="#111215"
-        position="bottom"
-        accentColor="#FF4D00"
-      />
-
-      {/* 01 // About Section (Deep Charcoal & Electric Blue) */}
+      {/* 01 // About Section (Light Cream Editorial Profile + Listen Feature) */}
       <AboutSection />
 
-      {/* Fractured Border 2: About -> Projects */}
-      <FracturedDivider
-        variant={2}
-        fillColor="#F7F5EE"
-        position="bottom"
-        accentColor="#0055FF"
-      />
+      {/* Editorial Chapter Connector: Smooth transition between light pages */}
+      <EditorialConnector />
 
-      {/* 02 // Projects Section (Brighter Editorial Case Studies) */}
+      {/* 02 // Projects Section (Vivid Editorial Case Studies) */}
       <ProjectsSection />
 
-      {/* Fractured Border 3: Projects -> Tech Stack */}
+      {/* Seamless Transition 1: Projects (Cream) -> Tech Stack (Deep Navy) */}
       <FracturedDivider
-        variant={3}
-        fillColor="#090E1A"
-        position="bottom"
+        variant={1}
+        fromColor="#F7F5EE"
+        toColor="#050811"
         accentColor="#D4FF00"
       />
 
-      {/* 03 // Tech Stack Section (Interactive Floating Ecosystem) */}
+      {/* 03 // Tech Stack Section (Interactive Cosmos & Ecosystem) */}
       <SkillsSection />
 
-      {/* Fractured Border 4: Tech Stack -> Certifications */}
+      {/* Seamless Transition 2: Tech Stack (Deep Navy) -> Certifications (Cream) */}
       <FracturedDivider
-        variant={4}
-        fillColor="#F7F5EE"
-        position="bottom"
+        variant={2}
+        fromColor="#050811"
+        toColor="#F7F5EE"
         accentColor="#0055FF"
       />
 
       {/* 04 // Certifications Section (Warm Cream with Direct Viewable PDFs) */}
       <CertificationsSection />
 
-      {/* Fractured Border 5: Certifications -> Education */}
+      {/* Seamless Transition 3: Certifications (Cream) -> Education (Deep Navy) */}
       <FracturedDivider
-        variant={5}
-        fillColor="#090E1A"
-        position="bottom"
+        variant={3}
+        fromColor="#F7F5EE"
+        toColor="#050811"
         accentColor="#FF4D00"
       />
 
-      {/* 05 // Education Section (Deep Navy) */}
+      {/* 05 // Education Section (Deep Navy Academic Matrix) */}
       <EducationSection />
 
-      {/* Fractured Border 6: Education -> Contact */}
+      {/* Seamless Transition 4: Education (Deep Navy) -> Contact (Vivid Orange) */}
       <FracturedDivider
-        variant={6}
-        fillColor="#FF4D00"
-        position="bottom"
+        variant={4}
+        fromColor="#050811"
+        toColor="#FF4D00"
         accentColor="#D4FF00"
       />
 
-      {/* 06 // Contact Section (Vivid Orange Finale with Direct Mailto) */}
+      {/* 06 // Contact Section (Vivid Orange Finale with Direct DM Form) */}
       <ContactSection />
+
+      {/* Seamless Transition 5: Contact (Vivid Orange) -> Footer (Deep Navy) */}
+      <FracturedDivider
+        variant={2}
+        fromColor="#FF4D00"
+        toColor="#050811"
+        accentColor="#FFFFFF"
+      />
 
       {/* Footer */}
       <Footer />

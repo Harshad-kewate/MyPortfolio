@@ -4,18 +4,18 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 interface FracturedDividerProps {
-  variant?: 1 | 2 | 3 | 4 | 5 | 6;
-  fillColor: string; // The color of the section this divider belongs to
-  position?: "top" | "bottom";
-  accentColor?: string;
+  variant?: 1 | 2 | 3 | 4;
+  fromColor: string; // The color of the section above
+  toColor: string; // The color of the section below
+  accentColor?: string; // Highlight edge stroke
   className?: string;
 }
 
 export const FracturedDivider: React.FC<FracturedDividerProps> = ({
   variant = 1,
-  fillColor,
-  position = "bottom",
-  accentColor = "rgba(255, 77, 0, 0.2)",
+  fromColor,
+  toColor,
+  accentColor = "rgba(255, 77, 0, 0.4)",
   className = "",
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -24,77 +24,71 @@ export const FracturedDivider: React.FC<FracturedDividerProps> = ({
     offset: ["start end", "end start"],
   });
 
-  // Subtle organic parallax shift on scroll
-  const xOffset = useTransform(scrollYProgress, [0, 1], [-8, 8]);
-  const scaleX = useTransform(scrollYProgress, [0, 1], [0.99, 1.01]);
+  // Micro parallax shift for physical torn feel
+  const xOffset = useTransform(scrollYProgress, [0, 1], [-6, 6]);
 
-  // Unique organic torn-paper & fractured editorial SVG paths for each section boundary
-  const paths = {
-    // 1: Hero -> About (Torn paper jagged edge with micro-fractures)
+  // Unique organic cut paths for each transition
+  const pathData = {
+    // 1: Organic dynamic paper rip (e.g. Projects Cream -> Tech Stack Navy)
     1: {
-      main: "M0,0 L0,32 Q140,55 280,24 T560,42 Q720,12 880,38 T1160,22 Q1300,48 1440,30 L1440,0 Z",
-      accent: "M0,35 Q140,58 280,27 T560,45 Q720,15 880,41 T1160,25 Q1300,51 1440,33",
+      accent:
+        "M0,45 Q160,72 340,35 T700,58 Q900,22 1080,54 T1280,30 Q1360,50 1440,38",
+      fill:
+        "M0,90 L0,45 Q160,72 340,35 T700,58 Q900,22 1080,54 T1280,30 Q1360,50 1440,38 L1440,90 Z",
     },
-    // 2: About -> Projects (Asymmetric digital fracture with sharp geometric rips)
+    // 2: Crystalline geometric fracture (e.g. Tech Stack Navy -> Certs Cream)
     2: {
-      main: "M0,0 L0,20 L160,48 L320,18 L480,52 L640,28 L800,58 L960,22 L1120,50 L1280,26 L1440,44 L1440,0 Z",
-      accent: "M0,23 L160,51 L320,21 L480,55 L640,31 L800,61 L960,25 L1120,53 L1280,29 L1440,47",
+      accent:
+        "M0,38 L140,65 L280,28 L440,62 L600,32 L780,68 L940,26 L1100,60 L1260,34 L1440,55",
+      fill:
+        "M0,90 L0,38 L140,65 L280,28 L440,62 L600,32 L780,68 L940,26 L1100,60 L1260,34 L1440,55 L1440,90 Z",
     },
-    // 3: Projects -> Tech Stack (Organic tear with layered paper slivers)
+    // 3: Layered digital tear (e.g. Certs Cream -> Education Navy)
     3: {
-      main: "M0,0 L0,38 C220,10 380,62 580,26 C780,66 940,16 1140,54 C1260,32 1360,46 1440,28 L1440,0 Z",
-      accent: "M0,41 C220,13 380,65 580,29 C780,69 940,19 1140,57 C1260,35 1360,49 1440,31",
+      accent:
+        "M0,48 C200,18 360,75 560,36 C760,78 960,24 1160,62 C1280,38 1360,52 1440,34",
+      fill:
+        "M0,90 L0,48 C200,18 360,75 560,36 C760,78 960,24 1160,62 C1280,38 1360,52 1440,34 L1440,90 Z",
     },
-    // 4: Tech Stack -> Certifications (Crystalline fracture)
+    // 4: High-energy electric rupture (e.g. Education Navy -> Contact Vivid Orange)
     4: {
-      main: "M0,0 L0,26 L180,12 L360,44 L540,20 L720,56 L900,18 L1080,48 L1260,24 L1440,40 L1440,0 Z",
-      accent: "M0,29 L180,15 L360,47 L540,23 L720,59 L900,21 L1080,51 L1260,27 L1440,43",
-    },
-    // 5: Certifications -> Education (Dynamic editorial rip)
-    5: {
-      main: "M0,0 L0,42 Q200,16 400,48 T800,24 Q1000,56 1200,30 T1440,46 L1440,0 Z",
-      accent: "M0,45 Q200,19 400,51 T800,27 Q1000,59 1200,33 T1440,49",
-    },
-    // 6: Education -> Contact (Deep jagged dramatic tear leading into vivid orange)
-    6: {
-      main: "M0,0 L0,30 L120,60 L280,20 L440,65 L600,25 L760,62 L920,18 L1080,58 L1240,22 L1440,55 L1440,0 Z",
-      accent: "M0,34 L120,64 L280,24 L440,69 L600,29 L760,66 L920,22 L1080,62 L1240,26 L1440,59",
+      accent:
+        "M0,42 L120,70 L260,28 L420,74 L580,30 L740,70 L900,22 L1060,68 L1220,26 L1340,58 L1440,36",
+      fill:
+        "M0,90 L0,42 L120,70 L260,28 L420,74 L580,30 L740,70 L900,22 L1060,68 L1220,26 L1340,58 L1440,36 L1440,90 Z",
     },
   };
 
-  const currentPath = paths[variant] || paths[1];
-  const isBottom = position === "bottom";
+  const selected = pathData[variant] || pathData[1];
 
   return (
     <div
       ref={ref}
-      className={`relative w-full overflow-hidden pointer-events-none select-none z-20 ${
-        isBottom ? "-mb-1" : "-mt-1"
-      } ${className}`}
-      style={{
-        height: "56px",
-        transform: isBottom ? "none" : "rotate(180deg)",
-      }}
+      className={`relative w-full overflow-hidden pointer-events-none select-none z-20 -my-1 ${className}`}
+      style={{ height: "76px" }}
     >
       <motion.svg
-        viewBox="0 0 1440 68"
+        viewBox="0 0 1440 90"
         preserveAspectRatio="none"
         className="w-full h-full block"
-        style={{ x: xOffset, scaleX }}
+        style={{ x: xOffset }}
       >
-        {/* Fractured accent underlayer / paper shadow */}
+        {/* Top section background fill */}
+        <rect x="0" y="0" width="1440" height="90" fill={fromColor} />
+
+        {/* Accent glow line beneath the torn edge */}
         <path
-          d={currentPath.accent}
+          d={selected.accent}
           fill="none"
           stroke={accentColor}
-          strokeWidth="3.5"
+          strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
-          opacity="0.85"
+          opacity="0.9"
         />
 
-        {/* Primary torn page silhouette */}
-        <path d={currentPath.main} fill={fillColor} />
+        {/* Bottom section organic torn fill */}
+        <path d={selected.fill} fill={toColor} />
       </motion.svg>
     </div>
   );

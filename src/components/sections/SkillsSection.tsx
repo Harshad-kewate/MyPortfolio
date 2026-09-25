@@ -314,7 +314,7 @@ export const SkillsSection: React.FC = () => {
   const [isHovering, setIsHovering] = useState<boolean>(false);
 
   return (
-    <section id="stack" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-navy-950 text-cream-100 overflow-hidden border-b border-white/10">
+    <section id="stack" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-navy-950 text-cream-100 overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-electricBlue/10 blur-[150px] pointer-events-none" />
 
