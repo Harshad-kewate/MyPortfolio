@@ -48,65 +48,65 @@ export default function Home() {
       {/* 01 // ABOUT SECTION (Soft Powder Blue #DCE8F2 + Warm Sand #E9DFCF) */}
       <AboutSection />
 
-      {/* Global Torn-Paper Seam 2: 01 About -> 02 Projects */}
+      {/* Global Torn-Paper Seam 2: 01 About -> 02 Projects (Warm Cream) */}
       <FracturedDivider
         variant={2}
         fromColor="#DCE8F2"
-        toColor="#FAF6F0"
-        accentColor="#FFD928"
-        accentSecondary="#E52420"
+        toColor="#FFF3E6"
+        accentColor="#F36F68"
+        accentSecondary="#FFD84D"
         height={84}
       />
 
-      {/* 02 // PROJECTS SECTION (Warm Ivory #FAF6F0 + Signal Orange) */}
+      {/* 02 // PROJECTS SECTION (Warm Editorial Cream #FFF3E6 + Deep Navy #162A44 + Soft Coral #F36F68) */}
       <ProjectsSection />
 
-      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Coral Red) */}
+      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Soft Hot Coral) */}
       <FracturedDivider
         variant={3}
-        fromColor="#FAF6F0"
-        toColor="#F45B55"
+        fromColor="#FFF3E6"
+        toColor="#F36F68"
         accentColor="#FFD84D"
-        accentSecondary="#FF7770"
+        accentSecondary="#1FA6A0"
         height={88}
       />
 
-      {/* 03 // TECHNOLOGY SECTION (Coral Red #F45B55 + Warm Yellow Boxes #FFD84D) */}
+      {/* 03 // TECHNOLOGY SECTION (Soft Hot Coral #F36F68 + Warm Yellow #FFD84D + Deep Navy #162A44) */}
       <SkillsSection />
 
       {/* Global Torn-Paper Seam 4: 03 Technology -> 04 Certifications (Warm Neutral) */}
       <FracturedDivider
         variant={4}
-        fromColor="#F45B55"
+        fromColor="#F36F68"
         toColor="#FFF4D6"
         accentColor="#FFD84D"
-        accentSecondary="#FF7770"
+        accentSecondary="#1FA6A0"
         height={88}
       />
 
       {/* 04 // CERTIFICATIONS SECTION (Horizontal Slider on Warm Neutral #FFF4D6) */}
       <CertificationsSection />
 
-      {/* Global Torn-Paper Seam 5: 04 Certifications -> 05 Academic Journey (Soft Coral Red) */}
+      {/* Global Torn-Paper Seam 5: 04 Certifications -> 05 Academic Journey (Soft Peach Sand) */}
       <FracturedDivider
         variant={5}
         fromColor="#FFF4D6"
-        toColor="#F06A63"
+        toColor="#F6D8C8"
         accentColor="#FFD84D"
-        accentSecondary="#FF8A7F"
+        accentSecondary="#F36F68"
         height={92}
       />
 
-      {/* 05 // ACADEMIC JOURNEY (Soft Coral Red #F06A63 + Bright Yellow #FFD84D) */}
+      {/* 05 // ACADEMIC JOURNEY (Soft Peach Sand #F6D8C8 + Deep Navy #162A44 + Signal Yellow #FFD84D) */}
       <EducationSection />
 
       {/* Global Torn-Paper Seam 6: 05 Academic Journey -> 06 Contact */}
       <FracturedDivider
         variant={6}
-        fromColor="#F06A63"
+        fromColor="#F6D8C8"
         toColor="#18352F"
-        accentColor="#FFD84D"
-        accentSecondary="#171717"
+        accentColor="#F36F68"
+        accentSecondary="#FFD84D"
         height={88}
       />
 
