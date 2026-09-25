@@ -1,47 +1,79 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 interface LinkedInToastProps {
   active?: boolean;
 }
 
+const VISIBILITY_DURATION_MS = 10000; // Exactly 10 seconds
+const REPEAT_INTERVAL_MS = 80000; // Repeat after 80 seconds
+
 export const LinkedInToast: React.FC<LinkedInToastProps> = ({ active = true }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [cycleKey, setCycleKey] = useState(0);
   const prefersReduced = useReducedMotion();
+  const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const repeatTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    // Only run on client
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || !active) return;
 
-    // Check session storage so it doesn't repeatedly appear while navigating sections
-    const hasShown = sessionStorage.getItem("hk_linkedin_toast_shown");
-    if (hasShown) return;
+    let isMounted = true;
 
-    // When active (e.g. page ready / preloader done), display toast
-    if (active) {
-      // Small 400ms delay for smooth post-load entrance
-      const showTimer = setTimeout(() => {
-        setIsVisible(true);
-        sessionStorage.setItem("hk_linkedin_toast_shown", "true");
+    const triggerCycle = () => {
+      if (!isMounted) return;
 
-        // Automatically disappear after exactly 5 seconds
-        const hideTimer = setTimeout(() => {
-          setIsVisible(false);
-        }, 5000);
+      // Show notification
+      setIsVisible(true);
+      setCycleKey((prev) => prev + 1);
 
-        return () => clearTimeout(hideTimer);
-      }, 400);
+      // Keep the notification visible for EXACTLY 10 seconds
+      hideTimeoutRef.current = setTimeout(() => {
+        if (!isMounted) return;
+        setIsVisible(false);
 
-      return () => clearTimeout(showTimer);
-    }
+        // Repeat/show the same notification again AFTER 80 SECONDS
+        repeatTimeoutRef.current = setTimeout(() => {
+          triggerCycle();
+        }, REPEAT_INTERVAL_MS);
+      }, VISIBILITY_DURATION_MS);
+    };
+
+    // Show immediately when the website is opened (400ms smooth post-load delay)
+    const initialDelay = setTimeout(() => {
+      triggerCycle();
+    }, 400);
+
+    return () => {
+      isMounted = false;
+      clearTimeout(initialDelay);
+      if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
+      if (repeatTimeoutRef.current) clearTimeout(repeatTimeoutRef.current);
+    };
   }, [active]);
+
+  const handleClick = () => {
+    setIsVisible(false);
+    if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
+    if (repeatTimeoutRef.current) clearTimeout(repeatTimeoutRef.current);
+
+    // Schedule next appearance 80 seconds after interaction
+    repeatTimeoutRef.current = setTimeout(() => {
+      setIsVisible(true);
+      setCycleKey((prev) => prev + 1);
+      hideTimeoutRef.current = setTimeout(() => {
+        setIsVisible(false);
+      }, VISIBILITY_DURATION_MS);
+    }, REPEAT_INTERVAL_MS);
+  };
 
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
+          key={`linkedin-toast-container-${cycleKey}`}
           initial={prefersReduced ? { opacity: 0 } : { opacity: 0, y: -24, scale: 0.95 }}
           animate={prefersReduced ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
           exit={prefersReduced ? { opacity: 0 } : { opacity: 0, y: -20, scale: 0.95 }}
@@ -52,7 +84,7 @@ export const LinkedInToast: React.FC<LinkedInToastProps> = ({ active = true }) =
             href="https://www.linkedin.com/in/harshad-kewate-87b718308"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => setIsVisible(false)}
+            onClick={handleClick}
             aria-label="Visit Harshad Kewate's LinkedIn Profile"
             className="group relative flex items-center gap-3 px-4 py-3 rounded-xl bg-[#FFF3E6] text-[#162A44] border-2 border-[#162A44] shadow-[4px_4px_0px_0px_#162A44] hover:shadow-[6px_6px_0px_0px_#E85D2A] hover:-translate-y-0.5 transition-all select-none overflow-hidden cursor-pointer backdrop-blur-sm"
           >
@@ -73,13 +105,14 @@ export const LinkedInToast: React.FC<LinkedInToastProps> = ({ active = true }) =
               </span>
             </div>
 
-            {/* 5-Second Duration Progress Timer Bar */}
+            {/* 10-Second Duration Progress Timer Bar */}
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#162A44]/15 overflow-hidden">
               <motion.div
+                key={`progress-timer-${cycleKey}`}
                 className="h-full bg-[#E85D2A]"
                 initial={{ width: "100%" }}
                 animate={{ width: "0%" }}
-                transition={{ duration: 5, ease: "linear" }}
+                transition={{ duration: 10, ease: "linear" }}
               />
             </div>
           </a>
