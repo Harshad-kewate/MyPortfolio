@@ -61,52 +61,52 @@ export default function Home() {
       {/* 02 // PROJECTS SECTION (Warm Ivory #FAF6F0 + Signal Orange) */}
       <ProjectsSection />
 
-      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Hot Red) */}
+      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Coral Red) */}
       <FracturedDivider
         variant={3}
         fromColor="#FAF6F0"
-        toColor="#E52420"
-        accentColor="#FFD928"
-        accentSecondary="#111111"
+        toColor="#F45B55"
+        accentColor="#FFD84D"
+        accentSecondary="#FF7770"
         height={88}
       />
 
-      {/* 03 // TECHNOLOGY SECTION (HOT RED #E52420 + Bright Yellow Boxes + Black) */}
+      {/* 03 // TECHNOLOGY SECTION (Coral Red #F45B55 + Warm Yellow Boxes #FFD84D) */}
       <SkillsSection />
 
       {/* Global Torn-Paper Seam 4: 03 Technology -> 04 Certifications (Warm Neutral) */}
       <FracturedDivider
         variant={4}
-        fromColor="#E52420"
+        fromColor="#F45B55"
         toColor="#FFF4D6"
-        accentColor="#FFD928"
-        accentSecondary="#111111"
+        accentColor="#FFD84D"
+        accentSecondary="#FF7770"
         height={88}
       />
 
       {/* 04 // CERTIFICATIONS SECTION (Horizontal Slider on Warm Neutral #FFF4D6) */}
       <CertificationsSection />
 
-      {/* Global Torn-Paper Seam 5: 04 Certifications -> 05 Academic Journey (Hot Red) */}
+      {/* Global Torn-Paper Seam 5: 04 Certifications -> 05 Academic Journey (Soft Coral Red) */}
       <FracturedDivider
         variant={5}
         fromColor="#FFF4D6"
-        toColor="#E52420"
-        accentColor="#FFD928"
-        accentSecondary="#111111"
+        toColor="#F06A63"
+        accentColor="#FFD84D"
+        accentSecondary="#FF8A7F"
         height={92}
       />
 
-      {/* 05 // ACADEMIC JOURNEY (HOT RED #E52420 + Yellow Markers + Black Milestones) */}
+      {/* 05 // ACADEMIC JOURNEY (Soft Coral Red #F06A63 + Bright Yellow #FFD84D) */}
       <EducationSection />
 
       {/* Global Torn-Paper Seam 6: 05 Academic Journey -> 06 Contact */}
       <FracturedDivider
         variant={6}
-        fromColor="#E52420"
+        fromColor="#F06A63"
         toColor="#18352F"
-        accentColor="#FFD928"
-        accentSecondary="#111111"
+        accentColor="#FFD84D"
+        accentSecondary="#171717"
         height={88}
       />
 
