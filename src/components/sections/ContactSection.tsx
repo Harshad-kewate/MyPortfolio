@@ -80,7 +80,7 @@ Sender Email: ${formState.email.trim()}`;
   return (
     <section
       id="contact"
-      className="relative py-28 sm:py-36 px-5 sm:px-8 md:px-12 bg-vividOrange text-white overflow-hidden"
+      className="relative py-28 sm:py-36 px-5 sm:px-8 md:px-12 bg-[#FF4D1C] text-white overflow-hidden"
     >
       {/* Editorial HK Watermark */}
       <div className="absolute right-[-2%] bottom-[-5%] font-display text-[180px] sm:text-[280px] font-black text-black/5 select-none pointer-events-none leading-none">

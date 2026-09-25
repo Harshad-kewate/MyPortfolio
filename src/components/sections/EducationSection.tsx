@@ -7,7 +7,7 @@ import { GraduationCap, CheckCircle2 } from "lucide-react";
 
 export const EducationSection: React.FC = () => {
   return (
-    <section id="education" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-navy-950 text-cream-100 overflow-hidden">
+    <section id="education" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-[#101820] text-[#FFF9F0] overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Identifier */}
         <div className="flex items-center gap-3 mb-12 sm:mb-16 font-mono text-xs">

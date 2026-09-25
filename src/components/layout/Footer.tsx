@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-navy-950 text-slate-400 py-12 px-4 sm:px-8 md:px-12 border-t border-white/10 font-mono text-xs">
+    <footer className="bg-[#101820] text-slate-400 py-14 px-4 sm:px-8 md:px-12 font-mono text-xs">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left: Identity & Telemetry */}
         <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">

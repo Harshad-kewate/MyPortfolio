@@ -6,10 +6,9 @@ import { CustomCursor } from "@/components/layout/CustomCursor";
 import { Navbar } from "@/components/layout/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { MarqueeTicker } from "@/components/sections/MarqueeTicker";
-import { AboutSection } from "@/components/sections/AboutSection";
-import { EditorialConnector } from "@/components/ui/EditorialConnector";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { CertificationsSection } from "@/components/sections/CertificationsSection";
 import { EducationSection } from "@/components/sections/EducationSection";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -20,7 +19,7 @@ export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   return (
-    <main className="relative min-h-screen bg-[#F7F5EE] text-charcoal-900 selection:bg-vividOrange selection:text-white">
+    <main className="relative min-h-screen bg-[#F4EFE6] text-[#101820] selection:bg-[#FF4D1C] selection:text-white">
       {/* Brand Cinematic Video Preloader */}
       <Preloader onComplete={() => setLoadingComplete(true)} />
 
@@ -30,74 +29,101 @@ export default function Home() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section (Warm Cream & Bold Typography) */}
+      {/* Hero Section (Warm Ivory & Bold Typography) */}
       <HeroSection />
 
-      {/* Ticker Ribbon: High-voltage chartreuse separator */}
+      {/* High-Voltage Moving Ticker Ribbon */}
       <MarqueeTicker />
 
-      {/* 01 // About Section (Light Cream Editorial Profile + Listen Feature) */}
-      <AboutSection />
-
-      {/* Editorial Chapter Connector: Smooth transition between light pages */}
-      <EditorialConnector />
-
-      {/* 02 // Projects Section (Vivid Editorial Case Studies) */}
-      <ProjectsSection />
-
-      {/* Seamless Transition 1: Projects (Cream) -> Tech Stack (Deep Navy) */}
+      {/* Global Torn-Paper Boundary 1: Hero/Ticker -> 01 Projects */}
       <FracturedDivider
         variant={1}
-        fromColor="#F7F5EE"
-        toColor="#050811"
-        accentColor="#D4FF00"
+        fromColor="#F4EFE6"
+        toColor="#FFF9F0"
+        accentColor="#FF4D1C"
+        accentSecondary="rgba(16, 24, 32, 0.2)"
+        height={84}
       />
 
-      {/* 03 // Tech Stack Section (Interactive Cosmos & Ecosystem) */}
+      {/* 01 // Projects Section (Vivid Editorial Case Studies on Soft Cream) */}
+      <ProjectsSection />
+
+      {/* Global Torn-Paper Boundary 2: 01 Projects -> 02 Technology */}
+      <FracturedDivider
+        variant={2}
+        fromColor="#FFF9F0"
+        toColor="#F4EFE6"
+        accentColor="#315CFF"
+        accentSecondary="#B8E000"
+        height={84}
+      />
+
+      {/* 02 // Technology Section (Kinetic Ecosystem on Warm Ivory) */}
       <SkillsSection />
 
-      {/* Seamless Transition 2: Tech Stack (Deep Navy) -> Certifications (Cream) */}
-      <FracturedDivider
-        variant={2}
-        fromColor="#050811"
-        toColor="#F7F5EE"
-        accentColor="#0055FF"
-      />
-
-      {/* 04 // Certifications Section (Warm Cream with Direct Viewable PDFs) */}
-      <CertificationsSection />
-
-      {/* Seamless Transition 3: Certifications (Cream) -> Education (Deep Navy) */}
+      {/* Global Torn-Paper Boundary 3: 02 Technology -> 03 About */}
       <FracturedDivider
         variant={3}
-        fromColor="#F7F5EE"
-        toColor="#050811"
-        accentColor="#FF4D00"
+        fromColor="#F4EFE6"
+        toColor="#F4EFE6"
+        accentColor="#B8E000"
+        accentSecondary="#FF4D1C"
+        height={84}
       />
 
-      {/* 05 // Education Section (Deep Navy Academic Matrix) */}
-      <EducationSection />
+      {/* 03 // About Section (Powder Blue & Warm Ivory Editorial Profile + Spoken Bio) */}
+      <AboutSection />
 
-      {/* Seamless Transition 4: Education (Deep Navy) -> Contact (Vivid Orange) */}
+      {/* Global Torn-Paper Boundary 4: 03 About -> 04 Certifications */}
       <FracturedDivider
         variant={4}
-        fromColor="#050811"
-        toColor="#FF4D00"
-        accentColor="#D4FF00"
+        fromColor="#F4EFE6"
+        toColor="#FFF9F0"
+        accentColor="#FF4D1C"
+        accentSecondary="rgba(16, 24, 32, 0.2)"
+        height={84}
       />
 
-      {/* 06 // Contact Section (Vivid Orange Finale with Direct DM Form) */}
+      {/* 04 // Certifications Section (Authentic PDFs on Soft Cream) */}
+      <CertificationsSection />
+
+      {/* Global Torn-Paper Boundary 5: 04 Certifications -> 05 Education */}
+      <FracturedDivider
+        variant={5}
+        fromColor="#FFF9F0"
+        toColor="#101820"
+        accentColor="#B8E000"
+        accentSecondary="#315CFF"
+        height={88}
+      />
+
+      {/* 05 // Education Section (Deep Ink Navy Academic Matrix) */}
+      <EducationSection />
+
+      {/* Global Torn-Paper Boundary 6: 05 Education -> 06 Contact */}
+      <FracturedDivider
+        variant={6}
+        fromColor="#101820"
+        toColor="#FF4D1C"
+        accentColor="#B8E000"
+        accentSecondary="#FFF9F0"
+        height={88}
+      />
+
+      {/* 06 // Contact Section (Signal Orange Finale with Direct DM Form) */}
       <ContactSection />
 
-      {/* Seamless Transition 5: Contact (Vivid Orange) -> Footer (Deep Navy) */}
+      {/* Global Torn-Paper Boundary 7: 06 Contact -> Footer */}
       <FracturedDivider
-        variant={2}
-        fromColor="#FF4D00"
-        toColor="#050811"
-        accentColor="#FFFFFF"
+        variant={7}
+        fromColor="#FF4D1C"
+        toColor="#101820"
+        accentColor="#315CFF"
+        accentSecondary="#B8E000"
+        height={84}
       />
 
-      {/* Footer */}
+      {/* Footer (Deep Ink Navy) */}
       <Footer />
     </main>
   );

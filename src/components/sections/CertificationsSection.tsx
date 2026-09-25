@@ -7,7 +7,7 @@ import { Award, ShieldCheck, ArrowUpRight, FileText, CheckCircle2 } from "lucide
 
 export const CertificationsSection: React.FC = () => {
   return (
-    <section id="certifications" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-cream text-charcoal-900 overflow-hidden">
+    <section id="certifications" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-[#FFF9F0] text-[#101820] overflow-hidden">
       {/* Editorial Watermark */}
       <div className="absolute top-10 right-4 font-mono text-[160px] font-black text-charcoal-900/[0.03] select-none pointer-events-none leading-none">
         04

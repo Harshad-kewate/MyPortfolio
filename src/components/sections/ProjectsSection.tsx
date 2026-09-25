@@ -16,19 +16,19 @@ export const ProjectsSection: React.FC = () => {
   const algo = projects.find((p) => p.id === "core-cpp-algorithms");
 
   return (
-    <section id="work" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-cream text-charcoal-900 overflow-hidden">
+    <section id="work" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-[#FFF9F0] text-[#101820] overflow-hidden">
       {/* Editorial Watermark */}
-      <div className="absolute top-10 right-4 font-mono text-[160px] font-black text-charcoal-900/[0.03] select-none pointer-events-none leading-none">
-        02
+      <div className="absolute top-10 right-4 font-mono text-[160px] font-black text-[#101820]/[0.035] select-none pointer-events-none leading-none">
+        01
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Identifier */}
         <div className="flex items-center gap-3 mb-8 font-mono text-xs">
-          <span className="px-2.5 py-1 rounded bg-charcoal-900 text-white font-bold">
-            02
+          <span className="px-2.5 py-1 rounded bg-[#101820] text-white font-bold">
+            01
           </span>
-          <span className="uppercase tracking-widest text-charcoal-700">
+          <span className="uppercase tracking-widest text-[#101820]/70 font-semibold">
             // SELECTED WORK & ARCHITECTURE
           </span>
         </div>
