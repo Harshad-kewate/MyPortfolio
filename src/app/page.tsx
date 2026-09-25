@@ -14,6 +14,7 @@ import { EducationSection } from "@/components/sections/EducationSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/layout/Footer";
 import { FracturedDivider } from "@/components/ui/FracturedDivider";
+import { LinkedInToast } from "@/components/ui/LinkedInToast";
 
 export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState(false);
@@ -22,6 +23,9 @@ export default function Home() {
     <main className="relative min-h-screen bg-[#F4EFE6] text-[#111111] selection:bg-[#FFD928] selection:text-[#111111]">
       {/* Brand Cinematic Video Preloader */}
       <Preloader onComplete={() => setLoadingComplete(true)} />
+
+      {/* Welcome LinkedIn Profile Notification */}
+      <LinkedInToast active={loadingComplete} />
 
       {/* Desktop Custom Magnetic Cursor */}
       <CustomCursor />
