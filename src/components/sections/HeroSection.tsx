@@ -8,10 +8,10 @@ import { contactInfo } from "@/data/portfolioData";
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-[92vh] flex flex-col justify-center pt-28 sm:pt-32 pb-16 px-5 sm:px-8 md:px-12 bg-cream text-charcoal-900 overflow-hidden border-b border-charcoal-900/10">
+    <section className="relative min-h-[92vh] flex flex-col justify-center pt-28 sm:pt-32 pb-16 px-5 sm:px-8 md:px-12 bg-[#F4EFE6] text-[#18352F] overflow-hidden">
       {/* Background Subtle Color Accents */}
-      <div className="absolute top-12 right-[-5%] w-[420px] h-[420px] rounded-full bg-vividOrange/10 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-6 left-[-5%] w-[380px] h-[380px] rounded-full bg-electricBlue/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-12 right-[-5%] w-[420px] h-[420px] rounded-full bg-[#E85D2A]/10 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-6 left-[-5%] w-[380px] h-[380px] rounded-full bg-[#B8D83D]/10 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Editorial Hero Grid */}
@@ -25,25 +25,26 @@ export const HeroSection: React.FC = () => {
           >
             {/* Tag / Category */}
             <div className="inline-flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-vividOrange" />
-              <span className="font-mono text-xs font-bold tracking-widest text-charcoal-700 uppercase">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#E85D2A]" />
+              <span className="font-mono text-xs font-bold tracking-widest text-[#18352F]/70 uppercase">
                 PORTFOLIO 2026 // AI & ML
               </span>
+              <span className="w-2 h-2 rounded-full bg-[#B8D83D] animate-pulse" />
             </div>
 
             {/* Giant Bold Headline */}
             <div className="space-y-2">
-              <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-black uppercase tracking-tight text-charcoal-900 leading-[0.88]">
+              <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-black uppercase tracking-tight text-[#18352F] leading-[0.88]">
                 HARSHAD <br />
-                <span className="text-vividOrange">KEWATE</span>
+                <span className="text-[#E85D2A]">KEWATE</span>
               </h1>
-              <p className="font-mono text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-charcoal-800 pt-1">
+              <p className="font-mono text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-[#18352F]/90 pt-1">
                 AI & ML ENGINEER
               </p>
             </div>
 
             {/* Short Minimal Copy */}
-            <p className="text-base sm:text-lg text-charcoal-700 max-w-lg font-normal leading-relaxed">
+            <p className="text-base sm:text-lg text-[#18352F]/80 max-w-lg font-normal leading-relaxed">
               Engineering machine learning pipelines, atmospheric predictive models, and scalable software systems with mathematical precision.
             </p>
 
@@ -52,7 +53,7 @@ export const HeroSection: React.FC = () => {
               <a
                 href="#work"
                 data-cursor="VIEW"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-mono text-xs sm:text-sm font-bold bg-charcoal-900 text-white hover:bg-vividOrange transition-all duration-200 shadow-lg hover:scale-102"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-mono text-xs sm:text-sm font-bold bg-[#18352F] text-white hover:bg-[#E85D2A] transition-all duration-200 shadow-lg hover:scale-102"
               >
                 <span>VIEW WORK</span>
                 <ArrowDownRight className="w-4 h-4" />

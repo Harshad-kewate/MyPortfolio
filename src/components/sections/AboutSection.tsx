@@ -6,16 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowUpRight,
   Volume2,
-  VolumeX,
   Play,
   Pause,
   Square,
   Sparkles,
-  ExternalLink,
-  ShieldCheck,
   FileText,
   MapPin,
-  Flame,
+  CheckCircle2,
 } from "lucide-react";
 import { contactInfo } from "@/data/portfolioData";
 
@@ -99,41 +96,41 @@ export const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative py-28 sm:py-36 px-5 sm:px-8 md:px-12 bg-[#F4EFE6] text-[#101820] overflow-hidden"
+      className="relative py-28 sm:py-36 px-5 sm:px-8 md:px-12 bg-[#DCE8F2] text-[#18352F] overflow-hidden"
     >
-      {/* Editorial Powder Blue Asymmetric Color Block Field in top corner */}
-      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-[#DCEBFF]/50 pointer-events-none -z-0" />
-
       {/* Editorial Watermark */}
-      <div className="absolute top-6 left-[-1%] font-display text-[140px] sm:text-[220px] font-black text-[#101820]/[0.035] select-none pointer-events-none leading-none tracking-tighter">
-        PROFILE
+      <div className="absolute top-6 left-[-1%] font-display text-[140px] sm:text-[220px] font-black text-[#18352F]/[0.04] select-none pointer-events-none leading-none tracking-tighter">
+        EDITORIAL
       </div>
+
+      {/* Asymmetric Warm Sand Secondary Surface in corner */}
+      <div className="absolute -top-24 right-[-10%] w-[500px] h-[500px] rounded-full bg-[#E9DFCF]/70 blur-[90px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Identifier & Listen Control Bar */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12 sm:mb-16 pb-6 border-b border-[#101820]/15">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12 sm:mb-16 pb-6 border-b border-[#18352F]/15">
           <div className="flex items-center gap-3 font-mono text-xs">
-            <span className="px-2.5 py-1 rounded bg-[#FF4D1C] text-white font-bold">
-              03
+            <span className="px-2.5 py-1 rounded bg-[#E85D2A] text-white font-bold tracking-wider">
+              01
             </span>
-            <span className="uppercase tracking-widest text-[#101820] font-semibold">
+            <span className="uppercase tracking-widest text-[#18352F] font-bold">
               // EDITORIAL PROFILE & PHILOSOPHY
             </span>
-            <span className="w-2 h-2 rounded-full bg-[#B8E000] animate-pulse" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#B8D83D] animate-pulse" />
           </div>
 
           {/* Web Speech "LISTEN TO BIO" Control */}
           {speechSupported && (
-            <div className="inline-flex items-center gap-2 p-1.5 rounded-full bg-[#FFF9F0] border-2 border-[#101820] shadow-sm">
+            <div className="inline-flex items-center gap-2 p-1.5 rounded-full bg-[#E9DFCF] border-2 border-[#18352F] shadow-sm">
               <button
                 onClick={handleTogglePlay}
                 data-cursor={isSpeaking && !isPaused ? "PAUSE" : "LISTEN"}
                 className={`inline-flex items-center gap-2.5 px-4 py-2 rounded-full font-mono text-xs font-bold transition-all ${
                   isSpeaking && !isPaused
-                    ? "bg-[#FF4D1C] text-white shadow-md"
+                    ? "bg-[#E85D2A] text-white shadow-md"
                     : isSpeaking && isPaused
-                    ? "bg-[#DCEBFF] text-[#101820]"
-                    : "bg-[#101820] text-[#FFF9F0] hover:bg-[#FF4D1C]"
+                    ? "bg-[#DCE8F2] text-[#18352F]"
+                    : "bg-[#18352F] text-[#E9DFCF] hover:bg-[#E85D2A]"
                 }`}
                 title={
                   isSpeaking && !isPaused
@@ -152,7 +149,7 @@ export const AboutSection: React.FC = () => {
                       <motion.span
                         animate={{ height: ["4px", "14px", "6px"] }}
                         transition={{ repeat: Infinity, duration: 0.6, ease: "easeInOut" }}
-                        className="w-0.5 bg-[#B8E000] rounded-full"
+                        className="w-0.5 bg-[#B8D83D] rounded-full"
                       />
                       <motion.span
                         animate={{ height: ["12px", "4px", "14px"] }}
@@ -162,7 +159,7 @@ export const AboutSection: React.FC = () => {
                       <motion.span
                         animate={{ height: ["6px", "14px", "5px"] }}
                         transition={{ repeat: Infinity, duration: 0.5, ease: "easeInOut", delay: 0.2 }}
-                        className="w-0.5 bg-[#B8E000] rounded-full"
+                        className="w-0.5 bg-[#B8D83D] rounded-full"
                       />
                       <motion.span
                         animate={{ height: ["10px", "5px", "12px"] }}
@@ -178,7 +175,7 @@ export const AboutSection: React.FC = () => {
                   </>
                 ) : (
                   <>
-                    <Volume2 className="w-3.5 h-3.5 text-[#B8E000]" />
+                    <Volume2 className="w-3.5 h-3.5 text-[#B8D83D]" />
                     <span>LISTEN TO BIO</span>
                     <span className="font-mono text-[10px] text-white/80 bg-white/20 px-1.5 py-0.5 rounded">
                       ~35s
@@ -190,7 +187,7 @@ export const AboutSection: React.FC = () => {
               {isSpeaking && (
                 <button
                   onClick={handleStop}
-                  className="p-2 rounded-full text-[#101820] hover:text-[#FF4D1C] hover:bg-white transition-colors"
+                  className="p-2 rounded-full text-[#18352F] hover:text-[#E85D2A] hover:bg-white/40 transition-colors"
                   title="Stop audio narration"
                 >
                   <Square className="w-3.5 h-3.5 fill-current" />
@@ -202,17 +199,17 @@ export const AboutSection: React.FC = () => {
 
         {/* Asymmetrical Composition with Strong Image Placement */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          {/* Left Column: Authentic Portrait with Powder Blue & Signal Orange Geometry (5 cols) */}
+          {/* Left Column: Authentic Portrait with Warm Sand & Burnt Orange Geometry (5 cols) */}
           <div className="lg:col-span-5 relative">
             <div className="relative w-full max-w-md mx-auto">
-              {/* Powder Blue Offset Backer Block */}
-              <div className="absolute -top-4 -left-4 w-full h-full rounded-3xl bg-[#DCEBFF] border-2 border-[#101820] shadow-md transform -rotate-1" />
+              {/* Warm Sand Offset Backer Block */}
+              <div className="absolute -top-4 -left-4 w-full h-full rounded-3xl bg-[#E9DFCF] border-2 border-[#18352F] shadow-md transform -rotate-1" />
 
-              {/* Signal Orange Corner Block */}
-              <div className="absolute -bottom-3.5 -right-3.5 w-32 h-32 rounded-2xl bg-[#FF4D1C] border-2 border-[#101820]" />
+              {/* Burnt Orange Corner Block */}
+              <div className="absolute -bottom-3.5 -right-3.5 w-32 h-32 rounded-2xl bg-[#E85D2A] border-2 border-[#18352F]" />
 
               {/* Main Portrait Container */}
-              <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-[#FFF9F0] shadow-2xl border-2 border-[#101820]">
+              <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-[#E9DFCF] shadow-2xl border-2 border-[#18352F]">
                 <Image
                   src="/harshad-photo.jpeg"
                   alt="Harshad Kewate — AI & ML Engineer"
@@ -222,12 +219,12 @@ export const AboutSection: React.FC = () => {
                 />
 
                 {/* Subtle gradient vignette */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#101820]/90 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#18352F]/90 via-transparent to-transparent" />
 
                 {/* Location Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-mono text-[11px] font-bold bg-[#FFF9F0] text-[#101820] border border-[#101820]/20 shadow-md">
-                    <span className="w-2 h-2 rounded-full bg-[#B8E000] animate-pulse" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-mono text-[11px] font-bold bg-[#E9DFCF] text-[#18352F] border border-[#18352F]/30 shadow-md">
+                    <span className="w-2 h-2 rounded-full bg-[#B8D83D] animate-pulse" />
                     BHOPAL, MP, INDIA
                   </span>
                 </div>
@@ -237,9 +234,9 @@ export const AboutSection: React.FC = () => {
                   <div className="font-display font-black text-2xl tracking-tight uppercase">
                     HARSHAD KEWATE
                   </div>
-                  <div className="font-mono text-xs text-[#B8E000] mt-0.5 flex items-center justify-between">
+                  <div className="font-mono text-xs text-[#B8D83D] mt-0.5 flex items-center justify-between font-bold">
                     <span>AIML UNDERGRADUATE // BIST</span>
-                    <span className="text-white/90 font-bold">7.11 CGPA</span>
+                    <span className="text-white/95">7.11 CGPA</span>
                   </div>
                 </div>
               </div>
@@ -249,15 +246,15 @@ export const AboutSection: React.FC = () => {
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="absolute -bottom-6 -left-4 sm:-left-6 bg-[#FFF9F0] p-4 rounded-2xl border-2 border-[#101820] shadow-xl max-w-[220px]"
+                className="absolute -bottom-6 -left-4 sm:-left-6 bg-[#E9DFCF] p-4 rounded-2xl border-2 border-[#18352F] shadow-xl max-w-[220px]"
               >
-                <div className="font-mono text-[10px] text-[#FF4D1C] uppercase tracking-wider font-bold">
+                <div className="font-mono text-[10px] text-[#E85D2A] uppercase tracking-wider font-bold">
                   ATMOSPHERIC MODELING
                 </div>
-                <div className="font-display font-black text-sm text-[#101820] mt-0.5">
+                <div className="font-display font-black text-sm text-[#18352F] mt-0.5">
                   13 YRS ERA5 REANALYSIS
                 </div>
-                <div className="font-mono text-[10px] text-[#315CFF] font-bold mt-1">
+                <div className="font-mono text-[10px] text-[#18352F]/80 font-bold mt-1">
                   0.25° RESOLUTION MESH
                 </div>
               </motion.div>
@@ -267,64 +264,64 @@ export const AboutSection: React.FC = () => {
           {/* Right Column: Large Typography & Rich Editorial Cards (7 cols) */}
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-5">
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#101820] leading-[0.96]">
+              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#18352F] leading-[0.96]">
                 BRIDGING THEORY, <br />
-                <span className="text-[#FF4D1C]">DATA</span> & SCALABLE CODE.
+                <span className="text-[#E85D2A]">DATA</span> & SCALABLE CODE.
               </h2>
 
-              <p className="text-base sm:text-lg text-[#101820]/90 leading-relaxed font-normal max-w-2xl">
-                I am an Artificial Intelligence & Machine Learning engineering undergraduate at{" "}
-                <strong className="text-[#101820] font-bold">
+              <p className="text-base sm:text-lg text-[#18352F]/90 leading-relaxed font-normal max-w-2xl">
+                Artificial Intelligence & Machine Learning engineering undergraduate at{" "}
+                <strong className="text-[#18352F] font-bold">
                   Bansal Institute Of Science & Technology, Bhopal
                 </strong>{" "}
-                (7.11 CGPA). My ambition is focused on transforming heavy environmental datasets and
+                (7.11 CGPA). Dedicated to transforming complex meteorological reanalysis and
                 multilingual speech pipelines into resilient, mathematically grounded software architectures.
               </p>
             </div>
 
-            {/* 3 Rich Editorial Cards (Powder Blue & Warm Cream) */}
+            {/* 3 Rich Editorial Cards (Warm Sand Surfaces) */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
               {/* Card 1 */}
-              <div className="p-5 rounded-2xl bg-[#DCEBFF] border-2 border-[#101820] shadow-sm space-y-2 hover:translate-y-[-2px] transition-transform group">
+              <div className="p-5 rounded-2xl bg-[#E9DFCF] border-2 border-[#18352F] shadow-sm space-y-2 hover:translate-y-[-2px] transition-transform group">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[11px] font-bold text-[#315CFF] uppercase tracking-wider">
+                  <span className="font-mono text-[11px] font-bold text-[#E85D2A] uppercase tracking-wider">
                     01 // ATMOSPHERIC AI
                   </span>
                 </div>
-                <div className="font-display font-bold text-lg text-[#101820] group-hover:text-[#315CFF] transition-colors">
+                <div className="font-display font-bold text-lg text-[#18352F] group-hover:text-[#E85D2A] transition-colors">
                   ERA5 Climate ML
                 </div>
-                <p className="font-sans text-xs text-[#101820]/80 leading-relaxed">
+                <p className="font-sans text-xs text-[#18352F]/80 leading-relaxed">
                   Trained HistGradientBoosting with CalibratedClassifierCV on 13 years of ECMWF ERA5 data (0.9928 ROC-AUC).
                 </p>
               </div>
 
               {/* Card 2 */}
-              <div className="p-5 rounded-2xl bg-[#FFF9F0] border-2 border-[#101820] shadow-sm space-y-2 hover:translate-y-[-2px] transition-transform group">
+              <div className="p-5 rounded-2xl bg-[#E9DFCF] border-2 border-[#18352F] shadow-sm space-y-2 hover:translate-y-[-2px] transition-transform group">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[11px] font-bold text-[#FF4D1C] uppercase tracking-wider">
+                  <span className="font-mono text-[11px] font-bold text-[#18352F] uppercase tracking-wider">
                     02 // AUDIO & GENAI
                   </span>
                 </div>
-                <div className="font-display font-bold text-lg text-[#101820] group-hover:text-[#FF4D1C] transition-colors">
+                <div className="font-display font-bold text-lg text-[#18352F] group-hover:text-[#E85D2A] transition-colors">
                   Speech Pipelines
                 </div>
-                <p className="font-sans text-xs text-[#101820]/80 leading-relaxed">
+                <p className="font-sans text-xs text-[#18352F]/80 leading-relaxed">
                   Engineered automated Whisper transcription, context-preserving translation, and voice synthesis pipelines.
                 </p>
               </div>
 
               {/* Card 3 */}
-              <div className="p-5 rounded-2xl bg-[#DCEBFF] border-2 border-[#101820] shadow-sm space-y-2 hover:translate-y-[-2px] transition-transform group">
+              <div className="p-5 rounded-2xl bg-[#E9DFCF] border-2 border-[#18352F] shadow-sm space-y-2 hover:translate-y-[-2px] transition-transform group">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[11px] font-bold text-[#101820] uppercase tracking-wider">
+                  <span className="font-mono text-[11px] font-bold text-[#E85D2A] uppercase tracking-wider">
                     03 // SYSTEMS LOGIC
                   </span>
                 </div>
-                <div className="font-display font-bold text-lg text-[#101820] group-hover:text-[#FF4D1C] transition-colors">
+                <div className="font-display font-bold text-lg text-[#18352F] group-hover:text-[#E85D2A] transition-colors">
                   C++ & Algorithms
                 </div>
-                <p className="font-sans text-xs text-[#101820]/80 leading-relaxed">
+                <p className="font-sans text-xs text-[#18352F]/80 leading-relaxed">
                   Implemented 10+ custom algorithmic modules emphasizing memory bounds and computational efficiency.
                 </p>
               </div>
@@ -337,7 +334,7 @@ export const AboutSection: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor="LINKEDIN"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#101820] text-[#FFF9F0] font-bold hover:bg-[#FF4D1C] transition-colors shadow-md"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#18352F] text-[#E9DFCF] font-bold hover:bg-[#E85D2A] hover:text-white transition-colors shadow-md"
               >
                 <span>VERIFY ON LINKEDIN</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -348,7 +345,7 @@ export const AboutSection: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor="GITHUB"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FFF9F0] border-2 border-[#101820] text-[#101820] font-bold hover:bg-[#101820] hover:text-[#FFF9F0] transition-colors shadow-md"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#E9DFCF] border-2 border-[#18352F] text-[#18352F] font-bold hover:bg-[#18352F] hover:text-[#E9DFCF] transition-colors shadow-md"
               >
                 <span>VIEW GITHUB REPOS</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -359,9 +356,9 @@ export const AboutSection: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor="RESUME"
-                className="inline-flex items-center gap-1.5 text-[#101820] hover:text-[#FF4D1C] font-bold transition-colors ml-1"
+                className="inline-flex items-center gap-1.5 text-[#18352F] hover:text-[#E85D2A] font-bold transition-colors ml-1"
               >
-                <FileText className="w-4 h-4 text-[#FF4D1C]" />
+                <FileText className="w-4 h-4 text-[#E85D2A]" />
                 <span>OFFICIAL RESUME (PDF)</span>
               </a>
             </div>

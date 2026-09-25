@@ -11,10 +11,10 @@ import {
   Linkedin,
   Github,
   ArrowUpRight,
-  Phone,
   Send,
   MessageSquare,
   Sparkles,
+  Loader2,
 } from "lucide-react";
 
 export const ContactSection: React.FC = () => {
@@ -24,6 +24,7 @@ export const ContactSection: React.FC = () => {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formError, setFormError] = useState("");
 
@@ -43,7 +44,7 @@ export const ContactSection: React.FC = () => {
     if (formError) setFormError("");
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!formState.name.trim() || !formState.email.trim() || !formState.message.trim()) {
@@ -51,77 +52,87 @@ export const ContactSection: React.FC = () => {
       return;
     }
 
-    // Construct structured mailto link
-    const subject = `Portfolio Contact — ${formState.name.trim()}`;
-    const body = `Hi Harshad,
-
-${formState.message.trim()}
-
----
-Sender Name: ${formState.name.trim()}
-Sender Email: ${formState.email.trim()}`;
-
-    const mailtoUrl = `mailto:${contactInfo.email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-
-    setFormSubmitted(true);
+    setIsSubmitting(true);
     setFormError("");
 
-    // Trigger user's default email client
-    window.location.href = mailtoUrl;
+    try {
+      // Direct server-side API dispatch — does NOT open mailto: or third party mail clients
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+        }),
+      });
 
-    setTimeout(() => {
-      setFormSubmitted(false);
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to transmit message.");
+      }
+
+      setFormSubmitted(true);
       setFormState({ name: "", email: "", message: "" });
-    }, 6000);
+
+      // Automatically reset status message after 7 seconds
+      setTimeout(() => {
+        setFormSubmitted(false);
+      }, 7000);
+    } catch (err: any) {
+      setFormError(err.message || "An unexpected error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <section
       id="contact"
-      className="relative py-28 sm:py-36 px-5 sm:px-8 md:px-12 bg-[#FF4D1C] text-white overflow-hidden"
+      className="relative py-28 sm:py-36 px-5 sm:px-8 md:px-12 bg-[#18352F] text-[#F4EFE6] overflow-hidden"
     >
       {/* Editorial HK Watermark */}
-      <div className="absolute right-[-2%] bottom-[-5%] font-display text-[180px] sm:text-[280px] font-black text-black/5 select-none pointer-events-none leading-none">
+      <div className="absolute right-[-2%] bottom-[-5%] font-display text-[180px] sm:text-[280px] font-black text-black/10 select-none pointer-events-none leading-none">
         HK
       </div>
 
-      {/* Ambient background glow */}
-      <div className="absolute top-1/4 left-[-10%] w-[500px] h-[500px] rounded-full bg-chartreuse/10 blur-[150px] pointer-events-none" />
+      {/* Ambient Burnt Orange Glow */}
+      <div className="absolute top-1/4 left-[-10%] w-[500px] h-[500px] rounded-full bg-[#E85D2A]/10 blur-[150px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto z-10">
         {/* Section Identifier */}
-        <div className="flex items-center gap-3 mb-10 font-mono text-xs text-charcoal-900 font-bold uppercase tracking-widest">
-          <span className="px-2.5 py-1 rounded bg-black/15 text-white">06</span>
+        <div className="flex items-center gap-3 mb-10 font-mono text-xs text-[#E9DFCF] font-bold uppercase tracking-widest">
+          <span className="px-2.5 py-1 rounded bg-[#E85D2A] text-white">06</span>
           <span>// DIRECT TRANSMISSION & CONTACT</span>
+          <span className="w-2.5 h-2.5 rounded-full bg-[#B8D83D] animate-pulse" />
         </div>
 
         {/* Large Typography Callout */}
         <div className="mb-14 sm:mb-20 max-w-4xl">
-          <h2 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight leading-[0.88] text-white">
+          <h2 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight leading-[0.88] text-[#F4EFE6]">
             LET’S <br />
-            CONNECT.
+            <span className="text-[#E85D2A]">CONNECT.</span>
           </h2>
-          <p className="mt-6 text-lg sm:text-xl text-white/95 max-w-2xl font-normal leading-relaxed">
+          <p className="mt-6 text-lg sm:text-xl text-[#F4EFE6]/90 max-w-2xl font-normal leading-relaxed">
             Open for AI/ML engineering internships, research collaborations, and ambitious software builds.
-            Send a direct note below or reach out via email.
+            Send a direct message below.
           </p>
         </div>
 
-        {/* 2-Column Responsive Layout: Direct DM Form + Fast Channels */}
+        {/* 2-Column Responsive Layout: Direct Message Form + Fast Channels */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Column 1: Compact Direct Message Form (7 cols) */}
-          <div className="lg:col-span-7 bg-charcoal-900 rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl">
-            <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
+          {/* Column 1: Real In-Page Direct Transmission Form (7 cols) */}
+          <div className="lg:col-span-7 bg-[#E9DFCF] text-[#18352F] rounded-3xl p-6 sm:p-10 border-2 border-[#18352F] shadow-2xl">
+            <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#18352F]/15">
               <div className="flex items-center gap-2">
-                <MessageSquare className="w-4 h-4 text-chartreuse" />
-                <span className="font-mono text-xs text-chartreuse font-bold uppercase tracking-wider">
+                <MessageSquare className="w-4 h-4 text-[#E85D2A]" />
+                <span className="font-mono text-xs text-[#18352F] font-bold uppercase tracking-wider">
                   DIRECT TRANSMISSION FORM
                 </span>
               </div>
-              <span className="font-mono text-[11px] text-slate-400">
-                OPENS PRE-FILLED MAIL CLIENT
+              <span className="font-mono text-[11px] text-[#18352F]/70 font-semibold">
+                IN-PAGE DISPATCH
               </span>
             </div>
 
@@ -131,7 +142,7 @@ Sender Email: ${formState.email.trim()}`;
                 <div className="space-y-1.5">
                   <label
                     htmlFor="contact-name"
-                    className="block font-mono text-xs font-semibold text-slate-300 uppercase tracking-wider"
+                    className="block font-mono text-xs font-bold text-[#18352F] uppercase tracking-wider"
                   >
                     Your Name *
                   </label>
@@ -143,7 +154,7 @@ Sender Email: ${formState.email.trim()}`;
                     value={formState.name}
                     onChange={handleInputChange}
                     placeholder="e.g. Alex Sharma"
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.06] border border-white/15 text-white placeholder-slate-500 font-sans text-sm focus:outline-none focus:border-chartreuse focus:ring-1 focus:ring-chartreuse transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white border-2 border-[#18352F]/30 text-[#18352F] placeholder-[#18352F]/40 font-sans text-sm focus:outline-none focus:border-[#E85D2A] focus:ring-1 focus:ring-[#E85D2A] transition-colors"
                   />
                 </div>
 
@@ -151,7 +162,7 @@ Sender Email: ${formState.email.trim()}`;
                 <div className="space-y-1.5">
                   <label
                     htmlFor="contact-email"
-                    className="block font-mono text-xs font-semibold text-slate-300 uppercase tracking-wider"
+                    className="block font-mono text-xs font-bold text-[#18352F] uppercase tracking-wider"
                   >
                     Your Email *
                   </label>
@@ -163,7 +174,7 @@ Sender Email: ${formState.email.trim()}`;
                     value={formState.email}
                     onChange={handleInputChange}
                     placeholder="alex@domain.com"
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.06] border border-white/15 text-white placeholder-slate-500 font-sans text-sm focus:outline-none focus:border-chartreuse focus:ring-1 focus:ring-chartreuse transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white border-2 border-[#18352F]/30 text-[#18352F] placeholder-[#18352F]/40 font-sans text-sm focus:outline-none focus:border-[#E85D2A] focus:ring-1 focus:ring-[#E85D2A] transition-colors"
                   />
                 </div>
               </div>
@@ -172,7 +183,7 @@ Sender Email: ${formState.email.trim()}`;
               <div className="space-y-1.5">
                 <label
                   htmlFor="contact-message"
-                  className="block font-mono text-xs font-semibold text-slate-300 uppercase tracking-wider"
+                  className="block font-mono text-xs font-bold text-[#18352F] uppercase tracking-wider"
                 >
                   Message *
                 </label>
@@ -184,67 +195,67 @@ Sender Email: ${formState.email.trim()}`;
                   value={formState.message}
                   onChange={handleInputChange}
                   placeholder="Share project details, opportunities, or inquiries..."
-                  className="w-full px-4 py-3 rounded-xl bg-white/[0.06] border border-white/15 text-white placeholder-slate-500 font-sans text-sm focus:outline-none focus:border-chartreuse focus:ring-1 focus:ring-chartreuse transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-white border-2 border-[#18352F]/30 text-[#18352F] placeholder-[#18352F]/40 font-sans text-sm focus:outline-none focus:border-[#E85D2A] focus:ring-1 focus:ring-[#E85D2A] transition-colors resize-none"
                 />
               </div>
 
               {/* Error Message */}
               {formError && (
-                <div className="font-mono text-xs text-rose-400 bg-rose-950/40 border border-rose-800/50 px-3 py-2 rounded-lg">
+                <div className="font-mono text-xs text-rose-800 bg-rose-100 border border-rose-300 px-3.5 py-2.5 rounded-xl font-bold">
                   {formError}
                 </div>
               )}
 
-              {/* Success Notification */}
+              {/* Success Notification — Stays on page */}
               {formSubmitted && (
-                <div className="p-3.5 rounded-xl bg-chartreuse/15 border border-chartreuse/40 text-chartreuse font-mono text-xs flex items-center gap-2">
-                  <Check className="w-4 h-4 shrink-0" />
-                  <span>
-                    Email client launched! If it didn't open automatically, send directly to{" "}
-                    <strong>{contactInfo.email}</strong>.
+                <div className="p-4 rounded-xl bg-[#DCE5D5] border-2 border-[#18352F] text-[#18352F] font-mono text-xs flex items-center gap-2.5 shadow-sm">
+                  <Check className="w-4 h-4 text-[#18352F] shrink-0" />
+                  <span className="font-bold">
+                    Message sent successfully! Harshad has received your transmission and will follow up shortly.
                   </span>
                 </div>
               )}
 
-              {/* Submit Button & Direct Fast Mailto Alternative */}
-              <div className="flex flex-wrap items-center gap-3 pt-2">
+              {/* Submit Button */}
+              <div className="pt-2">
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   data-cursor="TRANSMIT"
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-mono text-xs sm:text-sm font-bold bg-vividOrange text-white hover:bg-vividOrange-hover transition-all shadow-lg hover:scale-102"
+                  className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full font-mono text-xs sm:text-sm font-bold bg-[#E85D2A] text-white hover:bg-[#18352F] transition-all shadow-lg hover:scale-102 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-4 h-4" />
-                  <span>SEND MESSAGE ↗</span>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>TRANSMITTING...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      <span>SEND MESSAGE ↗</span>
+                    </>
+                  )}
                 </button>
-
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  data-cursor="EMAIL"
-                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full font-mono text-xs font-bold bg-white/10 text-white hover:bg-white/20 transition-colors"
-                >
-                  <Mail className="w-4 h-4" />
-                  <span>DIRECT EMAIL ME ↗</span>
-                </a>
               </div>
             </form>
           </div>
 
-          {/* Column 2: Direct Channels & Verified Badges (5 cols) */}
+          {/* Column 2: Fast Channels & Direct Info (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
             {/* Primary Email Card */}
-            <div className="bg-charcoal-900 rounded-3xl p-6 sm:p-7 border border-white/10 shadow-xl space-y-4">
-              <span className="font-mono text-xs text-chartreuse font-bold uppercase tracking-wider block">
+            <div className="bg-[#E9DFCF] text-[#18352F] rounded-3xl p-6 sm:p-7 border-2 border-[#18352F] shadow-xl space-y-4">
+              <span className="font-mono text-xs text-[#E85D2A] font-bold uppercase tracking-wider block">
                 // VERIFIED PRIMARY INBOX
               </span>
 
               <div>
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="font-display font-black text-xl sm:text-2xl text-white hover:text-vividOrange transition-colors break-all block"
+                  className="font-display font-black text-xl sm:text-2xl text-[#18352F] hover:text-[#E85D2A] transition-colors break-all block"
                 >
                   {contactInfo.email}
                 </a>
-                <span className="font-mono text-xs text-slate-400 mt-1 block">
+                <span className="font-mono text-xs text-[#18352F]/70 mt-1 block font-semibold">
                   PHONE: {contactInfo.phone} • BHOPAL, MP, INDIA
                 </span>
               </div>
@@ -252,12 +263,12 @@ Sender Email: ${formState.email.trim()}`;
               <div className="flex items-center gap-3 pt-1">
                 <button
                   onClick={handleCopyEmail}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xs font-bold bg-white/10 text-white hover:bg-white/20 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xs font-bold bg-[#18352F] text-[#E9DFCF] hover:bg-[#E85D2A] hover:text-white transition-colors"
                 >
                   {copied ? (
                     <>
-                      <Check className="w-3.5 h-3.5 text-chartreuse" />
-                      <span className="text-chartreuse font-bold">COPIED!</span>
+                      <Check className="w-3.5 h-3.5 text-[#B8D83D]" />
+                      <span className="text-[#B8D83D]">COPIED TO CLIPBOARD!</span>
                     </>
                   ) : (
                     <>
@@ -270,12 +281,12 @@ Sender Email: ${formState.email.trim()}`;
             </div>
 
             {/* Official Resume Download Card */}
-            <div className="bg-charcoal-900 rounded-2xl p-5 border border-white/10 shadow-xl flex items-center justify-between gap-4">
+            <div className="bg-[#E9DFCF] text-[#18352F] rounded-2xl p-5 border-2 border-[#18352F] shadow-xl flex items-center justify-between gap-4">
               <div>
-                <div className="font-display font-bold text-sm text-white">
+                <div className="font-display font-bold text-sm text-[#18352F]">
                   OFFICIAL RESUME
                 </div>
-                <div className="font-mono text-[11px] text-slate-400">
+                <div className="font-mono text-[11px] text-[#18352F]/70 font-semibold">
                   PDF FORMAT // 1-PAGE SUMMARY
                 </div>
               </div>
@@ -284,7 +295,7 @@ Sender Email: ${formState.email.trim()}`;
                 href={contactInfo.resumePath}
                 download="Harshad_Kewate_Resume.pdf"
                 data-cursor="RESUME"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xs font-bold bg-chartreuse text-charcoal-900 hover:bg-chartreuse-hover transition-colors shadow-md shrink-0"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xs font-bold bg-[#18352F] text-[#E9DFCF] hover:bg-[#E85D2A] hover:text-white transition-colors shadow-md shrink-0"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>DOWNLOAD PDF</span>
@@ -297,22 +308,22 @@ Sender Email: ${formState.email.trim()}`;
               target="_blank"
               rel="noopener noreferrer"
               data-cursor="LINKEDIN"
-              className="group p-5 rounded-2xl bg-charcoal-900 border border-white/10 hover:border-electricBlue/50 transition-all flex items-center justify-between shadow-xl"
+              className="group p-5 rounded-2xl bg-[#E9DFCF] border-2 border-[#18352F] hover:border-[#E85D2A] transition-all flex items-center justify-between shadow-xl text-[#18352F]"
             >
               <div className="flex items-center gap-3.5">
-                <div className="w-11 h-11 rounded-xl bg-electricBlue/20 border border-electricBlue/40 flex items-center justify-center text-electricBlue">
+                <div className="w-11 h-11 rounded-xl bg-[#18352F] flex items-center justify-center text-white">
                   <Linkedin className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-mono text-[10px] text-slate-400 uppercase">
+                  <div className="font-mono text-[10px] text-[#18352F]/70 uppercase font-semibold">
                     PROFESSIONAL NETWORK
                   </div>
-                  <div className="font-display font-bold text-base text-white group-hover:text-chartreuse transition-colors">
+                  <div className="font-display font-bold text-base text-[#18352F] group-hover:text-[#E85D2A] transition-colors">
                     LinkedIn Profile
                   </div>
                 </div>
               </div>
-              <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-white transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+              <ArrowUpRight className="w-4 h-4 text-[#18352F] group-hover:text-[#E85D2A] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
 
             {/* GitHub Direct Card */}
@@ -321,22 +332,22 @@ Sender Email: ${formState.email.trim()}`;
               target="_blank"
               rel="noopener noreferrer"
               data-cursor="GITHUB"
-              className="group p-5 rounded-2xl bg-charcoal-900 border border-white/10 hover:border-white/30 transition-all flex items-center justify-between shadow-xl"
+              className="group p-5 rounded-2xl bg-[#E9DFCF] border-2 border-[#18352F] hover:border-[#E85D2A] transition-all flex items-center justify-between shadow-xl text-[#18352F]"
             >
               <div className="flex items-center gap-3.5">
-                <div className="w-11 h-11 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white">
+                <div className="w-11 h-11 rounded-xl bg-[#18352F] flex items-center justify-center text-white">
                   <Github className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-mono text-[10px] text-slate-400 uppercase">
+                  <div className="font-mono text-[10px] text-[#18352F]/70 uppercase font-semibold">
                     CODE REPOSITORIES
                   </div>
-                  <div className="font-display font-bold text-base text-white group-hover:text-chartreuse transition-colors">
+                  <div className="font-display font-bold text-base text-[#18352F] group-hover:text-[#E85D2A] transition-colors">
                     GitHub / @Harshad-kewate
                   </div>
                 </div>
               </div>
-              <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-white transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+              <ArrowUpRight className="w-4 h-4 text-[#18352F] group-hover:text-[#E85D2A] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
           </div>
         </div>

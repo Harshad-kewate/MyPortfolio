@@ -16,28 +16,29 @@ export const ProjectsSection: React.FC = () => {
   const algo = projects.find((p) => p.id === "core-cpp-algorithms");
 
   return (
-    <section id="work" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-[#FFF9F0] text-[#101820] overflow-hidden">
+    <section id="work" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-[#FAF6F0] text-[#101820] overflow-hidden">
       {/* Editorial Watermark */}
       <div className="absolute top-10 right-4 font-mono text-[160px] font-black text-[#101820]/[0.035] select-none pointer-events-none leading-none">
-        01
+        02
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Identifier */}
         <div className="flex items-center gap-3 mb-8 font-mono text-xs">
-          <span className="px-2.5 py-1 rounded bg-[#101820] text-white font-bold">
-            01
+          <span className="px-2.5 py-1 rounded bg-[#E85D2A] text-white font-bold tracking-wider">
+            02
           </span>
-          <span className="uppercase tracking-widest text-[#101820]/70 font-semibold">
+          <span className="uppercase tracking-widest text-[#101820] font-bold">
             // SELECTED WORK & ARCHITECTURE
           </span>
+          <span className="w-2 h-2 rounded-full bg-[#18352F]" />
         </div>
 
         {/* Section Heading & Short Description */}
         <div className="mb-14 sm:mb-20 max-w-3xl">
-          <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-charcoal-900 leading-[0.92]">
+          <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#101820] leading-[0.92]">
             SELECTED <br />
-            <span className="text-vividOrange">SYSTEMS.</span>
+            <span className="text-[#E85D2A]">SYSTEMS.</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-charcoal-700 leading-relaxed font-normal">
             A curated collection of machine learning architectures, audio intelligence platforms, and full-stack software built with mathematical rigor.

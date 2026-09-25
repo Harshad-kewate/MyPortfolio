@@ -15,14 +15,14 @@ const TICKER_ITEMS = [
 
 export const MarqueeTicker: React.FC = () => {
   return (
-    <div className="relative w-full overflow-hidden bg-chartreuse text-charcoal-900 py-3 sm:py-3.5 border-y-2 border-charcoal-900 select-none z-20">
+    <div className="relative w-full overflow-hidden bg-[#B8D83D] text-[#18352F] py-3 sm:py-3.5 border-y-2 border-[#18352F] select-none z-20">
       <div className="animate-marquee whitespace-nowrap flex items-center gap-8">
         {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, index) => (
           <div key={index} className="flex items-center gap-8">
             <span className="font-display font-black text-sm sm:text-base tracking-wider uppercase">
               {item}
             </span>
-            <span className="inline-block w-2.5 h-2.5 bg-charcoal-900 transform rotate-45" />
+            <span className="inline-block w-2.5 h-2.5 bg-[#18352F] transform rotate-45" />
           </div>
         ))}
       </div>
