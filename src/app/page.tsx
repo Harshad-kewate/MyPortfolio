@@ -19,7 +19,7 @@ export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   return (
-    <main className="relative min-h-screen bg-[#F4EFE6] text-[#18352F] selection:bg-[#E85D2A] selection:text-white">
+    <main className="relative min-h-screen bg-[#F4EFE6] text-[#111111] selection:bg-[#FFD928] selection:text-[#111111]">
       {/* Brand Cinematic Video Preloader */}
       <Preloader onComplete={() => setLoadingComplete(true)} />
 
@@ -32,7 +32,7 @@ export default function Home() {
       {/* HERO SECTION (Warm Cream / Deep Ink) */}
       <HeroSection />
 
-      {/* Ticker Ribbon: High-voltage acid lime ribbon */}
+      {/* Ticker Ribbon: High-voltage yellow ribbon */}
       <MarqueeTicker />
 
       {/* Global Torn-Paper Seam 1: Hero -> 01 About */}
@@ -40,8 +40,8 @@ export default function Home() {
         variant={1}
         fromColor="#F4EFE6"
         toColor="#DCE8F2"
-        accentColor="#E85D2A"
-        accentSecondary="rgba(24, 53, 47, 0.2)"
+        accentColor="#E52420"
+        accentSecondary="#FFD928"
         height={84}
       />
 
@@ -53,64 +53,64 @@ export default function Home() {
         variant={2}
         fromColor="#DCE8F2"
         toColor="#FAF6F0"
-        accentColor="#B8D83D"
-        accentSecondary="#E85D2A"
+        accentColor="#FFD928"
+        accentSecondary="#E52420"
         height={84}
       />
 
-      {/* 02 // PROJECTS SECTION (Warm Ivory #FAF6F0 + Signal/Burnt Orange #E85D2A) */}
+      {/* 02 // PROJECTS SECTION (Warm Ivory #FAF6F0 + Signal Orange) */}
       <ProjectsSection />
 
-      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Tech Stack */}
+      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Hot Red) */}
       <FracturedDivider
         variant={3}
         fromColor="#FAF6F0"
-        toColor="#DCE5D5"
-        accentColor="#315CFF"
-        accentSecondary="#E85D2A"
-        height={84}
+        toColor="#E52420"
+        accentColor="#FFD928"
+        accentSecondary="#111111"
+        height={88}
       />
 
-      {/* 03 // TECH STACK (Compact Constellation on Soft Sage #DCE5D5 + Deep Forest) */}
+      {/* 03 // TECHNOLOGY SECTION (HOT RED #E52420 + Bright Yellow Boxes + Black) */}
       <SkillsSection />
 
-      {/* Global Torn-Paper Seam 4: 03 Tech Stack -> 04 Certifications */}
+      {/* Global Torn-Paper Seam 4: 03 Technology -> 04 Certifications (Warm Neutral) */}
       <FracturedDivider
         variant={4}
-        fromColor="#DCE5D5"
-        toColor="#F5EBE1"
-        accentColor="#E85D2A"
-        accentSecondary="rgba(24, 53, 47, 0.25)"
-        height={84}
+        fromColor="#E52420"
+        toColor="#FFF4D6"
+        accentColor="#FFD928"
+        accentSecondary="#111111"
+        height={88}
       />
 
-      {/* 04 // CERTIFICATIONS (Creative Minimal Slips on Muted Peach #F5EBE1) */}
+      {/* 04 // CERTIFICATIONS SECTION (Horizontal Slider on Warm Neutral #FFF4D6) */}
       <CertificationsSection />
 
-      {/* Global Torn-Paper Seam 5: 04 Certifications -> 05 Education */}
+      {/* Global Torn-Paper Seam 5: 04 Certifications -> 05 Academic Journey (Hot Red) */}
       <FracturedDivider
         variant={5}
-        fromColor="#F5EBE1"
-        toColor="#D9E2EC"
-        accentColor="#18352F"
-        accentSecondary="#E85D2A"
-        height={88}
+        fromColor="#FFF4D6"
+        toColor="#E52420"
+        accentColor="#FFD928"
+        accentSecondary="#111111"
+        height={92}
       />
 
-      {/* 05 // EDUCATION SECTION (Soft Blue-Grey #D9E2EC + Navy) */}
+      {/* 05 // ACADEMIC JOURNEY (HOT RED #E52420 + Yellow Markers + Black Milestones) */}
       <EducationSection />
 
-      {/* Global Torn-Paper Seam 6: 05 Education -> 06 Contact */}
+      {/* Global Torn-Paper Seam 6: 05 Academic Journey -> 06 Contact */}
       <FracturedDivider
         variant={6}
-        fromColor="#D9E2EC"
+        fromColor="#E52420"
         toColor="#18352F"
-        accentColor="#B8D83D"
-        accentSecondary="#E85D2A"
+        accentColor="#FFD928"
+        accentSecondary="#111111"
         height={88}
       />
 
-      {/* 06 // CONTACT SECTION (Deep Forest #18352F + Warm Cream with Direct Message Form) */}
+      {/* 06 // CONTACT SECTION (Deep Forest #18352F + Warm Cream with Direct Send API) */}
       <ContactSection />
 
       {/* Global Torn-Paper Seam 7: 06 Contact -> Footer */}
@@ -118,8 +118,8 @@ export default function Home() {
         variant={7}
         fromColor="#18352F"
         toColor="#101820"
-        accentColor="#E85D2A"
-        accentSecondary="#B8D83D"
+        accentColor="#E52420"
+        accentSecondary="#FFD928"
         height={84}
       />
 
