@@ -61,51 +61,51 @@ export default function Home() {
       {/* 02 // PROJECTS SECTION (Warm Editorial Cream #FFF3E6 + Deep Navy #162A44 + Soft Coral #F36F68) */}
       <ProjectsSection />
 
-      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Soft Hot Coral) */}
+      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Soft Sage) */}
       <FracturedDivider
         variant={3}
         fromColor="#FFF3E6"
-        toColor="#F36F68"
-        accentColor="#FFD84D"
-        accentSecondary="#1FA6A0"
+        toColor="#E7F0EA"
+        accentColor="#E85D2A"
+        accentSecondary="#FFD84D"
         height={88}
       />
 
-      {/* 03 // TECHNOLOGY SECTION (Soft Hot Coral #F36F68 + Warm Yellow #FFD84D + Deep Navy #162A44) */}
+      {/* 03 // TECHNOLOGY SECTION (Soft Sage #E7F0EA + Warm Cream #F5EBDD + Deep Navy #162A44) */}
       <SkillsSection />
 
       {/* Global Torn-Paper Seam 4: 03 Technology -> 04 Certifications (Warm Neutral) */}
       <FracturedDivider
         variant={4}
-        fromColor="#F36F68"
+        fromColor="#E7F0EA"
         toColor="#FFF4D6"
         accentColor="#FFD84D"
-        accentSecondary="#1FA6A0"
+        accentSecondary="#E85D2A"
         height={88}
       />
 
       {/* 04 // CERTIFICATIONS SECTION (Horizontal Slider on Warm Neutral #FFF4D6) */}
       <CertificationsSection />
 
-      {/* Global Torn-Paper Seam 5: 04 Certifications -> 05 Academic Journey (Soft Peach Sand) */}
+      {/* Global Torn-Paper Seam 5: 04 Certifications -> 05 Academic Journey (Warm Cream) */}
       <FracturedDivider
         variant={5}
         fromColor="#FFF4D6"
-        toColor="#F6D8C8"
-        accentColor="#FFD84D"
-        accentSecondary="#F36F68"
+        toColor="#F5EBDD"
+        accentColor="#E85D2A"
+        accentSecondary="#FFD84D"
         height={92}
       />
 
-      {/* 05 // ACADEMIC JOURNEY (Soft Peach Sand #F6D8C8 + Deep Navy #162A44 + Signal Yellow #FFD84D) */}
+      {/* 05 // ACADEMIC JOURNEY (Warm Cream #F5EBDD + Soft Sage #E7F0EA + Deep Navy #162A44) */}
       <EducationSection />
 
       {/* Global Torn-Paper Seam 6: 05 Academic Journey -> 06 Contact */}
       <FracturedDivider
         variant={6}
-        fromColor="#F6D8C8"
+        fromColor="#F5EBDD"
         toColor="#18352F"
-        accentColor="#F36F68"
+        accentColor="#E85D2A"
         accentSecondary="#FFD84D"
         height={88}
       />

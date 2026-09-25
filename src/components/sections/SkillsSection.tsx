@@ -286,11 +286,57 @@ export const SkillsSection: React.FC = () => {
   return (
     <section
       id="stack"
-      className="relative py-20 sm:py-24 px-5 sm:px-8 md:px-12 bg-[#F36F68] text-[#162A44] overflow-hidden"
+      className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-[#E7F0EA] text-[#162A44] overflow-hidden"
     >
+      {/* Editorial Fractured Geometric Borders at the Section Perimeter */}
+      {/* Top Fractured Paper Contour Line & Accent Flecks */}
+      <div className="absolute top-0 left-0 right-0 pointer-events-none select-none z-20 overflow-hidden">
+        <svg
+          viewBox="0 0 1440 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-8 block"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,16 L120,4 L280,24 L460,8 L640,28 L820,6 L1000,22 L1180,10 L1320,26 L1440,14"
+            stroke="#162A44"
+            strokeWidth="1.5"
+            strokeDasharray="8 6"
+            className="opacity-40"
+          />
+        </svg>
+
+        {/* Small Orange & Yellow Accent Fragments Floating Along Edge */}
+        <div className="absolute top-2 left-[12%] w-3 h-3 bg-[#E85D2A] rotate-45 border border-[#162A44] shadow-[1px_1px_0px_#162A44]" />
+        <div className="absolute top-3 left-[48%] w-2.5 h-2.5 bg-[#FFD84D] -rotate-12 border border-[#162A44]" />
+        <div className="absolute top-1 right-[18%] w-3.5 h-2 bg-[#315CFF] rotate-12 border border-[#162A44]" />
+      </div>
+
+      {/* Bottom Fractured Contour Line & Accent Fragments */}
+      <div className="absolute bottom-0 left-0 right-0 pointer-events-none select-none z-20 overflow-hidden">
+        <svg
+          viewBox="0 0 1440 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-8 block"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,14 L160,28 L340,10 L520,26 L700,8 L880,24 L1060,12 L1240,28 L1440,16"
+            stroke="#162A44"
+            strokeWidth="1.5"
+            strokeDasharray="8 6"
+            className="opacity-40"
+          />
+        </svg>
+        <div className="absolute bottom-2 left-[24%] w-2.5 h-2.5 bg-[#FFD84D] rotate-12 border border-[#162A44]" />
+        <div className="absolute bottom-3 right-[32%] w-3 h-3 bg-[#E85D2A] -rotate-45 border border-[#162A44] shadow-[1px_1px_0px_#162A44]" />
+      </div>
+
       {/* Background Graphic Watermark */}
-      <div className="absolute top-4 right-[-1%] font-display text-[120px] sm:text-[200px] font-black text-[#FF8B82]/35 select-none pointer-events-none leading-none tracking-tighter">
-        TECH
+      <div className="absolute top-6 right-[-1%] font-display text-[130px] sm:text-[220px] font-black text-[#162A44]/[0.035] select-none pointer-events-none leading-none tracking-tighter">
+        STACK
       </div>
 
       {/* Subtle Animated Connecting Neural / Circuit Lines (SVG) */}
@@ -326,78 +372,84 @@ export const SkillsSection: React.FC = () => {
               03
             </span>
             <span className="uppercase tracking-widest text-[#162A44] font-black">
-              // CORE COMPUTATIONAL STACK
+              // CORE COMPUTATIONAL ECOSYSTEM
             </span>
-            <span className="w-2.5 h-2.5 rounded-full bg-[#1FA6A0] animate-pulse" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#E85D2A] animate-pulse" />
           </div>
 
-          <span className="font-mono text-xs font-bold text-[#FFF3E6] hidden sm:inline">
+          <span className="font-mono text-xs font-bold text-[#162A44]/75 hidden sm:inline">
             CLICK ANY YELLOW LABEL TO INSPECT REAL USAGE
           </span>
         </div>
 
         {/* Section Heading */}
-        <div className="mb-10 sm:mb-14 max-w-3xl">
+        <div className="mb-12 sm:mb-16 max-w-3xl">
           <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#162A44] leading-[0.92]">
             TECHNOLOGY <br />
-            <span className="text-[#FFD84D] drop-shadow-[2px_2px_0px_#162A44]">
+            <span className="text-[#E85D2A] drop-shadow-[2px_2px_0px_#162A44]">
               ECOSYSTEM.
             </span>
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-[#162A44]/90 font-medium leading-relaxed max-w-xl">
-            A hot, kinetic cluster of mathematical libraries, atmospheric ML frameworks, and C++ systems.
-            Verified tools only.
+          <p className="mt-3 text-base sm:text-lg text-[#162A44]/85 font-medium leading-relaxed max-w-xl">
+            A verified cluster of mathematical libraries, atmospheric ML modeling frameworks, and low-level C++ systems.
+            Production validated tools only.
           </p>
         </div>
 
-        {/* COMPACT WARM SIGNAL YELLOW BOXES CLUSTER (Editorial tags with small logos) */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 p-4 sm:p-8 rounded-3xl bg-[#FF8B82]/35 border-2 border-[#162A44]/25 backdrop-blur-sm shadow-[4px_4px_0px_0px_rgba(22,42,68,0.15)]">
-          {TECHNOLOGIES.map((tech) => {
-            const isSelected = activeTech?.id === tech.id;
+        {/* COMPACT WARM YELLOW BOXES CLUSTER (Editorial surface on Warm Cream #F5EBDD) */}
+        <div className="relative rounded-3xl bg-[#F5EBDD] border-2 border-[#162A44] shadow-[8px_8px_0px_0px_#162A44] p-6 sm:p-10 overflow-hidden">
+          {/* Subtle Decorative Paper Corner Sliver */}
+          <div className="absolute top-0 right-0 w-16 h-16 bg-[#E85D2A]/10 -rotate-45 translate-x-8 -translate-y-8 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-12 h-12 bg-[#FFD84D]/20 rotate-12 -translate-x-6 translate-y-6 pointer-events-none" />
 
-            return (
-              <motion.div
-                key={tech.id}
-                style={{ rotate: tech.rotation }}
-                animate={
-                  prefersReduced
-                    ? undefined
-                    : {
-                        y: [-3, 3, -3],
-                        x: [-1.5, 1.5, -1.5],
-                      }
-                }
-                transition={{
-                  repeat: Infinity,
-                  duration: tech.duration,
-                  ease: "easeInOut",
-                }}
-                whileHover={{
-                  scale: 1.08,
-                  rotate: 0,
-                  y: -5,
-                  zIndex: 30,
-                }}
-                whileTap={{ scale: 0.96 }}
-                onClick={() => setActiveTech(isSelected ? null : tech)}
-                className="cursor-pointer select-none"
-              >
-                {/* Editorial Yellow Label Box with small clean logo */}
-                <div
-                  className={`flex items-center gap-2.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border-2 border-[#111111] font-sans font-bold text-xs sm:text-sm tracking-tight transition-all ${
-                    isSelected
-                      ? "bg-[#FFF3E6] text-[#111111] shadow-[5px_5px_0px_0px_#111111] ring-2 ring-[#1FA6A0]"
-                      : "bg-[#FFD84D] text-[#111111] shadow-[3px_3px_0px_0px_#111111] hover:shadow-[5px_5px_0px_0px_#111111]"
-                  }`}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4.5 relative z-10">
+            {TECHNOLOGIES.map((tech) => {
+              const isSelected = activeTech?.id === tech.id;
+
+              return (
+                <motion.div
+                  key={tech.id}
+                  style={{ rotate: tech.rotation }}
+                  animate={
+                    prefersReduced
+                      ? undefined
+                      : {
+                          y: [-3, 3, -3],
+                          x: [-1.5, 1.5, -1.5],
+                        }
+                  }
+                  transition={{
+                    repeat: Infinity,
+                    duration: tech.duration,
+                    ease: "easeInOut",
+                  }}
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: 0,
+                    y: -5,
+                    zIndex: 30,
+                  }}
+                  whileTap={{ scale: 0.96 }}
+                  onClick={() => setActiveTech(isSelected ? null : tech)}
+                  className="cursor-pointer select-none"
                 >
-                  <div className="shrink-0">{tech.svg}</div>
-                  <span className="whitespace-nowrap uppercase tracking-wider font-extrabold text-[#111111]">
-                    {tech.name}
-                  </span>
-                </div>
-              </motion.div>
-            );
-          })}
+                  {/* Editorial Warm Yellow Label Box with small clean logo */}
+                  <div
+                    className={`flex items-center gap-2.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border-2 border-[#162A44] font-sans font-bold text-xs sm:text-sm tracking-tight transition-all ${
+                      isSelected
+                        ? "bg-white text-[#111111] shadow-[5px_5px_0px_0px_#162A44] ring-2 ring-[#315CFF]"
+                        : "bg-[#FFD84D] text-[#111111] shadow-[3px_3px_0px_0px_#162A44] hover:shadow-[5px_5px_0px_0px_#162A44]"
+                    }`}
+                  >
+                    <div className="shrink-0">{tech.svg}</div>
+                    <span className="whitespace-nowrap uppercase tracking-wider font-extrabold text-[#111111]">
+                      {tech.name}
+                    </span>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Active Inspection Detail Card (Reveals on tap/click) */}
@@ -408,7 +460,7 @@ export const SkillsSection: React.FC = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.98 }}
               transition={{ duration: 0.2 }}
-              className="mt-6 p-5 sm:p-6 rounded-2xl bg-[#FFD84D] text-[#111111] border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] max-w-2xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+              className="mt-8 p-6 sm:p-7 rounded-2xl bg-[#F5EBDD] text-[#111111] border-2 border-[#162A44] shadow-[8px_8px_0px_0px_#162A44] max-w-2xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative"
             >
               <div className="space-y-1">
                 <div className="flex items-center gap-2 font-mono text-[10px] text-[#162A44]/80 font-bold uppercase tracking-wider">
@@ -423,8 +475,11 @@ export const SkillsSection: React.FC = () => {
                   <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#162A44] text-[#FFD84D]">
                     VERIFIED
                   </span>
-                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#1FA6A0] text-white">
+                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#E85D2A] text-white">
                     CORE
+                  </span>
+                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#315CFF] text-white">
+                    PROD
                   </span>
                 </div>
 
@@ -433,7 +488,7 @@ export const SkillsSection: React.FC = () => {
                 </p>
 
                 <div className="flex items-center gap-1.5 font-mono text-xs text-[#111111] font-bold pt-1">
-                  <CheckCircle2 className="w-4 h-4 text-[#111111] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#162A44] shrink-0" />
                   <span>Applied in: <u className="underline-offset-2">{activeTech.project}</u></span>
                 </div>
               </div>
