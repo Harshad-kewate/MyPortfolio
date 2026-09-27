@@ -2,7 +2,7 @@ import { Certification, ContactInfo, EducationItem, Project, SkillCategory } fro
 
 export const contactInfo: ContactInfo = {
   name: "Harshad Kewate",
-  role: "AI & ML Engineer",
+  role: "AI & ML Enthusiast",
   email: "kewateharshad@gmail.com",
   phone: "+91 8839928951",
   location: "Bhopal, Madhya Pradesh, India",

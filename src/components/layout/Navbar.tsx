@@ -31,9 +31,9 @@ export const Navbar: React.FC = () => {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-5 sm:px-8 md:px-12",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 sm:py-4 px-3.5 sm:px-8 md:px-12",
           isScrolled
-            ? "bg-[#F4EFE6]/95 backdrop-blur-md border-b border-[#18352F]/15 shadow-sm py-3"
+            ? "bg-[#F4EFE6]/95 backdrop-blur-md border-b border-[#18352F]/15 shadow-sm py-2.5 sm:py-3"
             : "bg-transparent"
         )}
       >
@@ -41,18 +41,18 @@ export const Navbar: React.FC = () => {
           {/* Logo / Monogram */}
           <a
             href="#"
-            className="flex items-center gap-3 group focus:outline-none"
+            className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none"
             aria-label="Harshad Kewate"
           >
-            <div className="w-8 h-8 rounded-lg bg-[#E85D2A] flex items-center justify-center font-display font-black text-white text-sm shadow-md group-hover:scale-105 transition-transform">
+            <div className="w-8 h-8 rounded-lg bg-[#E85D2A] flex items-center justify-center font-display font-black text-white text-sm shadow-md group-hover:scale-105 transition-transform shrink-0">
               HK
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-black text-sm tracking-tight text-[#18352F] group-hover:text-[#E85D2A] transition-colors">
+              <span className="font-display font-black text-xs sm:text-sm tracking-tight text-[#18352F] group-hover:text-[#E85D2A] transition-colors leading-tight">
                 HARSHAD KEWATE
               </span>
-              <span className="font-sans text-[11px] font-semibold text-[#18352F]/70 tracking-wide">
-                AI & ML ENGINEER
+              <span className="font-sans text-[9px] sm:text-[11px] font-semibold text-[#18352F]/70 tracking-wide uppercase leading-tight">
+                AI & ML ENTHUSIAST
               </span>
             </div>
           </a>
@@ -72,7 +72,7 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Right Action: Direct Email & Resume */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <a
               href="#contact"
               className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold bg-[#18352F] text-[#F4EFE6] hover:bg-[#E85D2A] transition-all duration-200 shadow-sm"
@@ -85,10 +85,10 @@ export const Navbar: React.FC = () => {
             <a
               href={contactInfo.resumePath}
               download="Harshad_Kewate_Resume.pdf"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold border-2 border-[#18352F]/30 text-[#18352F] hover:bg-[#18352F] hover:text-[#F4EFE6] transition-all duration-200"
+              className="hidden min-[360px]:inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-mono font-bold border-2 border-[#18352F]/30 text-[#18352F] hover:bg-[#18352F] hover:text-[#F4EFE6] transition-all duration-200"
               title="Download Resume"
             >
-              <Download className="w-3.5 h-3.5" />
+              <Download className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               <span>RESUME</span>
             </a>
 
@@ -112,7 +112,7 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-[#F4EFE6]/98 backdrop-blur-xl flex flex-col justify-between pt-24 pb-8 px-6 md:hidden text-[#18352F]"
+            className="fixed inset-0 z-40 bg-[#F4EFE6]/98 backdrop-blur-xl flex flex-col justify-between pt-24 pb-8 px-6 md:hidden text-[#18352F] overflow-y-auto"
           >
             <div className="space-y-4">
               <span className="font-mono text-xs text-[#18352F]/70 uppercase tracking-widest block mb-2 font-bold">

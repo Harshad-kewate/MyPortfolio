@@ -17,7 +17,7 @@ import {
 import { contactInfo } from "@/data/portfolioData";
 
 const BIO_SPEECH_TEXT =
-  "Harshad Kewate is an Artificial Intelligence and Machine Learning undergraduate at Bansal Institute of Science and Technology, Bhopal, graduating in 2026 with a 7.11 CGPA. Driven by building machine learning models that solve genuine environmental and educational challenges, he specializes in atmospheric modeling using 13 years of ECMWF ERA5 climate reanalysis, multilingual audio intelligence pipelines with Whisper, and memory-efficient C++ algorithmic systems.";
+  "Harshad Kewate is an Artificial Intelligence and Machine Learning undergraduate at Bansal Institute of Science and Technology, Bhopal, graduating in 2026 with a 7.11 CGPA. Driven by building machine learning models that solve genuine environmental and educational challenges, he specializes in atmospheric modeling using 13 years of ECMWF ERA5 climate reanalysis, multilingual audio intelligence pipelines with Whisper, and predictive machine learning pipelines with Scikit-Learn.";
 
 export const AboutSection: React.FC = () => {
   const [speechSupported, setSpeechSupported] = useState(false);
@@ -96,7 +96,7 @@ export const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative py-28 sm:py-36 px-5 sm:px-8 md:px-12 bg-[#DCE8F2] text-[#18352F] overflow-hidden"
+      className="relative py-28 sm:py-36 px-4 sm:px-8 md:px-12 bg-[#DCE8F2] text-[#18352F] overflow-hidden"
     >
       {/* Editorial Watermark */}
       <div className="absolute top-6 left-[-1%] font-display text-[140px] sm:text-[220px] font-black text-[#18352F]/[0.04] select-none pointer-events-none leading-none tracking-tighter">
@@ -212,7 +212,7 @@ export const AboutSection: React.FC = () => {
               <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-[#E9DFCF] shadow-2xl border-2 border-[#18352F]">
                 <Image
                   src="/harshad-photo.jpeg"
-                  alt="Harshad Kewate — AI & ML Engineer"
+                  alt="Harshad Kewate — AI & ML Enthusiast"
                   fill
                   priority
                   className="object-cover object-top filter contrast-[1.04] saturate-[1.02]"
@@ -246,7 +246,7 @@ export const AboutSection: React.FC = () => {
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="absolute -bottom-6 -left-4 sm:-left-6 bg-[#E9DFCF] p-4 rounded-2xl border-2 border-[#18352F] shadow-xl max-w-[220px]"
+                className="absolute -bottom-6 left-2 sm:-left-6 bg-[#E9DFCF] p-3.5 sm:p-4 rounded-2xl border-2 border-[#18352F] shadow-xl max-w-[200px] sm:max-w-[220px]"
               >
                 <div className="font-mono text-[10px] text-[#E85D2A] uppercase tracking-wider font-bold">
                   ATMOSPHERIC MODELING
@@ -264,7 +264,7 @@ export const AboutSection: React.FC = () => {
           {/* Right Column: Large Typography & Rich Editorial Cards (7 cols) */}
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-5">
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#18352F] leading-[0.96]">
+              <h2 className="font-display text-3xl min-[360px]:text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#18352F] leading-[0.96] break-words">
                 BRIDGING THEORY, <br />
                 <span className="text-[#E85D2A]">DATA</span> & SCALABLE CODE.
               </h2>
@@ -315,14 +315,14 @@ export const AboutSection: React.FC = () => {
               <div className="p-5 rounded-2xl bg-[#E9DFCF] border-2 border-[#18352F] shadow-sm space-y-2 hover:translate-y-[-2px] transition-transform group">
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[11px] font-bold text-[#E85D2A] uppercase tracking-wider">
-                    03 // SYSTEMS LOGIC
+                    03 // AUDIO & RECOMMENDATION
                   </span>
                 </div>
                 <div className="font-display font-bold text-lg text-[#18352F] group-hover:text-[#E85D2A] transition-colors">
-                  C++ & Algorithms
+                  KNN Music Recommendation
                 </div>
                 <p className="font-sans text-xs text-[#18352F]/80 leading-relaxed">
-                  Implemented 10+ custom algorithmic modules emphasizing memory bounds and computational efficiency.
+                  Engineered KNN audio classification modeling musical valence, energy, and acoustic features for mood prediction.
                 </p>
               </div>
             </div>

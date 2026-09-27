@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
             <span>HARSHAD KEWATE</span>
           </div>
           <span className="hidden sm:inline text-slate-600">|</span>
-          <span className="text-slate-400">AI & ML ENGINEER</span>
+          <span className="text-slate-400">AI & ML ENTHUSIAST</span>
           <span className="hidden sm:inline text-slate-600">|</span>
           <span className="text-slate-500">BHOPAL, MADHYA PRADESH, INDIA</span>
         </div>

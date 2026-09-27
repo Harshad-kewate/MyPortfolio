@@ -24,18 +24,18 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://harshad-kewate.github.io"),
-  title: "Harshad Kewate — AI & ML Engineer | Portfolio",
+  title: "Harshad Kewate — AI & ML Enthusiast | Portfolio",
   description:
     "Official portfolio of Harshad Kewate. AIML undergraduate at Bansal Institute of Science & Technology specializing in Machine Learning systems, atmospheric intelligence, and modern full-stack web applications.",
   keywords: [
     "Harshad Kewate",
-    "AI & ML Engineer",
+    "AI & ML Enthusiast",
     "Machine Learning",
     "Atmospheric ML",
     "Monsoon Mitra",
     "PolyLingo AI",
     "KrishiCart",
-    "Bhopal AIML Engineer",
+    "Bhopal AIML Enthusiast",
     "TypeScript",
     "Next.js",
     "Python",
@@ -48,24 +48,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://harshad-kewate.github.io/Portfoliyo",
-    title: "Harshad Kewate — AI & ML Engineer",
+    title: "Harshad Kewate — AI & ML Enthusiast",
     description:
-      "AI & ML Engineering undergraduate specializing in Machine Learning, atmospheric intelligence modeling, and scalable full-stack applications.",
+      "AI & Machine Learning undergraduate specializing in Machine Learning, atmospheric intelligence modeling, and scalable full-stack applications.",
     siteName: "Harshad Kewate Portfolio",
     images: [
       {
         url: "/harshad-photo.jpeg",
         width: 1200,
         height: 1600,
-        alt: "Harshad Kewate - AI & ML Engineer",
+        alt: "Harshad Kewate - AI & ML Enthusiast",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Harshad Kewate — AI & ML Engineer",
+    title: "Harshad Kewate — AI & ML Enthusiast",
     description:
-      "AI & ML Engineering undergraduate specializing in Machine Learning, atmospheric intelligence, and full-stack systems.",
+      "AI & Machine Learning undergraduate specializing in Machine Learning, atmospheric intelligence, and full-stack systems.",
     images: ["/harshad-photo.jpeg"],
   },
   robots: {

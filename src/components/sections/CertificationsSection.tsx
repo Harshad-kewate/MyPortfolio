@@ -59,7 +59,7 @@ export const CertificationsSection: React.FC = () => {
   return (
     <section
       id="certifications"
-      className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-[#FFF4D6] text-[#111111] overflow-hidden"
+      className="relative py-24 sm:py-32 px-4 sm:px-8 md:px-12 bg-[#FFF4D6] text-[#111111] overflow-hidden"
     >
       {/* Background Graphic Watermark */}
       <div className="absolute top-6 left-[-1%] font-display text-[120px] sm:text-[200px] font-black text-[#111111]/[0.035] select-none pointer-events-none leading-none tracking-tighter">
@@ -105,7 +105,7 @@ export const CertificationsSection: React.FC = () => {
 
         {/* Section Heading */}
         <div className="mb-10 sm:mb-14 max-w-3xl">
-          <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#111111] leading-[0.92]">
+          <h2 className="font-display text-3xl min-[360px]:text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#111111] leading-[0.92] break-words">
             VERIFIED <br />
             <span className="text-[#E52420] underline decoration-[#FFD928] decoration-4">
               CERTIFICATES.
@@ -129,7 +129,7 @@ export const CertificationsSection: React.FC = () => {
             return (
               <div
                 key={cert.id}
-                className="w-[300px] sm:w-[350px] md:w-[380px] shrink-0 snap-start select-none"
+                className="w-[260px] min-[360px]:w-[290px] sm:w-[350px] md:w-[380px] shrink-0 snap-start select-none"
               >
                 {/* Clickable Card Anchor */}
                 <a

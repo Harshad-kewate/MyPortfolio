@@ -30,7 +30,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-[9990] flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-y-auto">
+      <div className="fixed inset-0 z-[9990] flex items-center justify-center p-3 sm:p-6 md:p-10 overflow-y-auto">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -46,20 +46,20 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-4xl bg-charcoal-900 border border-white/20 rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 z-10 text-cream-100 max-h-[90vh] overflow-y-auto"
+          className="relative w-full max-w-4xl bg-charcoal-900 border border-white/20 rounded-2xl shadow-2xl p-4 sm:p-8 md:p-10 z-10 text-cream-100 max-h-[90vh] overflow-y-auto"
         >
           {/* Header */}
-          <div className="flex items-start justify-between gap-4 pb-6 border-b border-white/10">
+          <div className="flex items-start justify-between gap-3 pb-4 sm:pb-6 border-b border-white/10">
             <div>
-              <div className="flex items-center gap-2.5 font-mono text-xs text-chartreuse mb-2">
+              <div className="flex items-center gap-2 font-mono text-xs text-chartreuse mb-1.5">
                 <span>// {project.category}</span>
                 <span>•</span>
                 <span>{project.period}</span>
               </div>
-              <h2 className="font-display text-2xl sm:text-4xl font-bold uppercase tracking-tight text-white">
+              <h2 className="font-display text-xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight text-white break-words">
                 {project.title}
               </h2>
-              <p className="mt-1 font-mono text-sm text-slate-300">{project.tagline}</p>
+              <p className="mt-1 font-mono text-xs sm:text-sm text-slate-300">{project.tagline}</p>
             </div>
 
             <button

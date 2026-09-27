@@ -130,14 +130,14 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
                 PORTFOLIO 2026 // AI & ML
               </div>
 
-              <h1 className="font-display text-5xl sm:text-7xl md:text-8xl font-black uppercase tracking-tight text-white leading-none drop-shadow-2xl">
+              <h1 className="font-display text-4xl sm:text-7xl md:text-8xl font-black uppercase tracking-tight text-white leading-none drop-shadow-2xl">
                 HARSHAD KEWATE
               </h1>
 
-              <div className="mt-3 flex items-center justify-center gap-3 font-mono text-xs sm:text-sm text-slate-300">
-                <span className="text-vividOrange font-bold">AI & ML ENGINEER</span>
-                <span className="text-white/40">•</span>
-                <span>CREATIVE SYSTEMS</span>
+              <div className="mt-3 flex flex-wrap items-center justify-center gap-2 sm:gap-3 font-mono text-xs sm:text-sm text-slate-300">
+                <span className="text-vividOrange font-bold uppercase">AI & ML ENTHUSIAST</span>
+                <span className="text-white/40 hidden sm:inline">•</span>
+                <span className="hidden sm:inline">CREATIVE SYSTEMS</span>
                 <span className="text-white/40">•</span>
                 <span>BHOPAL</span>
               </div>

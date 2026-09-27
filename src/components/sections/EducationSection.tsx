@@ -20,7 +20,7 @@ export const EducationSection: React.FC = () => {
     <section
       id="education"
       ref={containerRef}
-      className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-[#F5EBDD] text-[#162A44] overflow-hidden"
+      className="relative py-24 sm:py-32 px-4 sm:px-8 md:px-12 bg-[#F5EBDD] text-[#162A44] overflow-hidden"
     >
       {/* Editorial Fractured Geometric Borders at the Section Perimeter */}
       {/* Top Fractured Paper Contour */}
@@ -84,7 +84,7 @@ export const EducationSection: React.FC = () => {
 
         {/* Section Heading */}
         <div className="mb-14 sm:mb-20 max-w-3xl">
-          <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#162A44] leading-[0.92]">
+          <h2 className="font-display text-3xl min-[360px]:text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#162A44] leading-[0.92] break-words">
             ACADEMIC <br />
             <span className="text-[#E85D2A] drop-shadow-[2px_2px_0px_#162A44]">
               JOURNEY.
@@ -108,7 +108,7 @@ export const EducationSection: React.FC = () => {
               <span>START // ACADEMIC GENESIS</span>
             </span>
             <span className="inline-flex items-center text-[#E85D2A] font-black">
-              <ArrowDown className="w-4 h-4 animate-bounce" />
+              <ArrowDown className="w-4 h-4" />
             </span>
           </div>
 
@@ -390,7 +390,7 @@ export const EducationSection: React.FC = () => {
           {/* Journey Destination Banner */}
           <div className="mt-16 sm:mt-24 pt-8 border-t-2 border-[#162A44]/20 flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
             <div className="flex items-center gap-2.5">
-              <span className="w-3 h-3 rounded-full bg-[#E85D2A] animate-ping" />
+              <span className="w-3 h-3 rounded-full bg-[#E85D2A] animate-pulse" />
               <span className="font-black text-[#162A44] uppercase tracking-wider">
                 CURRENT HORIZON: 2024 — 2028 B.TECH AIML EXPEDITION
               </span>

@@ -20,7 +20,7 @@ export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   return (
-    <main className="relative min-h-screen bg-[#F4EFE6] text-[#111111] selection:bg-[#FFD928] selection:text-[#111111]">
+    <main className="relative min-h-screen bg-[#F4EFE6] text-[#111111] selection:bg-[#FFD928] selection:text-[#111111] overflow-x-hidden">
       {/* Brand Cinematic Video Preloader */}
       <Preloader onComplete={() => setLoadingComplete(true)} />
 

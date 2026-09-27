@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import {
   ArrowUpRight,
   Github,
@@ -175,38 +175,38 @@ const PROJECT_DETAILS_DATA: Record<
 > = {
   "monsoon-mitra": {
     problem:
-      "Forecasting the onset and dry spells of the Indian Summer Monsoon is notoriously chaotic. Traditional simulations rely on coarse atmospheric grids that obscure hyperlocal (~25km) rainfall realities for farmers and regional planning.",
+      "Forecasting Indian Summer Monsoon onset is notoriously chaotic. Traditional global simulations run on coarse grids that miss hyperlocal (~25km) rainfall patterns vital for farmers.",
     solution:
-      "Engineered a research-grade meteorological intelligence platform that models monsoon onset and break spells at a fine 0.25° (~25km) spatial mesh using 13 years of ECMWF ERA5 reanalysis data.",
+      "A research-grade meteorological AI platform that models monsoon onset and dry spells at a fine 0.25° (~25km) spatial mesh using 13 years of ECMWF ERA5 reanalysis data.",
     approach:
-      "Trained HistGradientBoostingClassifier with probability calibration via CalibratedClassifierCV across 47,490+ records. Applied a strict time-aware temporal train/test split (2012–2020 train, 2021–2024 unseen test) to prevent data leakage, backed by an explainability engine for atmospheric feature attribution and a 14-day historical analogue similarity engine.",
+      "ECMWF ERA5 Climate Data → HistGradientBoosting with Calibrated Probabilities → Time-Aware Validation (Zero Leakage) → Hyperlocal Onset Inferences via FastAPI.",
     technologies: ["Python", "Scikit-Learn", "ECMWF ERA5", "FastAPI", "Next.js"],
   },
   "polylingo-ai": {
     problem:
-      "Technical video lectures and educational coursework delivered in a single language create steep barriers for multilingual learners who need accurate transcriptions, contextual translation, and natural synchronized audio.",
+      "Single-language video lectures create steep educational barriers for multilingual students who need accurate transcriptions, contextual translations, and natural audio.",
     solution:
-      "Developed an automated AI speech translation SaaS pipeline that transcribes video/audio lectures, performs context-aware neural translation, and synthesizes synchronized multilingual speech.",
+      "An automated AI speech translation platform that transcribes lecture speech, performs context-aware neural translation, and synthesizes synchronized multilingual speech.",
     approach:
-      "Extracts audio streams and transcribes speech using OpenAI Whisper STT, processes neural translations with target speech synthesis, persists user data and session state in PostgreSQL via Prisma ORM schemas, and caches transcription jobs in Redis for high-throughput processing.",
+      "Audio Stream Extraction → Whisper Speech-to-Text → OpenAI Neural Translation → Multilingual Voice Synthesis → PostgreSQL & Redis Job Caching.",
     technologies: ["Whisper STT", "OpenAI API", "PostgreSQL", "Prisma ORM", "Redis", "Node.js"],
   },
   "krishi-cart": {
     problem:
       "Smallholder agricultural farmers lose substantial margins to multi-tier middleman cartels and lack direct geospatial access to regional produce buyers and live mandi rates.",
     solution:
-      "Created a location-aware agritech e-commerce marketplace connecting farmers directly with agricultural produce buyers with transparent pricing and zero intermediary markups.",
+      "A location-aware agritech e-commerce marketplace connecting farmers directly with agricultural produce buyers with transparent pricing and zero intermediary markups.",
     approach:
-      "Architected a responsive modern client with Vite and Tailwind CSS integrated with OpenStreetMap and Leaflet for visual farm and mandi location mapping, Firebase for secure phone authentication and session management, and a Node.js REST API for produce inventory indexing.",
+      "Vite & Tailwind Client → OpenStreetMap & Leaflet Geospatial Mapping → Firebase Phone Auth → Node.js REST API Produce Indexing.",
     technologies: ["Vite", "Tailwind CSS", "OpenStreetMap / Leaflet", "Firebase", "Node.js", "Express.js"],
   },
   "music-mood-recommendation": {
     problem:
-      "Selecting songs that match a listener's current emotional state or activity requires analyzing intrinsic audio characteristics rather than relying only on broad genre or artist tags.",
+      "Discovering songs that match a listener's current emotional vibe requires analyzing intrinsic acoustic features rather than relying only on broad genre tags.",
     solution:
       "A machine-learning based music recommendation system that predicts music mood and recommends suitable songs based on audio features.",
     approach:
-      "Uses music/audio features such as BPM, energy, valence and danceability. A KNN model is used for mood classification to predict moods such as Happy, Sad, Energetic and Calm. The Flask backend handles the ML/API functionality integrated with the JioSaavn API, while the React frontend provides the user interface.",
+      "Audio Feature Extraction (BPM, Energy, Valence, Danceability) → KNN Mood Classification (Happy, Sad, Energetic, Calm) → Flask ML REST API → JioSaavn Song Discovery → React Frontend.",
     technologies: [
       "Python",
       "KNN",
@@ -234,9 +234,9 @@ export const ProjectsSection: React.FC = () => {
   const musicMood = projects.find((p) => p.id === "music-mood-recommendation");
 
   return (
-    <section id="work" className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-[#FFF3E6] text-[#162A44] overflow-hidden">
+    <section id="work" className="relative py-20 sm:py-28 px-4 sm:px-8 md:px-12 bg-[#FFF3E6] text-[#162A44] overflow-hidden">
       {/* Background Editorial Watermark */}
-      <div className="absolute top-10 right-[-1%] font-display text-[150px] sm:text-[240px] font-black text-[#162A44]/[0.035] select-none pointer-events-none leading-none tracking-tighter">
+      <div className="absolute top-10 right-[-1%] font-display text-[70px] sm:text-[130px] font-black text-[#162A44]/[0.035] select-none pointer-events-none leading-none tracking-tighter">
         SYSTEMS
       </div>
 
@@ -252,53 +252,44 @@ export const ProjectsSection: React.FC = () => {
           <span className="w-2.5 h-2.5 rounded-full bg-[#1FA6A0] animate-pulse" />
         </div>
 
-        {/* OVERSIZED EDITORIAL OPENING: Magazine Crop Effect */}
-        <div className="relative mb-14 sm:mb-20">
-          <div className="absolute -left-4 sm:-left-8 top-1/2 -translate-y-1/2 w-40 sm:w-72 h-16 sm:h-24 bg-[#F36F68]/20 -rotate-2 rounded-3xl pointer-events-none -z-10" />
-          <div className="absolute left-1/4 top-0 w-32 sm:w-52 h-1.5 bg-[#F36F68] rounded-full pointer-events-none" />
+        {/* EDITORIAL OPENING: Clean & Balanced */}
+        <div className="relative mb-10 sm:mb-14">
+          <div className="absolute -left-4 sm:-left-8 top-1/2 -translate-y-1/2 w-32 sm:w-60 h-12 sm:h-20 bg-[#F36F68]/20 -rotate-2 rounded-3xl pointer-events-none -z-10" />
+          <div className="absolute left-1/4 top-0 w-24 sm:w-44 h-1.5 bg-[#F36F68] rounded-full pointer-events-none" />
 
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-2 border-[#162A44]/15 pb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-wider text-[#1FA6A0] font-black">
-                <span className="w-2 h-2 rounded-full bg-[#1FA6A0]" />
-                <span>SELECTED WORK / PROJECTS</span>
-              </div>
-              <h2 className="font-display text-5xl sm:text-7xl lg:text-9xl font-black uppercase tracking-tighter text-[#162A44] leading-[0.85] select-none">
-                PROJ<span className="text-[#F36F68]">ECTS.</span>
-              </h2>
+          <div className="border-b-2 border-[#162A44]/15 pb-6">
+            <div className="flex items-center gap-2 mb-2 font-mono text-xs uppercase tracking-wider text-[#1FA6A0] font-black">
+              <span className="w-2 h-2 rounded-full bg-[#1FA6A0]" />
+              <span>SELECTED WORK / PROJECTS</span>
             </div>
-
-            <div className="max-w-md font-sans text-sm sm:text-base text-[#252525] font-medium leading-relaxed md:pb-1">
-              <span className="inline-block px-2.5 py-0.5 rounded-md bg-[#FFD84D] text-[#111111] font-mono text-xs font-bold mr-2 border border-[#162A44]/20 shadow-[1px_1px_0px_#162A44]">
-                04 CASE STUDIES
-              </span>
-              Curated machine learning architectures, audio intelligence platforms, and full-stack software built with mathematical rigor.
-            </div>
+            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#162A44] leading-[0.92] select-none">
+              PROJ<span className="text-[#F36F68]">ECTS.</span>
+            </h2>
           </div>
         </div>
 
-        {/* 4 CONTRASTING EDITORIAL CASE STUDIES */}
-        <div className="space-y-14 sm:space-y-20">
+        {/* 4 CONTRASTING EDITORIAL CASE STUDIES (Compact & Balanced) */}
+        <div className="space-y-7 sm:space-y-10">
           {/* ============================================================== */}
           {/* CASE STUDY 01: MONSOON MITRA — FEATURED PROJECT */}
           {/* ============================================================== */}
           {monsoon && (
             <motion.div
-              initial={{ opacity: 0, y: 35 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="group relative rounded-3xl bg-white border-2 border-[#162A44] p-6 sm:p-10 lg:p-14 shadow-[8px_8px_0px_0px_#162A44] overflow-hidden hover:shadow-[12px_12px_0px_0px_#F36F68] transition-all"
+              transition={{ duration: 0.6 }}
+              className="group relative rounded-3xl bg-white border-2 border-[#162A44] p-4 sm:p-7 lg:p-8 shadow-[6px_6px_0px_0px_#162A44] sm:shadow-[7px_7px_0px_0px_#162A44] overflow-hidden hover:shadow-[9px_9px_0px_0px_#F36F68] transition-all"
             >
               {/* Top Accent Stripe */}
-              <div className="absolute top-0 left-0 right-0 h-2.5 bg-gradient-to-r from-[#F36F68] via-[#FFD84D] to-[#1FA6A0]" />
+              <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#F36F68] via-[#FFD84D] to-[#1FA6A0]" />
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
                 {/* Large Telemetry Visual on Left (7 cols) */}
                 <div className="lg:col-span-7 order-2 lg:order-1">
-                  <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#162A44] border-2 border-[#162A44] p-6 flex flex-col justify-between overflow-hidden shadow-inner group-hover:scale-[1.01] transition-transform duration-500">
+                  <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#162A44] border-2 border-[#162A44] p-3.5 sm:p-5 flex flex-col justify-between overflow-hidden shadow-inner group-hover:scale-[1.01] transition-transform duration-500">
                     <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
-                      <div className="w-80 h-80 rounded-full border border-[#1FA6A0]/50 animate-ping" />
+                      <div className="w-80 h-80 rounded-full border border-[#1FA6A0]/50 animate-pulse" />
                       <div className="absolute w-60 h-60 rounded-full border border-[#FFD84D]/40" />
                       <div className="absolute w-40 h-40 rounded-full border border-white/30" />
                       <div className="absolute w-64 h-64 border-t-2 border-r-2 border-[#FFD84D] rounded-full animate-radar origin-center" />
@@ -306,19 +297,19 @@ export const ProjectsSection: React.FC = () => {
                     </div>
 
                     <div className="relative z-10 flex items-center justify-between font-mono text-xs text-slate-300">
-                      <span className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-[#FFD84D] font-bold">
+                      <span className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-[#FFD84D] font-bold text-[11px] sm:text-xs">
                         <Radio className="w-3.5 h-3.5 animate-pulse text-[#FFD84D]" />
                         <span>ERA5 SPATIAL MESH (0.25°)</span>
                       </span>
-                      <span className="text-white/70 font-mono text-xs font-bold">47,490 RECORDS</span>
+                      <span className="text-white/70 font-mono text-[11px] sm:text-xs font-bold">47,490 RECORDS</span>
                     </div>
 
-                    <div className="relative z-10 p-5 rounded-2xl bg-[#101820]/95 backdrop-blur-md border border-white/15 space-y-2 max-w-sm">
+                    <div className="relative z-10 p-3 sm:p-4 rounded-2xl bg-[#101820]/95 backdrop-blur-md border border-white/15 space-y-1.5 max-w-sm">
                       <div className="flex items-center justify-between font-mono text-[10px] text-slate-300">
                         <span>MODEL ALGORITHM</span>
                         <span className="text-[#FFD84D] font-bold">STRICT VALIDATION</span>
                       </div>
-                      <div className="font-display font-bold text-white text-base">
+                      <div className="font-display font-bold text-white text-sm sm:text-base">
                         HistGradientBoostingClassifier
                       </div>
                       <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
@@ -338,7 +329,7 @@ export const ProjectsSection: React.FC = () => {
                 </div>
 
                 {/* Information on Right (5 cols) */}
-                <div className="lg:col-span-5 order-1 lg:order-2 space-y-6">
+                <div className="lg:col-span-5 order-1 lg:order-2 space-y-4 sm:space-y-5">
                   {/* Subtle interactive VIEW DETAILS option ABOVE Title */}
                   <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
                     <div className="flex items-center gap-2">
@@ -364,23 +355,23 @@ export const ProjectsSection: React.FC = () => {
                     </button>
                   </div>
 
-                  <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#162A44] leading-tight">
+                  <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-[#162A44] leading-tight">
                     MONSOON MITRA // <br />
                     <span className="text-[#F36F68]">ATMOSPHERIC AI</span>
                   </h3>
 
-                  <p className="text-[#252525] text-sm sm:text-base leading-relaxed font-medium">
+                  <p className="text-[#252525] text-xs sm:text-sm leading-relaxed font-medium">
                     Research-grade atmospheric intelligence platform modeling Indian Summer Monsoon onset and break spells at a <strong>0.25° (~25km) hyperlocal spatial mesh</strong> using 13 years of ECMWF ERA5 reanalysis data.
                   </p>
 
                   {/* Verified Metrics Chips */}
-                  <div className="grid grid-cols-2 gap-3 pt-1">
-                    <div className="p-3.5 rounded-xl bg-[#FFF3E6] border-2 border-[#162A44] shadow-[3px_3px_0px_0px_#162A44]">
-                      <div className="font-display font-black text-2xl text-[#F36F68]">0.9928</div>
+                  <div className="grid grid-cols-2 gap-2.5 pt-0.5">
+                    <div className="p-2.5 sm:p-3 rounded-xl bg-[#FFF3E6] border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
+                      <div className="font-display font-black text-xl sm:text-2xl text-[#F36F68]">0.9928</div>
                       <div className="font-mono text-[10px] text-[#162A44] font-bold uppercase">Onset ROC-AUC</div>
                     </div>
-                    <div className="p-3.5 rounded-xl bg-[#FFF3E6] border-2 border-[#162A44] shadow-[3px_3px_0px_0px_#162A44]">
-                      <div className="font-display font-black text-2xl text-[#162A44]">0.7381</div>
+                    <div className="p-2.5 sm:p-3 rounded-xl bg-[#FFF3E6] border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
+                      <div className="font-display font-black text-xl sm:text-2xl text-[#162A44]">0.7381</div>
                       <div className="font-mono text-[10px] text-[#162A44] font-bold uppercase">Onset F1 Score</div>
                     </div>
                   </div>
@@ -388,17 +379,17 @@ export const ProjectsSection: React.FC = () => {
                   {/* Tech stack badges */}
                   <div className="flex flex-wrap gap-1.5 font-mono text-xs text-[#162A44]">
                     {["Python", "Scikit-Learn", "FastAPI", "Next.js", "ERA5 Data"].map((t) => (
-                      <span key={t} className="px-2.5 py-1 rounded-md bg-[#FFF3E6] border border-[#162A44]/30 font-bold">
+                      <span key={t} className="px-2 py-0.5 rounded-md bg-[#FFF3E6] border border-[#162A44]/30 font-bold text-[11px]">
                         {t}
                       </span>
                     ))}
                   </div>
 
                   {/* Action Button */}
-                  <div className="pt-2">
+                  <div className="pt-1">
                     <button
                       onClick={() => setActiveModalProject(monsoon)}
-                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-mono text-xs sm:text-sm font-black bg-[#162A44] text-[#FFF3E6] hover:bg-[#F36F68] hover:text-[#162A44] border-2 border-[#162A44] shadow-[4px_4px_0px_0px_#162A44] transition-all group-hover:translate-x-1 cursor-pointer"
+                      className="inline-flex items-center gap-2 px-5 py-3 rounded-full font-mono text-xs sm:text-sm font-black bg-[#162A44] text-[#FFF3E6] hover:bg-[#F36F68] hover:text-[#162A44] border-2 border-[#162A44] shadow-[3px_3px_0px_0px_#162A44] transition-all group-hover:translate-x-0.5 cursor-pointer"
                     >
                       <span>INSPECT ARCHITECTURE DETAILS</span>
                       <ArrowUpRight className="w-4 h-4" />
@@ -425,11 +416,11 @@ export const ProjectsSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="group relative rounded-3xl bg-[#315CFF] text-white p-6 sm:p-10 lg:p-12 border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] overflow-hidden hover:shadow-[10px_10px_0px_0px_#162A44] transition-all"
+              className="group relative rounded-3xl bg-[#315CFF] text-white p-4 sm:p-7 lg:p-8 border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] overflow-hidden hover:shadow-[9px_9px_0px_0px_#162A44] transition-all"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
                 {/* Info on Left (5 cols) */}
-                <div className="lg:col-span-5 space-y-6">
+                <div className="lg:col-span-5 space-y-4 sm:space-y-5">
                   {/* Subtle interactive VIEW DETAILS option ABOVE Title */}
                   <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
                     <div className="flex items-center gap-2">
@@ -454,27 +445,27 @@ export const ProjectsSection: React.FC = () => {
                     </button>
                   </div>
 
-                  <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white leading-tight">
+                  <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white leading-tight">
                     POLYLINGO AI // <br />
                     <span>AUDIO TRANSLATION</span>
                   </h3>
 
-                  <p className="text-white/95 text-sm sm:text-base leading-relaxed font-normal">
+                  <p className="text-white/95 text-xs sm:text-sm leading-relaxed font-normal">
                     AI-powered lecture and video audio translation SaaS system integrating <strong>OpenAI Whisper</strong> speech-to-text, neural translation, and synchronized voice synthesis for multilingual educational access.
                   </p>
 
                   <div className="flex flex-wrap gap-1.5 font-mono text-xs text-white">
                     {["Whisper STT", "OpenAI API", "PostgreSQL", "Prisma", "Node.js"].map((t) => (
-                      <span key={t} className="px-2.5 py-1 rounded-md bg-white/15 border border-white/25 backdrop-blur-sm">
+                      <span key={t} className="px-2 py-0.5 rounded-md bg-white/15 border border-white/25 backdrop-blur-sm text-[11px]">
                         {t}
                       </span>
                     ))}
                   </div>
 
-                  <div className="pt-2">
+                  <div className="pt-1">
                     <button
                       onClick={() => setActiveModalProject(polylingo)}
-                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-mono text-xs sm:text-sm font-black bg-white text-[#162A44] hover:bg-[#FFD84D] border-2 border-[#162A44] shadow-[4px_4px_0px_0px_#162A44] transition-all cursor-pointer"
+                      className="inline-flex items-center gap-2 px-5 py-3 rounded-full font-mono text-xs sm:text-sm font-black bg-white text-[#162A44] hover:bg-[#FFD84D] border-2 border-[#162A44] shadow-[3px_3px_0px_0px_#162A44] transition-all cursor-pointer"
                     >
                       <span>VIEW CASE STUDY</span>
                       <ArrowUpRight className="w-4 h-4 text-[#162A44]" />
@@ -484,7 +475,7 @@ export const ProjectsSection: React.FC = () => {
 
                 {/* Large Visual on Right (7 cols): Animated Spectrogram & Pipeline */}
                 <div className="lg:col-span-7">
-                  <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#101820] border-2 border-white/20 p-6 sm:p-8 flex flex-col justify-between overflow-hidden shadow-2xl group-hover:scale-[1.01] transition-transform duration-500">
+                  <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#101820] border-2 border-white/20 p-4 sm:p-6 flex flex-col justify-between overflow-hidden shadow-2xl group-hover:scale-[1.01] transition-transform duration-500">
                     <div className="flex items-center justify-between font-mono text-xs text-slate-300">
                       <span className="flex items-center gap-2">
                         <AudioWaveform className="w-4 h-4 text-[#F36F68]" />
@@ -494,8 +485,8 @@ export const ProjectsSection: React.FC = () => {
                     </div>
 
                     {/* Animated Multichannel Audio Wave */}
-                    <div className="py-6 space-y-3">
-                      <div className="flex items-end gap-1.5 sm:gap-2 h-20 justify-between">
+                    <div className="py-4 sm:py-5 space-y-2.5">
+                      <div className="flex items-end gap-1.5 sm:gap-2 h-16 sm:h-20 justify-between">
                         {[45, 80, 30, 95, 65, 100, 50, 85, 40, 75, 90, 60, 35, 85, 70, 95, 40, 60, 80, 50, 70].map((h, i) => (
                           <div
                             key={i}
@@ -511,7 +502,7 @@ export const ProjectsSection: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="p-3.5 rounded-xl bg-[#162A44] border border-white/15 flex items-center justify-between font-mono text-xs text-slate-200">
+                    <div className="p-3 rounded-xl bg-[#162A44] border border-white/15 flex items-center justify-between font-mono text-[11px] sm:text-xs text-slate-200">
                       <span>Database: PostgreSQL + Prisma ORM</span>
                       <span className="text-white font-bold">Redis High-Throughput Cache</span>
                     </div>
@@ -531,7 +522,7 @@ export const ProjectsSection: React.FC = () => {
           {/* ============================================================== */}
           {/* TWO ASYMMETRIC CONTRASTING CARDS FOR REMAINING PROJECTS */}
           {/* ============================================================== */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
             {/* PROJECT 03: KRISHICART (Warm Yellow / Lime + Deep Navy) (7 cols) */}
             {krishi && (
               <motion.div
@@ -539,9 +530,9 @@ export const ProjectsSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="lg:col-span-7 group relative rounded-3xl bg-[#D4FF00] text-[#162A44] p-6 sm:p-10 border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] flex flex-col justify-between hover:shadow-[10px_10px_0px_0px_#162A44] transition-all"
+                className="lg:col-span-7 group relative rounded-3xl bg-[#D4FF00] text-[#162A44] p-4 sm:p-6 lg:p-7 border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] flex flex-col justify-between hover:shadow-[9px_9px_0px_0px_#162A44] transition-all"
               >
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {/* Subtle interactive VIEW DETAILS option ABOVE Title */}
                   <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
                     <div className="flex items-center gap-2">
@@ -566,17 +557,17 @@ export const ProjectsSection: React.FC = () => {
                     </button>
                   </div>
 
-                  <h3 className="font-display text-3xl sm:text-4xl font-black uppercase tracking-tight text-[#162A44] leading-tight">
+                  <h3 className="font-display text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tight text-[#162A44] leading-tight">
                     KRISHICART // <br />
                     <span>GEOSPATIAL MARKETPLACE</span>
                   </h3>
 
-                  <p className="text-[#252525] text-sm sm:text-base leading-relaxed font-medium">
+                  <p className="text-[#252525] text-xs sm:text-sm leading-relaxed font-medium">
                     Agriculture-based e-commerce platform eliminating middlemen between farmers and buyers with product cataloging, search engine, and geospatial mapping via <strong>OpenStreetMap / Leaflet</strong>.
                   </p>
 
                   {/* Visual Map Simulation */}
-                  <div className="p-5 rounded-2xl bg-[#162A44] text-white space-y-3 shadow-lg">
+                  <div className="p-3.5 sm:p-4 rounded-2xl bg-[#162A44] text-white space-y-2 shadow-lg">
                     <div className="flex items-center justify-between font-mono text-xs">
                       <span className="flex items-center gap-1.5 text-[#D4FF00] font-bold">
                         <MapPin className="w-4 h-4 text-[#D4FF00]" />
@@ -584,14 +575,14 @@ export const ProjectsSection: React.FC = () => {
                       </span>
                       <span className="text-slate-300">FIREBASE AUTH</span>
                     </div>
-                    <div className="font-mono text-xs text-slate-200">
+                    <div className="font-mono text-[11px] sm:text-xs text-slate-200">
                       Hyperlocal produce listing, live farmer mandi coordinates & responsive client architecture.
                     </div>
                   </div>
 
                   <div className="flex flex-wrap gap-1.5 font-mono text-xs">
                     {["Vite", "Tailwind CSS", "Node.js", "Express.js", "Firebase", "Leaflet"].map((t) => (
-                      <span key={t} className="px-2.5 py-1 rounded-md bg-[#162A44]/10 border border-[#162A44]/20 font-bold text-[#162A44]">
+                      <span key={t} className="px-2 py-0.5 rounded-md bg-[#162A44]/10 border border-[#162A44]/20 font-bold text-[#162A44] text-[11px]">
                         {t}
                       </span>
                     ))}
@@ -605,13 +596,13 @@ export const ProjectsSection: React.FC = () => {
                   </AnimatePresence>
                 </div>
 
-                <div className="pt-8 border-t border-[#162A44]/20 mt-8 flex flex-wrap items-center justify-between gap-4">
+                <div className="pt-5 sm:pt-6 border-t border-[#162A44]/20 mt-5 sm:mt-6 flex flex-wrap items-center justify-between gap-3 sm:gap-4">
                   {krishi.githubUrl && (
                     <a
                       href={krishi.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-mono text-xs font-bold bg-[#162A44] text-white hover:bg-[#F36F68] hover:text-[#162A44] transition-colors shadow-md"
+                      className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-mono text-xs font-bold bg-[#162A44] text-white hover:bg-[#F36F68] hover:text-[#162A44] transition-colors shadow-md"
                     >
                       <Github className="w-4 h-4" />
                       <span>OPEN GITHUB REPOSITORY</span>
@@ -621,7 +612,7 @@ export const ProjectsSection: React.FC = () => {
 
                   <button
                     onClick={() => setActiveModalProject(krishi)}
-                    className="font-mono text-xs font-bold text-[#162A44] hover:underline cursor-pointer"
+                    className="font-mono text-xs font-bold text-[#162A44] hover:underline cursor-pointer py-1"
                   >
                     SPECS & DETAILS →
                   </button>
@@ -636,9 +627,9 @@ export const ProjectsSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="lg:col-span-5 group relative rounded-3xl bg-[#162A44] text-white p-6 sm:p-10 border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#F36F68] flex flex-col justify-between hover:border-[#F36F68] transition-all"
+                className="lg:col-span-5 group relative rounded-3xl bg-[#162A44] text-white p-4 sm:p-6 lg:p-7 border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#F36F68] flex flex-col justify-between hover:border-[#F36F68] transition-all"
               >
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {/* Subtle interactive VIEW DETAILS option ABOVE Title */}
                   <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
                     <div className="flex items-center gap-2">
@@ -663,15 +654,15 @@ export const ProjectsSection: React.FC = () => {
                     </button>
                   </div>
 
-                  <h3 className="font-display text-2xl sm:text-3xl font-black uppercase tracking-tight text-white leading-tight">
+                  <h3 className="font-display text-xl sm:text-2xl font-black uppercase tracking-tight text-white leading-tight">
                     MUSIC MOOD RECOMMENDATION SYSTEM
                   </h3>
 
-                  <p className="text-slate-200 text-sm leading-relaxed font-normal">
+                  <p className="text-slate-200 text-xs sm:text-sm leading-relaxed font-normal">
                     A machine-learning based music recommendation system that predicts music mood and recommends suitable songs based on audio features.
                   </p>
 
-                  <div className="p-4 rounded-2xl bg-[#101820] border border-white/10 space-y-2 font-mono text-xs">
+                  <div className="p-3.5 rounded-2xl bg-[#101820] border border-white/10 space-y-2 font-mono text-xs">
                     <div className="flex items-center justify-between text-[#FFD84D] font-bold">
                       <span>KNN MOOD CLASSIFIER</span>
                       <span className="text-[10px] text-slate-300">AUDIO FEATURES</span>
@@ -692,7 +683,7 @@ export const ProjectsSection: React.FC = () => {
                       "Tailwind CSS",
                       "JioSaavn API",
                     ].map((t) => (
-                      <span key={t} className="px-2.5 py-1 rounded-md bg-white/10 border border-white/15">
+                      <span key={t} className="px-2 py-0.5 rounded-md bg-white/10 border border-white/15 text-[11px]">
                         {t}
                       </span>
                     ))}
@@ -706,10 +697,10 @@ export const ProjectsSection: React.FC = () => {
                   </AnimatePresence>
                 </div>
 
-                <div className="pt-8 border-t border-white/10 mt-8 flex items-center justify-between">
+                <div className="pt-5 sm:pt-6 border-t border-white/10 mt-5 sm:mt-6 flex items-center justify-between">
                   <button
                     onClick={() => setActiveModalProject(musicMood)}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-mono text-xs font-bold bg-white/10 hover:bg-[#F36F68] hover:text-[#162A44] text-white transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-mono text-xs font-bold bg-white/10 hover:bg-[#F36F68] hover:text-[#162A44] text-white transition-colors cursor-pointer"
                   >
                     <span>EXPLORE ARCHITECTURE</span>
                     <ArrowUpRight className="w-4 h-4" />
@@ -742,6 +733,8 @@ interface ProjectExpandableDrawerProps {
 }
 
 const ProjectExpandableDrawer: React.FC<ProjectExpandableDrawerProps> = ({ details, theme }) => {
+  const prefersReduced = useReducedMotion();
+
   // Adaptive themes matching each card's identity
   const containerClasses = {
     cream: "bg-[#FFF3E6] text-[#162A44] border-2 border-[#162A44] shadow-[4px_4px_0px_#162A44]",
@@ -764,29 +757,36 @@ const ProjectExpandableDrawer: React.FC<ProjectExpandableDrawerProps> = ({ detai
     navy: "bg-white/10 text-white border border-white/15",
   }[theme];
 
+  const workflowPillClasses = {
+    cream: "bg-[#162A44]/5 text-[#162A44] border border-[#162A44]/15",
+    blue: "bg-white/15 text-white border border-white/20",
+    lime: "bg-[#D4FF00]/15 text-[#D4FF00] border border-[#D4FF00]/30",
+    navy: "bg-white/10 text-slate-200 border border-white/15",
+  }[theme];
+
   return (
     <motion.div
-      initial={{ opacity: 0, height: 0, marginTop: 0 }}
-      animate={{ opacity: 1, height: "auto", marginTop: 24 }}
-      exit={{ opacity: 0, height: 0, marginTop: 0 }}
-      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+      initial={prefersReduced ? { opacity: 0 } : { opacity: 0, height: 0, marginTop: 0 }}
+      animate={prefersReduced ? { opacity: 1 } : { opacity: 1, height: "auto", marginTop: 20 }}
+      exit={prefersReduced ? { opacity: 0 } : { opacity: 0, height: 0, marginTop: 0 }}
+      transition={{ duration: prefersReduced ? 0.05 : 0.35, ease: [0.16, 1, 0.3, 1] }}
       className="overflow-hidden"
     >
-      <div className={`p-6 sm:p-8 rounded-3xl ${containerClasses} space-y-6`}>
+      <div className={`p-3.5 sm:p-5 md:p-6 rounded-3xl ${containerClasses} space-y-4 sm:space-y-5`}>
         {/* Drawer Header */}
         <div className="flex items-center justify-between border-b border-current/15 pb-3 font-mono text-xs">
-          <span className="font-black uppercase tracking-wider">
-            // ARCHITECTURAL BREAKDOWN & METHODOLOGY
+          <span className="font-black uppercase tracking-wider text-[11px] sm:text-xs">
+            // ARCHITECTURAL BREAKDOWN & WORKFLOW
           </span>
           <span className="px-2 py-0.5 rounded bg-[#FFD84D] text-[#111111] font-bold text-[10px]">
-            VERIFIED ANALYSIS
+            CONCISE SPEC
           </span>
         </div>
 
-        {/* 4 Required Parts in an Asymmetric 2x2 Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+        {/* 4 Required Areas in an Asymmetric 2x2 Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {/* 1. PROBLEM */}
-          <div className={`p-5 rounded-2xl ${subBoxClasses} space-y-2`}>
+          <div className={`p-4 sm:p-5 rounded-2xl ${subBoxClasses} space-y-2`}>
             <div className="flex items-center gap-2 font-mono text-xs font-black uppercase text-[#F36F68] tracking-wider">
               <span className="w-2 h-2 rounded-full bg-[#F36F68]" />
               <span>1. PROBLEM</span>
@@ -797,7 +797,7 @@ const ProjectExpandableDrawer: React.FC<ProjectExpandableDrawerProps> = ({ detai
           </div>
 
           {/* 2. SOLUTION */}
-          <div className={`p-5 rounded-2xl ${subBoxClasses} space-y-2`}>
+          <div className={`p-4 sm:p-5 rounded-2xl ${subBoxClasses} space-y-2`}>
             <div className="flex items-center gap-2 font-mono text-xs font-black uppercase text-[#1FA6A0] tracking-wider">
               <span className="w-2 h-2 rounded-full bg-[#1FA6A0]" />
               <span>2. SOLUTION</span>
@@ -807,28 +807,43 @@ const ProjectExpandableDrawer: React.FC<ProjectExpandableDrawerProps> = ({ detai
             </p>
           </div>
 
-          {/* 3. APPROACH */}
-          <div className={`p-5 rounded-2xl ${subBoxClasses} space-y-2`}>
+          {/* 3. APPROACH (Rendered as short clear workflow steps) */}
+          <div className={`p-4 sm:p-5 rounded-2xl ${subBoxClasses} space-y-2.5`}>
             <div className="flex items-center gap-2 font-mono text-xs font-black uppercase text-[#315CFF] tracking-wider">
               <span className="w-2 h-2 rounded-full bg-[#315CFF]" />
-              <span>3. APPROACH</span>
+              <span>3. APPROACH // WORKFLOW</span>
             </div>
-            <p className="text-xs sm:text-sm leading-relaxed font-medium">
-              {details.approach}
-            </p>
+            {details.approach.includes(" → ") ? (
+              <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
+                {details.approach.split(" → ").map((step, idx, arr) => (
+                  <React.Fragment key={idx}>
+                    <span className={`inline-flex items-center px-2.5 py-1 rounded-lg font-mono text-[11px] sm:text-xs font-bold ${workflowPillClasses}`}>
+                      {step}
+                    </span>
+                    {idx < arr.length - 1 && (
+                      <span className="text-[#E85D2A] font-bold text-xs select-none">→</span>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+            ) : (
+              <p className="text-xs sm:text-sm leading-relaxed font-medium">
+                {details.approach}
+              </p>
+            )}
           </div>
 
           {/* 4. TECHNOLOGY */}
-          <div className={`p-5 rounded-2xl ${subBoxClasses} space-y-3`}>
+          <div className={`p-4 sm:p-5 rounded-2xl ${subBoxClasses} space-y-2.5`}>
             <div className="flex items-center gap-2 font-mono text-xs font-black uppercase text-[#FFD84D] tracking-wider">
               <span className="w-2 h-2 rounded-full bg-[#FFD84D]" />
               <span>4. TECHNOLOGY</span>
             </div>
-            <div className="flex flex-wrap gap-2 pt-0.5">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-0.5">
               {details.technologies.map((techName) => (
                 <span
                   key={techName}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl font-mono text-xs font-bold ${pillClasses} transition-transform hover:scale-102`}
+                  className={`inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl font-mono text-[11px] sm:text-xs font-bold ${pillClasses} transition-transform hover:scale-102`}
                 >
                   {TechIcons[techName] || <Layers className="w-3.5 h-3.5 shrink-0" />}
                   <span>{techName}</span>

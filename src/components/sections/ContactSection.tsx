@@ -90,7 +90,7 @@ export const ContactSection: React.FC = () => {
   return (
     <section
       id="contact"
-      className="relative py-28 sm:py-36 px-5 sm:px-8 md:px-12 bg-[#18352F] text-[#F4EFE6] overflow-hidden"
+      className="relative py-28 sm:py-36 px-4 sm:px-8 md:px-12 bg-[#18352F] text-[#F4EFE6] overflow-hidden"
     >
       {/* Editorial HK Watermark */}
       <div className="absolute right-[-2%] bottom-[-5%] font-display text-[180px] sm:text-[280px] font-black text-black/10 select-none pointer-events-none leading-none">
@@ -110,7 +110,7 @@ export const ContactSection: React.FC = () => {
 
         {/* Large Typography Callout */}
         <div className="mb-14 sm:mb-20 max-w-4xl">
-          <h2 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight leading-[0.88] text-[#F4EFE6]">
+          <h2 className="font-display text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight leading-[0.88] text-[#F4EFE6] break-words">
             LET’S <br />
             <span className="text-[#E85D2A]">CONNECT.</span>
           </h2>
@@ -123,7 +123,7 @@ export const ContactSection: React.FC = () => {
         {/* 2-Column Responsive Layout: Direct Message Form + Fast Channels */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Column 1: Real In-Page Direct Transmission Form (7 cols) */}
-          <div className="lg:col-span-7 bg-[#E9DFCF] text-[#18352F] rounded-3xl p-6 sm:p-10 border-2 border-[#18352F] shadow-2xl">
+          <div className="lg:col-span-7 bg-[#E9DFCF] text-[#18352F] rounded-3xl p-4 sm:p-8 md:p-10 border-2 border-[#18352F] shadow-2xl">
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#18352F]/15">
               <div className="flex items-center gap-2">
                 <MessageSquare className="w-4 h-4 text-[#E85D2A]" />
@@ -222,7 +222,7 @@ export const ContactSection: React.FC = () => {
                   type="submit"
                   disabled={isSubmitting}
                   data-cursor="TRANSMIT"
-                  className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full font-mono text-xs sm:text-sm font-bold bg-[#E85D2A] text-white hover:bg-[#18352F] transition-all shadow-lg hover:scale-102 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full font-mono text-xs sm:text-sm font-bold bg-[#E85D2A] text-white hover:bg-[#18352F] transition-all shadow-lg hover:scale-102 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
@@ -243,7 +243,7 @@ export const ContactSection: React.FC = () => {
           {/* Column 2: Fast Channels & Direct Info (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
             {/* Primary Email Card */}
-            <div className="bg-[#E9DFCF] text-[#18352F] rounded-3xl p-6 sm:p-7 border-2 border-[#18352F] shadow-xl space-y-4">
+            <div className="bg-[#E9DFCF] text-[#18352F] rounded-3xl p-4 sm:p-7 border-2 border-[#18352F] shadow-xl space-y-4">
               <span className="font-mono text-xs text-[#E85D2A] font-bold uppercase tracking-wider block">
                 // VERIFIED PRIMARY INBOX
               </span>

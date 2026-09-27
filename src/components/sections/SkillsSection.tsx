@@ -136,34 +136,6 @@ const TECHNOLOGIES: TechBox[] = [
     ),
   },
   {
-    id: "prisma",
-    name: "Prisma ORM",
-    category: "Database Client",
-    role: "Declarative Schema Migrations & Relations",
-    project: "PolyLingo Audio Pipeline",
-    rotation: -1.5,
-    duration: 4.9,
-    svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
-        <path d="M12.4 2.2L3.6 17.4l4.8 4.4 12-4-8-15.6zm.4 3.8l5.2 10.2-7.8 2.6-3.1-2.9 5.7-9.9z" />
-      </svg>
-    ),
-  },
-  {
-    id: "redis",
-    name: "Redis",
-    category: "In-Memory Store",
-    role: "Sub-Millisecond Job & Transcription Caching",
-    project: "PolyLingo AI Queue Cache",
-    rotation: 2.3,
-    duration: 4.0,
-    svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
-        <path d="M12 2L2 7l10 5 10-5-10-5zm0 7.8L4.6 7 12 3.3 19.4 7 12 9.8zM2 12l10 5 10-5-2-1-8 4-8-4-2 1zm0 5l10 5 10-5-2-1-8 4-8-4-2 1z" />
-      </svg>
-    ),
-  },
-  {
     id: "sql",
     name: "SQL & MySQL",
     category: "Relational Queries",
@@ -174,48 +146,6 @@ const TECHNOLOGIES: TechBox[] = [
     svg: (
       <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 2C6.48 2 2 3.79 2 6v12c0 2.21 4.48 4 10 4s10-1.79 10-4V6c0-2.21-4.48-4-10-4zm0 2c4.42 0 8 1.34 8 2s-3.58 2-8 2-8-1.34-8-2 3.58-2 8-2zm8 14c0 .66-3.58 2-8 2s-8-1.34-8-2v-2.23c2.09 1.37 5.06 2.23 8 2.23s5.91-.86 8-2.23V18zm0-4.5c0 .66-3.58 2-8 2s-8-1.34-8-2v-2.23c2.09 1.37 5.06 2.23 8 2.23s5.91-.86 8-2.23v2.23z" />
-      </svg>
-    ),
-  },
-  {
-    id: "nextjs",
-    name: "Next.js",
-    category: "Full-Stack Web",
-    role: "Streaming Server Components & API Handlers",
-    project: "PolyLingo AI & Official Portfolio",
-    rotation: 1.4,
-    duration: 4.3,
-    svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
-        <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.1 16.5l-6.6-8.8V17H9V7h1.6l6.5 8.7V7h1.5v9.5h-1.5z" />
-      </svg>
-    ),
-  },
-  {
-    id: "tailwind",
-    name: "Tailwind CSS",
-    category: "Design Systems",
-    role: "Editorial Tokens & Fluid Clamp Typography",
-    project: "KrishiCart // Monsoon UI",
-    rotation: -2.0,
-    duration: 5.0,
-    svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
-        <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.335 6.182 14.974 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.335 13.382 8.974 12 6.001 12z" />
-      </svg>
-    ),
-  },
-  {
-    id: "nodejs",
-    name: "Node.js",
-    category: "Backend Runtime",
-    role: "REST APIs & Asynchronous Video Transcoding",
-    project: "KrishiCart // PolyLingo Services",
-    rotation: 1.7,
-    duration: 4.7,
-    svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
-        <path d="M12 2L3 7.2v10.4L12 23l9-5.4V7.2L12 2zm0 2.3l6.7 3.9v7.8L12 19.9l-6.7-3.9V8.2L12 4.3zm-1 4.7v5.5l3.5-2.1v-2.2l-2 1.2V9h-1.5z" />
       </svg>
     ),
   },
@@ -250,20 +180,6 @@ const TECHNOLOGIES: TechBox[] = [
     ),
   },
   {
-    id: "firebase",
-    name: "Firebase",
-    category: "Cloud Services",
-    role: "Secure Phone Auth & Farmer Session State",
-    project: "KrishiCart Agritech",
-    rotation: -1.7,
-    duration: 4.8,
-    svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
-        <path d="M4.6 17.5l5.5-10.4 2.9 5.5-5.9 4.9zm13.8-12.8l-2.2 4.1 2.2 4.1 3.1-7.8c.1-.2 0-.4-.2-.4zm-8.2 2.3l-5.6 10.5 7.7 4.3 3.5-8.2-5.6-6.6zm10.7 8.3L15.3 4.2c-.1-.2-.4-.2-.5 0L12 9.5l4.8 4 4.1 1.8z" />
-      </svg>
-    ),
-  },
-  {
     id: "mongodb",
     name: "MongoDB",
     category: "Document Store",
@@ -286,7 +202,7 @@ export const SkillsSection: React.FC = () => {
   return (
     <section
       id="stack"
-      className="relative py-24 sm:py-32 px-5 sm:px-8 md:px-12 bg-[#E7F0EA] text-[#162A44] overflow-hidden"
+      className="relative py-24 sm:py-32 px-4 sm:px-8 md:px-12 bg-[#E7F0EA] text-[#162A44] overflow-hidden"
     >
       {/* Editorial Fractured Geometric Borders at the Section Perimeter */}
       {/* Top Fractured Paper Contour Line & Accent Flecks */}
@@ -384,7 +300,7 @@ export const SkillsSection: React.FC = () => {
 
         {/* Section Heading */}
         <div className="mb-12 sm:mb-16 max-w-3xl">
-          <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#162A44] leading-[0.92]">
+          <h2 className="font-display text-3xl min-[360px]:text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#162A44] leading-[0.92] break-words">
             TECHNOLOGY <br />
             <span className="text-[#E85D2A] drop-shadow-[2px_2px_0px_#162A44]">
               ECOSYSTEM.
@@ -397,12 +313,12 @@ export const SkillsSection: React.FC = () => {
         </div>
 
         {/* COMPACT WARM YELLOW BOXES CLUSTER (Editorial surface on Warm Cream #F5EBDD) */}
-        <div className="relative rounded-3xl bg-[#F5EBDD] border-2 border-[#162A44] shadow-[8px_8px_0px_0px_#162A44] p-6 sm:p-10 overflow-hidden">
+        <div className="relative rounded-3xl bg-[#F5EBDD] border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] sm:shadow-[8px_8px_0px_0px_#162A44] p-4 sm:p-10 overflow-hidden">
           {/* Subtle Decorative Paper Corner Sliver */}
           <div className="absolute top-0 right-0 w-16 h-16 bg-[#E85D2A]/10 -rotate-45 translate-x-8 -translate-y-8 pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-12 h-12 bg-[#FFD84D]/20 rotate-12 -translate-x-6 translate-y-6 pointer-events-none" />
 
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4.5 relative z-10">
+          <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-4.5 relative z-10">
             {TECHNOLOGIES.map((tech) => {
               const isSelected = activeTech?.id === tech.id;
 
@@ -435,7 +351,7 @@ export const SkillsSection: React.FC = () => {
                 >
                   {/* Editorial Warm Yellow Label Box with small clean logo */}
                   <div
-                    className={`flex items-center gap-2.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border-2 border-[#162A44] font-sans font-bold text-xs sm:text-sm tracking-tight transition-all ${
+                    className={`flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-xl border-2 border-[#162A44] font-sans font-bold text-xs sm:text-sm tracking-tight transition-all ${
                       isSelected
                         ? "bg-white text-[#111111] shadow-[5px_5px_0px_0px_#162A44] ring-2 ring-[#315CFF]"
                         : "bg-[#FFD84D] text-[#111111] shadow-[3px_3px_0px_0px_#162A44] hover:shadow-[5px_5px_0px_0px_#162A44]"
@@ -460,7 +376,7 @@ export const SkillsSection: React.FC = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.98 }}
               transition={{ duration: 0.2 }}
-              className="mt-8 p-6 sm:p-7 rounded-2xl bg-[#F5EBDD] text-[#111111] border-2 border-[#162A44] shadow-[8px_8px_0px_0px_#162A44] max-w-2xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative"
+              className="mt-8 p-4 sm:p-6 rounded-2xl bg-[#F5EBDD] text-[#111111] border-2 border-[#162A44] shadow-[5px_5px_0px_0px_#162A44] sm:shadow-[8px_8px_0px_0px_#162A44] max-w-2xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative"
             >
               <div className="space-y-1">
                 <div className="flex items-center gap-2 font-mono text-[10px] text-[#162A44]/80 font-bold uppercase tracking-wider">

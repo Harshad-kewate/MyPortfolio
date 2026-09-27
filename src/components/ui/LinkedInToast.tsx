@@ -78,7 +78,7 @@ export const LinkedInToast: React.FC<LinkedInToastProps> = ({ active = true }) =
           animate={prefersReduced ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
           exit={prefersReduced ? { opacity: 0 } : { opacity: 0, y: -20, scale: 0.95 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
-          className="fixed top-20 z-[60] left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-6 md:right-8"
+          className="fixed top-20 z-[60] left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-6 md:right-8 w-auto max-w-[calc(100vw-24px)]"
         >
           <a
             href="https://www.linkedin.com/in/harshad-kewate-87b718308"
@@ -86,7 +86,7 @@ export const LinkedInToast: React.FC<LinkedInToastProps> = ({ active = true }) =
             rel="noopener noreferrer"
             onClick={handleClick}
             aria-label="Visit Harshad Kewate's LinkedIn Profile"
-            className="group relative flex items-center gap-3 px-4 py-3 rounded-xl bg-[#FFF3E6] text-[#162A44] border-2 border-[#162A44] shadow-[4px_4px_0px_0px_#162A44] hover:shadow-[6px_6px_0px_0px_#E85D2A] hover:-translate-y-0.5 transition-all select-none overflow-hidden cursor-pointer backdrop-blur-sm"
+            className="group relative flex items-center gap-2.5 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#FFF3E6] text-[#162A44] border-2 border-[#162A44] shadow-[4px_4px_0px_0px_#162A44] hover:shadow-[6px_6px_0px_0px_#E85D2A] hover:-translate-y-0.5 transition-all select-none overflow-hidden cursor-pointer backdrop-blur-sm max-w-[calc(100vw-24px)]"
           >
             {/* Small Official LinkedIn Icon Badge */}
             <div className="w-7 h-7 rounded-lg bg-[#0A66C2] text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
