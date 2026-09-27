@@ -25,7 +25,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: -1.8,
     duration: 4.1,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.006 2.748h5.814v.824H3.882S0 5.78 0 11.905c0 6.126 3.4 5.92 3.4 5.92h2.033v-2.853s-.11-3.4 3.344-3.4h5.768s3.236.054 3.236-3.18V2.656S18.25 0 11.914 0zm-3.29 1.86a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1zm3.462 22.14c6.094 0 5.714-2.656 5.714-2.656l-.006-2.748h-5.814v-.824h8.138s3.882.447 3.882-5.678c0-6.126-3.4-5.92-3.4-5.92h-2.033v2.853s.11 3.4-3.344 3.4H9.405s-3.236-.054-3.236 3.18v5.733s-.472 2.656 5.865 2.656zm3.29-1.86a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z" />
       </svg>
     ),
@@ -39,10 +39,10 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: 1.5,
     duration: 4.8,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none" stroke="#111111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="6" cy="6" r="3" fill="#111111" />
+      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0" fill="none" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="6" cy="6" r="3.2" fill="#111111" />
         <circle cx="18" cy="9" r="3.5" fill="#111111" />
-        <circle cx="10" cy="18" r="3" fill="#111111" />
+        <circle cx="10" cy="18" r="3.2" fill="#111111" />
         <line x1="6" y1="6" x2="18" y2="9" />
         <line x1="6" y1="6" x2="10" y2="18" />
         <line x1="10" y1="18" x2="18" y2="9" />
@@ -58,8 +58,8 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: -2.2,
     duration: 4.4,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
-        <path d="M12 2L3 7.2v9.6L12 22l9-5.2V7.2L12 2zm0 2.3l6.5 3.8-2.6 1.5-6.5-3.8 2.6-1.5zm-7 4.7l6 3.5v7l-6-3.5V9zm8 10.5v-7l6-3.5v7l-6 3.5z" />
+      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+        <path d="M12 1.5L2.5 7v10L12 22.5l9.5-5.5V7L12 1.5zm0 2.3l6.9 4-2.6 1.5-6.9-4 2.6-1.5zM4.5 8.7l6.5 3.8v7.5l-6.5-3.8V8.7zm8.5 11.3v-7.5l6.5-3.8v7.5l-6.5 3.8z" />
       </svg>
     ),
   },
@@ -72,10 +72,10 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: 2.1,
     duration: 5.2,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
-        <rect x="3" y="4" width="4" height="16" rx="1.5" />
+      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+        <rect x="2.5" y="4" width="4" height="16" rx="1.5" />
         <rect x="10" y="8" width="4" height="12" rx="1.5" />
-        <rect x="17" y="2" width="4" height="18" rx="1.5" />
+        <rect x="17.5" y="2" width="4" height="18" rx="1.5" />
       </svg>
     ),
   },
@@ -88,8 +88,8 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: -1.2,
     duration: 3.8,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
-        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1 4.5l5 7h-4.5l2 7.5-6.5-8.5h4.5l-.5-6z" />
+      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1 4.5l5.5 7.5h-4.5l2 7.5-6.5-9h4.5l-1-6z" />
       </svg>
     ),
   },
@@ -102,7 +102,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: 1.8,
     duration: 4.6,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M11 5C7.7 5 5 7.7 5 11s2.7 6 6 6c2.3 0 4.2-1.3 5.2-3.2h-2.4C13.2 14.5 12.2 15 11 15c-2.2 0-4-1.8-4-4s1.8-4 4-4c1.2 0 2.2.5 2.8 1.2h2.4C15.2 6.3 13.3 5 11 5zm5 4v2h-2v2h2v2h2v-2h2v-2h-2V9h-2zm5 0v2h-1v2h1v2h2v-2h2v-2h-2V9h-2z" />
       </svg>
     ),
@@ -116,8 +116,8 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: -2.5,
     duration: 5.3,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 16.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5c2.76 0 5.12 1.71 6.08 4.14h-3.09c-.7-1.01-1.78-1.64-2.99-1.64-2.21 0-4 1.79-4 4s1.79 4 4 4c1.21 0 2.29-.63 2.99-1.64h3.09c-.96 2.43-3.32 4.14-6.08 4.14z" />
+      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c4.14 0 7.7-2.52 9.24-6.14h-3.32C16.68 17.58 14.53 19 12 19c-3.86 0-7-3.14-7-7s3.14-7 7-7c2.53 0 4.68 1.42 5.92 3.14h3.32C19.7 4.52 16.14 2 12 2z" />
       </svg>
     ),
   },
@@ -130,7 +130,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: 1.2,
     duration: 4.5,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 2C8.69 2 6 4.69 6 8c0 1.5.55 2.87 1.47 3.93C5.96 12.8 5 14.52 5 16.5 5 19.54 7.46 22 10.5 22h3c3.04 0 5.5-2.46 5.5-5.5 0-1.98-.96-3.7-2.47-4.57C17.45 10.87 18 9.5 18 8c0-3.31-2.69-6-6-6zm0 2.5c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5S8.5 9.93 8.5 8s1.57-3.5 3.5-3.5zm-1.5 9.5h3c1.66 0 3 1.34 3 3s-1.34 3-3 3h-3c-1.66 0-3-1.34-3-3s1.34-3 3-3z" />
       </svg>
     ),
@@ -144,7 +144,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: -1.9,
     duration: 5.1,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 2C6.48 2 2 3.79 2 6v12c0 2.21 4.48 4 10 4s10-1.79 10-4V6c0-2.21-4.48-4-10-4zm0 2c4.42 0 8 1.34 8 2s-3.58 2-8 2-8-1.34-8-2 3.58-2 8-2zm8 14c0 .66-3.58 2-8 2s-8-1.34-8-2v-2.23c2.09 1.37 5.06 2.23 8 2.23s5.91-.86 8-2.23V18zm0-4.5c0 .66-3.58 2-8 2s-8-1.34-8-2v-2.23c2.09 1.37 5.06 2.23 8 2.23s5.91-.86 8-2.23v2.23z" />
       </svg>
     ),
@@ -158,10 +158,10 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: -1.4,
     duration: 5.4,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
-        <rect x="3" y="11" width="4.5" height="10" rx="1" />
-        <rect x="9.75" y="7" width="4.5" height="14" rx="1" />
-        <rect x="16.5" y="3" width="4.5" height="18" rx="1" />
+      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+        <rect x="3" y="11" width="4.5" height="10" rx="1.2" />
+        <rect x="9.75" y="7" width="4.5" height="14" rx="1.2" />
+        <rect x="16.5" y="3" width="4.5" height="18" rx="1.2" />
       </svg>
     ),
   },
@@ -174,7 +174,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: 2.2,
     duration: 4.4,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M21.6 10.4l-8-8c-.8-.8-2-.8-2.8 0L8.7 4.5l3.5 3.5c.8-.3 1.8-.1 2.4.5.6.6.8 1.6.5 2.4l3.4 3.4c.8-.3 1.8-.1 2.4.5.9.9.9 2.5 0 3.4s-2.5.9-3.4 0c-.7-.7-.8-1.7-.5-2.5l-3.2-3.2v4.8c.4.3.7.8.7 1.4 0 1.2-1 2.2-2.2 2.2s-2.2-1-2.2-2.2c0-.6.3-1.1.7-1.4V8.6c-.4-.3-.7-.8-.7-1.4 0-.8.4-1.5 1.1-1.9L8.4 2.8 2.4 8.8c-.8.8-.8 2 0 2.8l8 8c.8.8 2 .8 2.8 0l8.4-8.4c.8-.8.8-2 0-2.8z" />
       </svg>
     ),
@@ -188,7 +188,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: 1.9,
     duration: 5.1,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 1.5C12 1.5 6.5 6.2 6.5 13.2c0 4.1 3 7.5 5.5 8.8v-10h1v10c2.5-1.3 5.5-4.7 5.5-8.8C18.5 6.2 12 1.5 12 1.5zm0 17.5c-.2 0-.3-.1-.4-.2-.9-.8-3.1-3.1-3.1-5.6 0-3.3 2.5-5.7 3.5-6.5v12.3z" />
       </svg>
     ),
@@ -349,9 +349,9 @@ export const SkillsSection: React.FC = () => {
                   onClick={() => setActiveTech(isSelected ? null : tech)}
                   className="cursor-pointer select-none"
                 >
-                  {/* Editorial Warm Yellow Label Box with small clean logo */}
+                  {/* Editorial Warm Yellow Label Box with clear recognizable logo */}
                   <div
-                    className={`flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-xl border-2 border-[#162A44] font-sans font-bold text-xs sm:text-sm tracking-tight transition-all ${
+                    className={`flex items-center gap-2.5 px-3.5 sm:px-4.5 py-2 sm:py-2.5 rounded-xl border-2 border-[#162A44] font-sans font-bold text-xs sm:text-sm tracking-tight transition-all ${
                       isSelected
                         ? "bg-white text-[#111111] shadow-[5px_5px_0px_0px_#162A44] ring-2 ring-[#315CFF]"
                         : "bg-[#FFD84D] text-[#111111] shadow-[3px_3px_0px_0px_#162A44] hover:shadow-[5px_5px_0px_0px_#162A44]"
@@ -386,7 +386,7 @@ export const SkillsSection: React.FC = () => {
                 </div>
 
                 <div className="font-display font-black text-xl text-[#111111] flex items-center gap-2.5">
-                  <div className="shrink-0">{activeTech.svg}</div>
+                  <div className="shrink-0 scale-110 origin-center">{activeTech.svg}</div>
                   <span>{activeTech.name}</span>
                   <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#162A44] text-[#FFD84D]">
                     VERIFIED

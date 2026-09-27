@@ -17,13 +17,13 @@ export const HeroSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Editorial Hero Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
           {/* Left Column: Bold Typography & Actions (7 cols) */}
           <motion.div
             initial={prefersReduced ? { opacity: 0 } : { opacity: 0, y: 24 }}
             animate={prefersReduced ? { opacity: 1 } : { opacity: 1, y: 0 }}
             transition={{ duration: prefersReduced ? 0.05 : 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7 flex flex-col justify-center space-y-5 sm:space-y-8"
+            className="lg:col-span-7 flex flex-col justify-center space-y-5 sm:space-y-6"
           >
             {/* Tag / Category */}
             <div className="inline-flex items-center gap-2">
@@ -34,11 +34,10 @@ export const HeroSection: React.FC = () => {
               <span className="w-2 h-2 rounded-full bg-[#B8D83D] animate-pulse" />
             </div>
 
-            {/* Giant Bold Headline */}
+            {/* Giant Bold Headline — Balanced on Desktop */}
             <div className="space-y-2">
-              <h1 className="font-display text-4xl sm:text-7xl md:text-8xl lg:text-[100px] font-black uppercase tracking-tight text-[#18352F] leading-[0.92] sm:leading-[0.88] break-words">
-                HARSHAD <br />
-                <span className="text-[#E85D2A]">KEWATE</span>
+              <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] font-black uppercase tracking-tight text-[#18352F] leading-[1.05] sm:leading-tight lg:whitespace-nowrap select-none">
+                HARSHAD <span className="text-[#E85D2A]">KEWATE</span>
               </h1>
               <p className="font-mono text-base sm:text-xl md:text-2xl font-bold tracking-tight text-[#18352F]/90 pt-1">
                 AI & ML ENTHUSIAST
@@ -82,34 +81,34 @@ export const HeroSection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Right Column: Smaller Circular Portrait (Head to Collar) with Signature Color Accents (5 cols) */}
+          {/* Right Column: Circular Portrait (Full Head, Hair, Face & Shoulders) with Signature Color Accents (5 cols) */}
           <motion.div
             initial={prefersReduced ? { opacity: 0 } : { opacity: 0, scale: 0.96 }}
             animate={prefersReduced ? { opacity: 1 } : { opacity: 1, scale: 1 }}
             transition={{ duration: prefersReduced ? 0.05 : 0.8, delay: prefersReduced ? 0 : 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 flex flex-col items-center lg:items-end justify-center pt-2 sm:pt-0"
+            className="lg:col-span-5 flex flex-col items-center justify-center pt-4 sm:pt-0"
           >
             <div className="relative">
               {/* Asymmetric Vivid Orange Architectural Circle behind portrait */}
-              <div className="absolute -top-2.5 -right-2.5 sm:-top-3.5 sm:-right-3.5 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full bg-vividOrange border-2 border-[#18352F]" />
+              <div className="absolute -top-2.5 -right-2.5 sm:-top-3.5 sm:-right-3.5 w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-vividOrange border-2 border-[#18352F]" />
               
               {/* Subtle accent border */}
-              <div className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full border-2 border-[#18352F]/30 pointer-events-none" />
+              <div className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-2 border-[#18352F]/30 pointer-events-none" />
 
-              {/* Main Circular Photo Frame (Head to Shirt/Collar Only) */}
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden bg-charcoal-900 shadow-2xl border-2 sm:border-3 border-[#18352F]">
+              {/* Main Circular Photo Frame (Full Head, Hair & Upper Body Naturally Displayed) */}
+              <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-charcoal-900 shadow-2xl border-2 sm:border-3 border-[#18352F]">
                 <Image
                   src="/harshad-photo.jpeg"
                   alt="Harshad Kewate — AI & ML Enthusiast"
                   fill
                   priority
-                  className="object-cover object-[50%_14%] scale-110 hover:scale-115 transition-transform duration-700 ease-out"
+                  className="object-cover object-top scale-100 hover:scale-[1.02] transition-transform duration-500 ease-out"
                 />
               </div>
             </div>
 
-            {/* Clean Name & Degree Subtitle aligned with smaller circular photo */}
-            <div className="mt-4 sm:mt-5 text-center lg:text-right space-y-0.5">
+            {/* Clean Name & Degree Subtitle aligned with circular photo */}
+            <div className="mt-4 sm:mt-5 text-center space-y-0.5">
               <div className="font-display font-black text-lg sm:text-xl text-[#18352F] tracking-tight uppercase">
                 HARSHAD KEWATE
               </div>
