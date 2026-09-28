@@ -17,7 +17,7 @@ import {
 import { contactInfo } from "@/data/portfolioData";
 
 const BIO_SPEECH_TEXT =
-  "Harshad Kewate is an Artificial Intelligence and Machine Learning undergraduate at Bansal Institute of Science and Technology, Bhopal, graduating in 2026 with a 7.11 CGPA. Driven by building machine learning models that solve genuine environmental and educational challenges, he specializes in atmospheric modeling using 13 years of ECMWF ERA5 climate reanalysis, multilingual audio intelligence pipelines with Whisper, and predictive machine learning pipelines with Scikit-Learn.";
+  "Harshad Kewate is an Artificial Intelligence and Machine Learning undergraduate at Bansal Institute of Science and Technology, Bhopal, graduating in 2026 with a 7.11 CGPA. Driven by building practical machine learning models and clean software applications, he works on climate prediction systems, speech recognition and translation pipelines, and data-driven web applications.";
 
 export const AboutSection: React.FC = () => {
   const [speechSupported, setSpeechSupported] = useState(false);
@@ -249,13 +249,13 @@ export const AboutSection: React.FC = () => {
                 className="absolute -bottom-6 left-2 sm:-left-6 bg-[#E9DFCF] p-3.5 sm:p-4 rounded-2xl border-2 border-[#18352F] shadow-xl max-w-[200px] sm:max-w-[220px]"
               >
                 <div className="font-mono text-[10px] text-[#E85D2A] uppercase tracking-wider font-bold">
-                  ATMOSPHERIC MODELING
+                  CLIMATE ML
                 </div>
                 <div className="font-display font-black text-sm text-[#18352F] mt-0.5">
-                  13 YRS ERA5 REANALYSIS
+                  13 YRS CLIMATE DATA
                 </div>
                 <div className="font-mono text-[10px] text-[#18352F]/80 font-bold mt-1">
-                  0.25° RESOLUTION MESH
+                  HIGH-RESOLUTION GRID
                 </div>
               </motion.div>
             </div>
@@ -264,9 +264,9 @@ export const AboutSection: React.FC = () => {
           {/* Right Column: Large Typography & Rich Editorial Cards (7 cols) */}
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-5">
-              <h2 className="font-display text-3xl min-[360px]:text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#18352F] leading-[0.96] break-words">
-                BRIDGING THEORY, <br />
-                <span className="text-[#E85D2A]">DATA</span> & SCALABLE CODE.
+              <h2 className="font-display text-2xl min-[360px]:text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#18352F] leading-[0.96] break-normal">
+                BRIDGING MACHINE LEARNING, <br />
+                <span className="text-[#E85D2A]">DATA</span> & PRACTICAL CODE.
               </h2>
 
               <p className="text-base sm:text-lg text-[#18352F]/90 leading-relaxed font-normal max-w-2xl">
@@ -274,8 +274,8 @@ export const AboutSection: React.FC = () => {
                 <strong className="text-[#18352F] font-bold">
                   Bansal Institute Of Science & Technology, Bhopal
                 </strong>{" "}
-                (7.11 CGPA). Dedicated to transforming complex meteorological reanalysis and
-                multilingual speech pipelines into resilient, mathematically grounded software architectures.
+                (7.11 CGPA). Dedicated to building practical machine learning models and
+                clean software applications that solve genuine environmental and educational challenges.
               </p>
             </div>
 
@@ -285,14 +285,14 @@ export const AboutSection: React.FC = () => {
               <div className="p-5 rounded-2xl bg-[#E9DFCF] border-2 border-[#18352F] shadow-sm space-y-2 hover:translate-y-[-2px] transition-transform group">
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[11px] font-bold text-[#E85D2A] uppercase tracking-wider">
-                    01 // ATMOSPHERIC AI
+                    01 // CLIMATE ML
                   </span>
                 </div>
                 <div className="font-display font-bold text-lg text-[#18352F] group-hover:text-[#E85D2A] transition-colors">
-                  ERA5 Climate ML
+                  Monsoon Prediction
                 </div>
                 <p className="font-sans text-xs text-[#18352F]/80 leading-relaxed">
-                  Trained HistGradientBoosting with CalibratedClassifierCV on 13 years of ECMWF ERA5 data (0.9928 ROC-AUC).
+                  Trained predictive gradient boosting models on 13 years of climate reanalysis data to forecast monsoon patterns.
                 </p>
               </div>
 
@@ -300,14 +300,14 @@ export const AboutSection: React.FC = () => {
               <div className="p-5 rounded-2xl bg-[#E9DFCF] border-2 border-[#18352F] shadow-sm space-y-2 hover:translate-y-[-2px] transition-transform group">
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[11px] font-bold text-[#18352F] uppercase tracking-wider">
-                    02 // AUDIO & GENAI
+                    02 // SPEECH AI
                   </span>
                 </div>
                 <div className="font-display font-bold text-lg text-[#18352F] group-hover:text-[#E85D2A] transition-colors">
-                  Speech Pipelines
+                  Audio Translation
                 </div>
                 <p className="font-sans text-xs text-[#18352F]/80 leading-relaxed">
-                  Engineered automated Whisper transcription, context-preserving translation, and voice synthesis pipelines.
+                  Built end-to-end automated pipelines for lecture speech recognition, multilingual translation, and audio synthesis.
                 </p>
               </div>
 
@@ -315,14 +315,14 @@ export const AboutSection: React.FC = () => {
               <div className="p-5 rounded-2xl bg-[#E9DFCF] border-2 border-[#18352F] shadow-sm space-y-2 hover:translate-y-[-2px] transition-transform group">
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[11px] font-bold text-[#E85D2A] uppercase tracking-wider">
-                    03 // AUDIO & RECOMMENDATION
+                    03 // RECOMMENDATION ML
                   </span>
                 </div>
                 <div className="font-display font-bold text-lg text-[#18352F] group-hover:text-[#E85D2A] transition-colors">
-                  KNN Music Recommendation
+                  Music Mood Classifier
                 </div>
                 <p className="font-sans text-xs text-[#18352F]/80 leading-relaxed">
-                  Engineered KNN audio classification modeling musical valence, energy, and acoustic features for mood prediction.
+                  Applied machine learning classification to analyze audio tempo, valence, and acoustic features for mood-based song recommendations.
                 </p>
               </div>
             </div>

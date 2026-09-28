@@ -84,9 +84,9 @@ export const EducationSection: React.FC = () => {
 
         {/* Section Heading */}
         <div className="mb-14 sm:mb-20 max-w-3xl">
-          <h2 className="font-display text-3xl min-[360px]:text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#162A44] leading-[0.92] break-words">
-            ACADEMIC <br />
-            <span className="text-[#E85D2A] drop-shadow-[2px_2px_0px_#162A44]">
+          <h2 className="font-display text-2xl min-[360px]:text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black uppercase tracking-tight text-[#162A44] leading-[0.95] break-normal">
+            <span className="inline-block whitespace-nowrap">ACADEMIC</span> <br />
+            <span className="inline-block whitespace-nowrap text-[#E85D2A] drop-shadow-[2px_2px_0px_#162A44]">
               JOURNEY.
             </span>
           </h2>

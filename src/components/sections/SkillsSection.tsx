@@ -19,13 +19,13 @@ const TECHNOLOGIES: TechBox[] = [
   {
     id: "python",
     name: "Python",
-    category: "AI & Numerical ML",
-    role: "Atmospheric ML Modeling & Data Scripting",
-    project: "Monsoon Mitra // CS50P Honors (Harvard)",
+    category: "Programming & ML",
+    role: "Machine Learning & Data Modeling",
+    project: "Monsoon Mitra // Harvard CS50P Honors",
     rotation: -1.8,
     duration: 4.1,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.006 2.748h5.814v.824H3.882S0 5.78 0 11.905c0 6.126 3.4 5.92 3.4 5.92h2.033v-2.853s-.11-3.4 3.344-3.4h5.768s3.236.054 3.236-3.18V2.656S18.25 0 11.914 0zm-3.29 1.86a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1zm3.462 22.14c6.094 0 5.714-2.656 5.714-2.656l-.006-2.748h-5.814v-.824h8.138s3.882.447 3.882-5.678c0-6.126-3.4-5.92-3.4-5.92h-2.033v2.853s.11 3.4-3.344 3.4H9.405s-3.236-.054-3.236 3.18v5.733s-.472 2.656 5.865 2.656zm3.29-1.86a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z" />
       </svg>
     ),
@@ -34,12 +34,12 @@ const TECHNOLOGIES: TechBox[] = [
     id: "scikit-learn",
     name: "Scikit-Learn",
     category: "Machine Learning",
-    role: "HistGradientBoosting & 0.9928 ROC-AUC",
-    project: "Monsoon Mitra // Atmospheric AI",
+    role: "Model Training & Performance Evaluation",
+    project: "Monsoon Mitra // Climate ML",
     rotation: 1.5,
     duration: 4.8,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0" fill="none" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0" fill="none" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <circle cx="6" cy="6" r="3.2" fill="#111111" />
         <circle cx="18" cy="9" r="3.5" fill="#111111" />
         <circle cx="10" cy="18" r="3.2" fill="#111111" />
@@ -52,13 +52,13 @@ const TECHNOLOGIES: TechBox[] = [
   {
     id: "numpy",
     name: "NumPy",
-    category: "Numerical Math",
-    role: "0.25° ECMWF Grid Vectorized Computation",
-    project: "Monsoon Mitra // ERA5 Grid",
+    category: "Numerical Computing",
+    role: "Array Operations & Matrix Computation",
+    project: "Monsoon Mitra // Data Modeling",
     rotation: -2.2,
     duration: 4.4,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 1.5L2.5 7v10L12 22.5l9.5-5.5V7L12 1.5zm0 2.3l6.9 4-2.6 1.5-6.9-4 2.6-1.5zM4.5 8.7l6.5 3.8v7.5l-6.5-3.8V8.7zm8.5 11.3v-7.5l6.5-3.8v7.5l-6.5 3.8z" />
       </svg>
     ),
@@ -66,13 +66,13 @@ const TECHNOLOGIES: TechBox[] = [
   {
     id: "pandas",
     name: "Pandas",
-    category: "Data Wrangling",
-    role: "47,490+ Atmospheric Time-Series Records",
-    project: "Monsoon Mitra // Data Pipeline",
+    category: "Data Processing",
+    role: "Data Cleaning, Preprocessing & Analysis",
+    project: "Monsoon Mitra // Data Pipelines",
     rotation: 2.1,
     duration: 5.2,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
         <rect x="2.5" y="4" width="4" height="16" rx="1.5" />
         <rect x="10" y="8" width="4" height="12" rx="1.5" />
         <rect x="17.5" y="2" width="4" height="18" rx="1.5" />
@@ -82,13 +82,13 @@ const TECHNOLOGIES: TechBox[] = [
   {
     id: "fastapi",
     name: "FastAPI",
-    category: "Inference APIs",
-    role: "Sub-Second Asynchronous Prediction Endpoints",
-    project: "Monsoon Mitra // Inference Engine",
+    category: "Backend & APIs",
+    role: "High-Performance REST APIs & ML Serving",
+    project: "Monsoon Mitra // API Endpoints",
     rotation: -1.2,
     duration: 3.8,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1 4.5l5.5 7.5h-4.5l2 7.5-6.5-9h4.5l-1-6z" />
       </svg>
     ),
@@ -96,13 +96,13 @@ const TECHNOLOGIES: TechBox[] = [
   {
     id: "cpp",
     name: "C++",
-    category: "Systems & Algorithms",
-    role: "Manual Memory Pointer Bounds & Data Structures",
-    project: "10+ Custom Algorithmic Implementations",
+    category: "Languages & Algorithms",
+    role: "Data Structures & Systems Programming",
+    project: "Algorithmic Implementations",
     rotation: 1.8,
     duration: 4.6,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M11 5C7.7 5 5 7.7 5 11s2.7 6 6 6c2.3 0 4.2-1.3 5.2-3.2h-2.4C13.2 14.5 12.2 15 11 15c-2.2 0-4-1.8-4-4s1.8-4 4-4c1.2 0 2.2.5 2.8 1.2h2.4C15.2 6.3 13.3 5 11 5zm5 4v2h-2v2h2v2h2v-2h2v-2h-2V9h-2zm5 0v2h-1v2h1v2h2v-2h2v-2h-2V9h-2z" />
       </svg>
     ),
@@ -110,13 +110,13 @@ const TECHNOLOGIES: TechBox[] = [
   {
     id: "c",
     name: "C",
-    category: "Low-Level Computing",
-    role: "Hardware Pointers & Systems Foundations",
-    project: "Computer Science Architecture Coursework",
+    category: "Languages & Systems",
+    role: "Memory Fundamentals & Core Programming",
+    project: "Systems Coursework",
     rotation: -2.5,
     duration: 5.3,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c4.14 0 7.7-2.52 9.24-6.14h-3.32C16.68 17.58 14.53 19 12 19c-3.86 0-7-3.14-7-7s3.14-7 7-7c2.53 0 4.68 1.42 5.92 3.14h3.32C19.7 4.52 16.14 2 12 2z" />
       </svg>
     ),
@@ -124,13 +124,13 @@ const TECHNOLOGIES: TechBox[] = [
   {
     id: "postgresql",
     name: "PostgreSQL",
-    category: "Relational DB",
-    role: "Relational Data Modeling & ACID Schemas",
-    project: "PolyLingo AI Storage",
+    category: "Relational Databases",
+    role: "Relational Schema Design & Persistence",
+    project: "PolyLingo AI Data",
     rotation: 1.2,
     duration: 4.5,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 2C8.69 2 6 4.69 6 8c0 1.5.55 2.87 1.47 3.93C5.96 12.8 5 14.52 5 16.5 5 19.54 7.46 22 10.5 22h3c3.04 0 5.5-2.46 5.5-5.5 0-1.98-.96-3.7-2.47-4.57C17.45 10.87 18 9.5 18 8c0-3.31-2.69-6-6-6zm0 2.5c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5S8.5 9.93 8.5 8s1.57-3.5 3.5-3.5zm-1.5 9.5h3c1.66 0 3 1.34 3 3s-1.34 3-3 3h-3c-1.66 0-3-1.34-3-3s1.34-3 3-3z" />
       </svg>
     ),
@@ -138,13 +138,13 @@ const TECHNOLOGIES: TechBox[] = [
   {
     id: "sql",
     name: "SQL & MySQL",
-    category: "Relational Queries",
-    role: "Window Aggregations & Query Execution Plans",
-    project: "DBMS & Analytics Reports",
+    category: "Database Queries",
+    role: "Complex Queries, Joins & Aggregations",
+    project: "Relational Data Modeling",
     rotation: -1.9,
     duration: 5.1,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 2C6.48 2 2 3.79 2 6v12c0 2.21 4.48 4 10 4s10-1.79 10-4V6c0-2.21-4.48-4-10-4zm0 2c4.42 0 8 1.34 8 2s-3.58 2-8 2-8-1.34-8-2 3.58-2 8-2zm8 14c0 .66-3.58 2-8 2s-8-1.34-8-2v-2.23c2.09 1.37 5.06 2.23 8 2.23s5.91-.86 8-2.23V18zm0-4.5c0 .66-3.58 2-8 2s-8-1.34-8-2v-2.23c2.09 1.37 5.06 2.23 8 2.23s5.91-.86 8-2.23v2.23z" />
       </svg>
     ),
@@ -152,13 +152,13 @@ const TECHNOLOGIES: TechBox[] = [
   {
     id: "powerbi",
     name: "Power BI",
-    category: "Analytics & BI",
-    role: "Simulated Corporate KPI Storytelling",
-    project: "Deloitte Data Simulation",
+    category: "Business Intelligence",
+    role: "Interactive Dashboards & Data Reporting",
+    project: "Business Simulation Analysis",
     rotation: -1.4,
     duration: 5.4,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
         <rect x="3" y="11" width="4.5" height="10" rx="1.2" />
         <rect x="9.75" y="7" width="4.5" height="14" rx="1.2" />
         <rect x="16.5" y="3" width="4.5" height="18" rx="1.2" />
@@ -168,13 +168,13 @@ const TECHNOLOGIES: TechBox[] = [
   {
     id: "git",
     name: "Git & GitHub",
-    category: "Version Control",
-    role: "Semantic Commits & Open-Source Repositories",
+    category: "Developer Tools",
+    role: "Version Control, Branching & Collaboration",
     project: "github.com/Harshad-kewate",
     rotation: 2.2,
     duration: 4.4,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M21.6 10.4l-8-8c-.8-.8-2-.8-2.8 0L8.7 4.5l3.5 3.5c.8-.3 1.8-.1 2.4.5.6.6.8 1.6.5 2.4l3.4 3.4c.8-.3 1.8-.1 2.4.5.9.9.9 2.5 0 3.4s-2.5.9-3.4 0c-.7-.7-.8-1.7-.5-2.5l-3.2-3.2v4.8c.4.3.7.8.7 1.4 0 1.2-1 2.2-2.2 2.2s-2.2-1-2.2-2.2c0-.6.3-1.1.7-1.4V8.6c-.4-.3-.7-.8-.7-1.4 0-.8.4-1.5 1.1-1.9L8.4 2.8 2.4 8.8c-.8.8-.8 2 0 2.8l8 8c.8.8 2 .8 2.8 0l8.4-8.4c.8-.8.8-2 0-2.8z" />
       </svg>
     ),
@@ -182,13 +182,13 @@ const TECHNOLOGIES: TechBox[] = [
   {
     id: "mongodb",
     name: "MongoDB",
-    category: "Document Store",
-    role: "BSON Schemas & Flexible Catalogs",
-    project: "Full-Stack Web Sprints",
+    category: "NoSQL Databases",
+    role: "Document Databases & CRUD Operations",
+    project: "Web Development Projects",
     rotation: 1.9,
     duration: 5.1,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 1.5C12 1.5 6.5 6.2 6.5 13.2c0 4.1 3 7.5 5.5 8.8v-10h1v10c2.5-1.3 5.5-4.7 5.5-8.8C18.5 6.2 12 1.5 12 1.5zm0 17.5c-.2 0-.3-.1-.4-.2-.9-.8-3.1-3.1-3.1-5.6 0-3.3 2.5-5.7 3.5-6.5v12.3z" />
       </svg>
     ),
@@ -288,50 +288,66 @@ export const SkillsSection: React.FC = () => {
               03
             </span>
             <span className="uppercase tracking-widest text-[#162A44] font-black">
-              // CORE COMPUTATIONAL ECOSYSTEM
+              // TECHNICAL SKILLS & STACK
             </span>
             <span className="w-2.5 h-2.5 rounded-full bg-[#E85D2A] animate-pulse" />
           </div>
 
           <span className="font-mono text-xs font-bold text-[#162A44]/75 hidden sm:inline">
-            CLICK ANY YELLOW LABEL TO INSPECT REAL USAGE
+            CLICK ANY SKILL TO VIEW APPLICATION DETAILS
           </span>
         </div>
 
         {/* Section Heading */}
-        <div className="mb-12 sm:mb-16 max-w-3xl">
-          <h2 className="font-display text-3xl min-[360px]:text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#162A44] leading-[0.92] break-words">
-            TECHNOLOGY <br />
-            <span className="text-[#E85D2A] drop-shadow-[2px_2px_0px_#162A44]">
+        <div className="mb-10 sm:mb-14 max-w-3xl">
+          <h2 className="font-display text-2xl min-[360px]:text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black uppercase tracking-tight text-[#162A44] leading-[0.95] break-normal">
+            <span className="inline-block whitespace-nowrap">TECHNOLOGY</span> <br />
+            <span className="inline-block whitespace-nowrap text-[#E85D2A] drop-shadow-[2px_2px_0px_#162A44]">
               ECOSYSTEM.
             </span>
           </h2>
           <p className="mt-3 text-base sm:text-lg text-[#162A44]/85 font-medium leading-relaxed max-w-xl">
-            A verified cluster of mathematical libraries, atmospheric ML modeling frameworks, and low-level C++ systems.
-            Production validated tools only.
+            Languages, frameworks, and libraries used across machine learning models and practical software engineering projects.
           </p>
         </div>
 
-        {/* COMPACT WARM YELLOW BOXES CLUSTER (Editorial surface on Warm Cream #F5EBDD) */}
-        <div className="relative rounded-3xl bg-[#F5EBDD] border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] sm:shadow-[8px_8px_0px_0px_#162A44] p-4 sm:p-10 overflow-hidden">
-          {/* Subtle Decorative Paper Corner Sliver */}
+        {/* BENTO-STYLE EDITORIAL TECHNOLOGY MATRIX (Warm Cream Surface #F5EBDD) */}
+        <div className="relative rounded-3xl bg-[#F5EBDD] border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] sm:shadow-[8px_8px_0px_0px_#162A44] p-4 sm:p-7 md:p-8 overflow-hidden">
+          {/* Subtle Technical Corner Accents & Slivers */}
+          <div className="absolute top-2.5 left-3 text-xs font-mono font-bold text-[#162A44]/30 select-none pointer-events-none">+</div>
+          <div className="absolute top-2.5 right-3 text-xs font-mono font-bold text-[#162A44]/30 select-none pointer-events-none">+</div>
+          <div className="absolute bottom-2.5 left-3 text-xs font-mono font-bold text-[#162A44]/30 select-none pointer-events-none">+</div>
+          <div className="absolute bottom-2.5 right-3 text-xs font-mono font-bold text-[#162A44]/30 select-none pointer-events-none">+</div>
           <div className="absolute top-0 right-0 w-16 h-16 bg-[#E85D2A]/10 -rotate-45 translate-x-8 -translate-y-8 pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-12 h-12 bg-[#FFD84D]/20 rotate-12 -translate-x-6 translate-y-6 pointer-events-none" />
 
-          <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-4.5 relative z-10">
-            {TECHNOLOGIES.map((tech) => {
+          {/* Editorial Bento Header Bar */}
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-5 sm:mb-6 pb-3 sm:pb-4 border-b-2 border-[#162A44]/15 relative z-10">
+            <div className="flex items-center gap-2 font-mono text-xs text-[#162A44] font-black">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#E85D2A] animate-pulse" />
+              <span className="uppercase tracking-wider">// CORE TECHNOLOGIES & TOOLS</span>
+            </div>
+            <div className="font-mono text-[10px] sm:text-[11px] text-[#162A44]/70 font-bold hidden sm:flex items-center gap-2">
+              <span>12 KEY TECHNOLOGIES</span>
+              <span>•</span>
+              <span>BENTO GRID</span>
+            </div>
+          </div>
+
+          {/* 12-Item Balanced Editorial Bento Grid */}
+          <div className="grid grid-cols-2 min-[540px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 relative z-10">
+            {TECHNOLOGIES.map((tech, idx) => {
               const isSelected = activeTech?.id === tech.id;
 
               return (
                 <motion.div
                   key={tech.id}
-                  style={{ rotate: tech.rotation }}
+                  style={{ rotate: tech.rotation * 0.3 }}
                   animate={
                     prefersReduced
                       ? undefined
                       : {
-                          y: [-3, 3, -3],
-                          x: [-1.5, 1.5, -1.5],
+                          y: [-2, 2, -2],
                         }
                   }
                   transition={{
@@ -340,27 +356,50 @@ export const SkillsSection: React.FC = () => {
                     ease: "easeInOut",
                   }}
                   whileHover={{
-                    scale: 1.08,
+                    scale: 1.03,
                     rotate: 0,
-                    y: -5,
-                    zIndex: 30,
+                    y: -4,
+                    zIndex: 20,
                   }}
-                  whileTap={{ scale: 0.96 }}
+                  whileTap={{ scale: 0.97 }}
                   onClick={() => setActiveTech(isSelected ? null : tech)}
                   className="cursor-pointer select-none"
                 >
-                  {/* Editorial Warm Yellow Label Box with clear recognizable logo */}
                   <div
-                    className={`flex items-center gap-2.5 px-3.5 sm:px-4.5 py-2 sm:py-2.5 rounded-xl border-2 border-[#162A44] font-sans font-bold text-xs sm:text-sm tracking-tight transition-all ${
+                    className={`h-full p-3.5 sm:p-4 rounded-2xl border-2 border-[#162A44] flex flex-col justify-between transition-all ${
                       isSelected
-                        ? "bg-white text-[#111111] shadow-[5px_5px_0px_0px_#162A44] ring-2 ring-[#315CFF]"
+                        ? "bg-white text-[#111111] shadow-[5px_5px_0px_0px_#E85D2A] ring-2 ring-[#E85D2A]"
                         : "bg-[#FFD84D] text-[#111111] shadow-[3px_3px_0px_0px_#162A44] hover:shadow-[5px_5px_0px_0px_#162A44]"
                     }`}
                   >
-                    <div className="shrink-0">{tech.svg}</div>
-                    <span className="whitespace-nowrap uppercase tracking-wider font-extrabold text-[#111111]">
-                      {tech.name}
-                    </span>
+                    {/* Top Row: Index + Technical Category Tag */}
+                    <div className="flex items-center justify-between pb-2 mb-2 border-b border-[#162A44]/15">
+                      <span className="font-mono text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-[#162A44]/80">
+                        0{idx + 1} // {tech.category.split(" ")[0]}
+                      </span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#162A44]/60" />
+                    </div>
+
+                    {/* Middle Row: Crisp 24px Logo in Tile + Name & Category */}
+                    <div className="flex items-center gap-3 py-1">
+                      <div className="shrink-0 p-2 rounded-xl bg-white/80 border border-[#162A44]/20 shadow-sm flex items-center justify-center">
+                        {tech.svg}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="font-display font-black text-sm sm:text-base uppercase tracking-tight text-[#111111] leading-tight truncate">
+                          {tech.name}
+                        </div>
+                        <div className="font-mono text-[10px] sm:text-[11px] font-bold text-[#162A44]/80 tracking-tight truncate mt-0.5">
+                          {tech.category}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Bottom Row: Role / usage hint */}
+                    <div className="pt-2 mt-2 border-t border-[#162A44]/10 flex items-center justify-between font-mono text-[9px] sm:text-[10px] text-[#162A44]/75">
+                      <span className="truncate">{tech.role.split("&")[0].trim()}</span>
+                      <span className="text-[11px] font-bold shrink-0 ml-1">→</span>
+                    </div>
                   </div>
                 </motion.div>
               );

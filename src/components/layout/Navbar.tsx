@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
                 HARSHAD KEWATE
               </span>
               <span className="font-sans text-[9px] sm:text-[11px] font-semibold text-[#18352F]/70 tracking-wide uppercase leading-tight">
-                AI & ML ENTHUSIAST
+                AI & MACHINE LEARNING STUDENT
               </span>
             </div>
           </a>

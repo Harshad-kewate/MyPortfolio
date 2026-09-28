@@ -105,9 +105,9 @@ export const CertificationsSection: React.FC = () => {
 
         {/* Section Heading */}
         <div className="mb-10 sm:mb-14 max-w-3xl">
-          <h2 className="font-display text-3xl min-[360px]:text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#111111] leading-[0.92] break-words">
-            VERIFIED <br />
-            <span className="text-[#E52420] underline decoration-[#FFD928] decoration-4">
+          <h2 className="font-display text-2xl min-[360px]:text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black uppercase tracking-tight text-[#111111] leading-[0.95] break-normal">
+            <span className="inline-block whitespace-nowrap">VERIFIED</span> <br />
+            <span className="inline-block whitespace-nowrap text-[#E52420] underline decoration-[#FFD928] decoration-4">
               CERTIFICATES.
             </span>
           </h2>

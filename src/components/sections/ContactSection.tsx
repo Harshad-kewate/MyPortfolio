@@ -104,35 +104,35 @@ export const ContactSection: React.FC = () => {
         {/* Section Identifier */}
         <div className="flex items-center gap-3 mb-10 font-mono text-xs text-[#E9DFCF] font-bold uppercase tracking-widest">
           <span className="px-2.5 py-1 rounded bg-[#E85D2A] text-white">06</span>
-          <span>// DIRECT TRANSMISSION & CONTACT</span>
+          <span>// GET IN TOUCH & CONTACT</span>
           <span className="w-2.5 h-2.5 rounded-full bg-[#B8D83D] animate-pulse" />
         </div>
 
         {/* Large Typography Callout */}
         <div className="mb-14 sm:mb-20 max-w-4xl">
-          <h2 className="font-display text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight leading-[0.88] text-[#F4EFE6] break-words">
-            LET’S <br />
-            <span className="text-[#E85D2A]">CONNECT.</span>
+          <h2 className="font-display text-3xl min-[360px]:text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tight leading-[0.92] text-[#F4EFE6] break-normal">
+            <span className="inline-block whitespace-nowrap">LET’S</span> <br />
+            <span className="inline-block whitespace-nowrap text-[#E85D2A]">CONNECT.</span>
           </h2>
           <p className="mt-6 text-lg sm:text-xl text-[#F4EFE6]/90 max-w-2xl font-normal leading-relaxed">
-            Open for AI/ML engineering internships, research collaborations, and ambitious software builds.
+            Open for AI/ML engineering internships, full-stack opportunities, and collaborative software projects.
             Send a direct message below.
           </p>
         </div>
 
         {/* 2-Column Responsive Layout: Direct Message Form + Fast Channels */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Column 1: Real In-Page Direct Transmission Form (7 cols) */}
+          {/* Column 1: Real In-Page Direct Message Form (7 cols) */}
           <div className="lg:col-span-7 bg-[#E9DFCF] text-[#18352F] rounded-3xl p-4 sm:p-8 md:p-10 border-2 border-[#18352F] shadow-2xl">
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#18352F]/15">
               <div className="flex items-center gap-2">
                 <MessageSquare className="w-4 h-4 text-[#E85D2A]" />
                 <span className="font-mono text-xs text-[#18352F] font-bold uppercase tracking-wider">
-                  DIRECT TRANSMISSION FORM
+                  SEND A MESSAGE
                 </span>
               </div>
               <span className="font-mono text-[11px] text-[#18352F]/70 font-semibold">
-                IN-PAGE DISPATCH
+                DIRECT CONTACT
               </span>
             </div>
 
@@ -211,7 +211,7 @@ export const ContactSection: React.FC = () => {
                 <div className="p-4 rounded-xl bg-[#DCE5D5] border-2 border-[#18352F] text-[#18352F] font-mono text-xs flex items-center gap-2.5 shadow-sm">
                   <Check className="w-4 h-4 text-[#18352F] shrink-0" />
                   <span className="font-bold">
-                    Message sent successfully! Harshad has received your transmission and will follow up shortly.
+                    Message sent successfully! Harshad has received your note and will follow up shortly.
                   </span>
                 </div>
               )}
@@ -221,13 +221,13 @@ export const ContactSection: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  data-cursor="TRANSMIT"
+                  data-cursor="SEND"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full font-mono text-xs sm:text-sm font-bold bg-[#E85D2A] text-white hover:bg-[#18352F] transition-all shadow-lg hover:scale-102 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
                       <Loader2 className="w-4 h-4 animate-spin" />
-                      <span>TRANSMITTING...</span>
+                      <span>SENDING...</span>
                     </>
                   ) : (
                     <>
@@ -245,7 +245,7 @@ export const ContactSection: React.FC = () => {
             {/* Primary Email Card */}
             <div className="bg-[#E9DFCF] text-[#18352F] rounded-3xl p-4 sm:p-7 border-2 border-[#18352F] shadow-xl space-y-4">
               <span className="font-mono text-xs text-[#E85D2A] font-bold uppercase tracking-wider block">
-                // VERIFIED PRIMARY INBOX
+                // DIRECT EMAIL ADDRESS
               </span>
 
               <div>

@@ -35,6 +35,13 @@
     color: #ffffff;
   }
 
+  /* Global heading word-break preservation: never break inside individual words */
+  h1, h2, h3, h4, h5, h6 {
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
   /* Accessibility focus ring */
   *:focus-visible {
     outline: 2px solid #FF4D00;
@@ -130,4 +137,9 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Instant suppression of preloader on page reload/refresh */
+html.preload-skipped #cinematic-preloader {
+  display: none !important;
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Preloader } from "@/components/layout/Preloader";
 import { CustomCursor } from "@/components/layout/CustomCursor";
 import { Navbar } from "@/components/layout/Navbar";
@@ -17,7 +17,29 @@ import { FracturedDivider } from "@/components/ui/FracturedDivider";
 import { LinkedInToast } from "@/components/ui/LinkedInToast";
 
 export default function Home() {
-  const [loadingComplete, setLoadingComplete] = useState(false);
+  const [loadingComplete, setLoadingComplete] = useState(() => {
+    if (typeof window !== "undefined") {
+      try {
+        return sessionStorage.getItem("portfolio_has_loaded") === "true";
+      } catch (e) {
+        return false;
+      }
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      try {
+        if ("scrollRestoration" in window.history) {
+          window.history.scrollRestoration = "auto";
+        }
+        if (sessionStorage.getItem("portfolio_has_loaded") === "true") {
+          setLoadingComplete(true);
+        }
+      } catch (e) {}
+    }
+  }, []);
 
   return (
     <main className="relative min-h-screen bg-[#F4EFE6] text-[#111111] selection:bg-[#FFD928] selection:text-[#111111] overflow-x-hidden">

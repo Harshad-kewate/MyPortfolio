@@ -9,10 +9,33 @@ interface PreloaderProps {
 
 export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
   const [phase, setPhase] = useState<1 | 2 | 3 | 4>(1);
-  const [isFinished, setIsFinished] = useState(false);
+  const [isFinished, setIsFinished] = useState(() => {
+    if (typeof window !== "undefined") {
+      try {
+        return sessionStorage.getItem("portfolio_has_loaded") === "true";
+      } catch (e) {
+        return false;
+      }
+    }
+    return false;
+  });
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
+    // If the portfolio has already been loaded in this browser session, skip immediately
+    if (typeof window !== "undefined") {
+      try {
+        if ("scrollRestoration" in window.history) {
+          window.history.scrollRestoration = "auto";
+        }
+        if (sessionStorage.getItem("portfolio_has_loaded") === "true") {
+          setIsFinished(true);
+          onComplete();
+          return;
+        }
+      } catch (e) {}
+    }
+
     // Phase 1 -> Phase 2 (Video begins)
     const t1 = setTimeout(() => {
       setPhase(2);
@@ -52,6 +75,9 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
     setPhase(4);
     setTimeout(() => {
       setIsFinished(true);
+      try {
+        sessionStorage.setItem("portfolio_has_loaded", "true");
+      } catch (e) {}
       setTimeout(() => {
         onComplete();
       }, 700);
@@ -62,10 +88,13 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
     triggerExit();
   };
 
+  if (isFinished) return null;
+
   return (
     <AnimatePresence>
       {!isFinished && (
         <motion.div
+          id="cinematic-preloader"
           key="cinematic-loader"
           initial={{ opacity: 1 }}
           exit={{

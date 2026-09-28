@@ -169,6 +169,8 @@ const TechIcons: Record<string, React.ReactNode> = {
 const PROJECT_DETAILS_DATA: Record<
   string,
   {
+    name: string;
+    purpose: string;
     problem: string;
     solution: string;
     approach: string;
@@ -176,35 +178,47 @@ const PROJECT_DETAILS_DATA: Record<
   }
 > = {
   "monsoon-mitra": {
+    name: "Monsoon Mitra",
+    purpose:
+      "An AI-powered climate prediction system designed to forecast Indian Summer Monsoon onset and dry spells with high regional accuracy, helping farmers make timely agricultural decisions.",
     problem:
-      "Forecasting Indian Summer Monsoon onset is notoriously chaotic. Traditional global simulations run on coarse grids that miss hyperlocal (~25km) rainfall patterns vital for farmers.",
+      "Forecasting Indian Summer Monsoon onset is complex. Traditional global weather simulations run on coarse grids that miss hyperlocal (~25km) rainfall patterns vital for farmers.",
     solution:
-      "A research-grade meteorological AI platform that models monsoon onset and dry spells at a fine 0.25° (~25km) spatial mesh using 13 years of ECMWF ERA5 reanalysis data.",
+      "A machine-learning climate system that models monsoon onset and dry spells at a high-resolution 0.25° (~25km) grid using 13 years of ECMWF ERA5 reanalysis data.",
     approach:
-      "ECMWF ERA5 Climate Data → HistGradientBoosting with Calibrated Probabilities → Time-Aware Validation (Zero Leakage) → Hyperlocal Onset Inferences via FastAPI.",
+      "ECMWF ERA5 Climate Data → Gradient Boosting Classifier → Time-Aware Validation (Zero Leakage) → Fast Onset Inferences via FastAPI.",
     technologies: ["Python", "Scikit-Learn", "ECMWF ERA5", "FastAPI", "Next.js"],
   },
   "polylingo-ai": {
+    name: "PolyLingo AI",
+    purpose:
+      "An automated speech translation platform that converts video and lecture audio into multiple languages with synchronized voice synthesis, breaking language barriers in education.",
     problem:
       "Single-language video lectures create steep educational barriers for multilingual students who need accurate transcriptions, contextual translations, and natural audio.",
     solution:
       "An automated AI speech translation platform that transcribes lecture speech, performs context-aware neural translation, and synthesizes synchronized multilingual speech.",
     approach:
-      "Audio Stream Extraction → Whisper Speech-to-Text → OpenAI Neural Translation → Multilingual Voice Synthesis → PostgreSQL & Redis Job Caching.",
+      "Audio Stream Extraction → Whisper Speech-to-Text → Neural Translation → Multilingual Voice Synthesis → Job Queue & Caching.",
     technologies: ["Whisper STT", "OpenAI API", "PostgreSQL", "Prisma ORM", "Redis", "Node.js"],
   },
   "krishi-cart": {
+    name: "KrishiCart",
+    purpose:
+      "A direct agritech marketplace connecting local farmers with verified wholesale produce buyers, featuring transparent pricing, real-time listings, and interactive farm-to-buyer location mapping.",
     problem:
-      "Smallholder agricultural farmers lose substantial margins to multi-tier middleman cartels and lack direct geospatial access to regional produce buyers and live mandi rates.",
+      "Smallholder agricultural farmers lose substantial margins to multi-tier middleman networks and lack direct geospatial access to regional produce buyers and live market rates.",
     solution:
-      "A location-aware agritech e-commerce marketplace connecting farmers directly with agricultural produce buyers with transparent pricing and zero intermediary markups.",
+      "A location-aware agritech e-commerce marketplace connecting farmers directly with agricultural produce buyers with transparent pricing and zero middleman markups.",
     approach:
-      "Vite & Tailwind Client → OpenStreetMap & Leaflet Geospatial Mapping → Firebase Phone Auth → Node.js REST API Produce Indexing.",
+      "Modern Web Client → OpenStreetMap & Leaflet Geospatial View → Firebase Phone Auth → Node.js REST API Produce Indexing.",
     technologies: ["Vite", "Tailwind CSS", "OpenStreetMap / Leaflet", "Firebase", "Node.js", "Express.js"],
   },
   "music-mood-recommendation": {
+    name: "Music Mood Recommendation System",
+    purpose:
+      "A machine-learning recommendation system that predicts song mood and curates personalized music recommendations based on acoustic features like tempo, energy, and rhythm.",
     problem:
-      "Discovering songs that match a listener's current emotional vibe requires analyzing intrinsic acoustic features rather than relying only on broad genre tags.",
+      "Discovering songs that match a listener's current emotional vibe requires analyzing intrinsic acoustic features rather than relying solely on broad genre tags.",
     solution:
       "A machine-learning based music recommendation system that predicts music mood and recommends suitable songs based on audio features.",
     approach:
@@ -350,8 +364,8 @@ export const ProjectsSection: React.FC = () => {
               <span className="w-2 h-2 rounded-full bg-[#1FA6A0]" />
               <span>SELECTED WORK / ARCHITECTURAL CASE STUDIES</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#162A44] leading-[0.92] select-none">
-              PROJ<span className="text-[#F36F68]">ECTS.</span>
+            <h2 className="font-display text-3xl min-[360px]:text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#162A44] leading-[0.95] select-none break-normal">
+              <span className="inline-block whitespace-nowrap">PROJ<span className="text-[#F36F68]">ECTS.</span></span>
             </h2>
           </div>
         </div>
@@ -387,31 +401,31 @@ export const ProjectsSection: React.FC = () => {
                       <div className="relative z-10 flex items-center justify-between font-mono text-xs text-slate-300">
                         <span className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-[#FFD84D] font-bold text-[11px] sm:text-xs">
                           <Radio className="w-3.5 h-3.5 animate-pulse text-[#FFD84D]" />
-                          <span>ERA5 SPATIAL MESH (0.25°)</span>
+                          <span>CLIMATE ML PREDICTION SYSTEM</span>
                         </span>
-                        <span className="text-white/70 font-mono text-[11px] sm:text-xs font-bold">47,490 RECORDS</span>
+                        <span className="text-white/80 font-mono text-[11px] sm:text-xs font-bold">13 YRS DATA</span>
                       </div>
 
                       <div className="relative z-10 p-3 sm:p-4 rounded-2xl bg-[#101820]/95 backdrop-blur-md border border-white/15 space-y-1.5 max-w-sm">
                         <div className="flex items-center justify-between font-mono text-[10px] text-slate-300">
-                          <span>MODEL ALGORITHM</span>
-                          <span className="text-[#FFD84D] font-bold">STRICT VALIDATION</span>
+                          <span>CORE PREDICTIVE CAPABILITY</span>
+                          <span className="text-[#FFD84D] font-bold">VALIDATED MODEL</span>
                         </div>
                         <div className="font-display font-bold text-white text-sm sm:text-base">
-                          HistGradientBoostingClassifier
+                          Monsoon Onset & Dry Spell Prediction
                         </div>
                         <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
                           <div className="w-[88%] bg-gradient-to-r from-[#F36F68] via-[#FFD84D] to-[#1FA6A0] h-full rounded-full" />
                         </div>
                         <div className="flex justify-between font-mono text-[10px] text-slate-300 pt-0.5">
-                          <span>Time-Aware Split (2012–2020 ➔ 2021–2024)</span>
-                          <span className="text-white font-bold">ZERO LEAKAGE</span>
+                          <span>Time-Series Split (Zero Leakage)</span>
+                          <span className="text-white font-bold">HIGH RELIABILITY</span>
                         </div>
                       </div>
 
                       <div className="relative z-10 flex items-center justify-between font-mono text-[11px] text-slate-300 pt-2 border-t border-white/10">
-                        <span>ECMWF REANALYSIS DATA</span>
-                        <span className="text-[#FFD84D] font-bold">F1: 0.7381 | ROC-AUC: 0.9928</span>
+                        <span>ECMWF ERA5 CLIMATE DATA</span>
+                        <span className="text-[#FFD84D] font-bold">0.99 ROC-AUC SCORE</span>
                       </div>
                     </div>
                   </div>
@@ -423,7 +437,7 @@ export const ProjectsSection: React.FC = () => {
                       <div className="flex items-center gap-2">
                         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F36F68] text-[#162A44] font-black border border-[#162A44] shadow-[2px_2px_0px_#162A44]">
                           <Star className="w-3.5 h-3.5 fill-[#162A44]" />
-                          <span>FEATURED CASE STUDY</span>
+                          <span>FEATURED PROJECT</span>
                         </span>
                         <span className="text-[#252525]/70 font-bold">01 / 04</span>
                       </div>
@@ -445,22 +459,22 @@ export const ProjectsSection: React.FC = () => {
 
                     <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-[#162A44] leading-tight">
                       MONSOON MITRA // <br />
-                      <span className="text-[#F36F68]">ATMOSPHERIC AI</span>
+                      <span className="text-[#F36F68]">CLIMATE ML PREDICTOR</span>
                     </h3>
 
                     <p className="text-[#252525] text-xs sm:text-sm leading-relaxed font-medium">
-                      Research-grade atmospheric intelligence platform modeling Indian Summer Monsoon onset and break spells at a <strong>0.25° (~25km) hyperlocal spatial mesh</strong> using 13 years of ECMWF ERA5 reanalysis data.
+                      An AI-driven climate forecasting system designed to predict Indian Summer Monsoon onset and dry spells with high regional accuracy, helping farmers make timely agricultural decisions.
                     </p>
 
-                    {/* Verified Metrics Chips */}
+                    {/* Recruiter-Friendly Highlight Chips */}
                     <div className="grid grid-cols-2 gap-2.5 pt-0.5">
                       <div className="p-2.5 sm:p-3 rounded-xl bg-[#FFF3E6] border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
-                        <div className="font-display font-black text-xl sm:text-2xl text-[#F36F68]">0.9928</div>
-                        <div className="font-mono text-[10px] text-[#162A44] font-bold uppercase">Onset ROC-AUC</div>
+                        <div className="font-display font-black text-xl sm:text-2xl text-[#F36F68]">13 Years</div>
+                        <div className="font-mono text-[10px] text-[#162A44] font-bold uppercase">Climate Data (ERA5)</div>
                       </div>
                       <div className="p-2.5 sm:p-3 rounded-xl bg-[#FFF3E6] border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
-                        <div className="font-display font-black text-xl sm:text-2xl text-[#162A44]">0.7381</div>
-                        <div className="font-mono text-[10px] text-[#162A44] font-bold uppercase">Onset F1 Score</div>
+                        <div className="font-display font-black text-xl sm:text-2xl text-[#162A44]">0.99 ROC-AUC</div>
+                        <div className="font-mono text-[10px] text-[#162A44] font-bold uppercase">Onset Prediction Score</div>
                       </div>
                     </div>
 
@@ -479,7 +493,7 @@ export const ProjectsSection: React.FC = () => {
                         onClick={() => setActiveModalProject(monsoon)}
                         className="inline-flex items-center gap-2 px-5 py-3 rounded-full font-mono text-xs sm:text-sm font-black bg-[#162A44] text-[#FFF3E6] hover:bg-[#F36F68] hover:text-[#162A44] border-2 border-[#162A44] shadow-[3px_3px_0px_0px_#162A44] transition-all group-hover:translate-x-0.5 cursor-pointer"
                       >
-                        <span>INSPECT ARCHITECTURE DETAILS</span>
+                        <span>VIEW PROJECT DETAILS</span>
                         <ArrowUpRight className="w-4 h-4" />
                       </button>
                     </div>
@@ -509,7 +523,7 @@ export const ProjectsSection: React.FC = () => {
                     <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
                       <div className="flex items-center gap-2">
                         <span className="px-3 py-1 rounded-full bg-white/20 text-white font-bold backdrop-blur-sm border border-white/20">
-                          SPEECH PIPELINE
+                          SPEECH AI & TRANSLATION
                         </span>
                         <span className="text-white/70 font-bold">02 / 04</span>
                       </div>
@@ -531,12 +545,24 @@ export const ProjectsSection: React.FC = () => {
 
                     <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white leading-tight">
                       POLYLINGO AI // <br />
-                      <span>AUDIO TRANSLATION</span>
+                      <span>VOICE TRANSLATION</span>
                     </h3>
 
                     <p className="text-white/95 text-xs sm:text-sm leading-relaxed font-normal">
-                      AI-powered lecture and video audio translation SaaS system integrating <strong>OpenAI Whisper</strong> speech-to-text, neural translation, and synchronized voice synthesis for multilingual educational access.
+                      An automated speech translation platform that converts video and lecture audio into multiple languages with synchronized voice synthesis, breaking language barriers in education.
                     </p>
+
+                    {/* Recruiter-Friendly Highlight Chips */}
+                    <div className="grid grid-cols-2 gap-2.5 pt-0.5">
+                      <div className="p-2.5 sm:p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
+                        <div className="font-display font-black text-xl sm:text-2xl text-white">Whisper AI</div>
+                        <div className="font-mono text-[10px] text-white/80 font-bold uppercase">Speech Recognition</div>
+                      </div>
+                      <div className="p-2.5 sm:p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
+                        <div className="font-display font-black text-xl sm:text-2xl text-[#FFD84D]">Sync Audio</div>
+                        <div className="font-mono text-[10px] text-white/80 font-bold uppercase">Multilingual Synthesis</div>
+                      </div>
+                    </div>
 
                     <div className="flex flex-wrap gap-1.5 font-mono text-xs text-white">
                       {["Whisper STT", "OpenAI API", "PostgreSQL", "Prisma", "Node.js"].map((t) => (
@@ -551,7 +577,7 @@ export const ProjectsSection: React.FC = () => {
                         onClick={() => setActiveModalProject(polylingo)}
                         className="inline-flex items-center gap-2 px-5 py-3 rounded-full font-mono text-xs sm:text-sm font-black bg-white text-[#162A44] hover:bg-[#FFD84D] border-2 border-[#162A44] shadow-[3px_3px_0px_0px_#162A44] transition-all cursor-pointer"
                       >
-                        <span>VIEW CASE STUDY</span>
+                        <span>VIEW PROJECT DETAILS</span>
                         <ArrowUpRight className="w-4 h-4 text-[#162A44]" />
                       </button>
                     </div>
@@ -563,9 +589,9 @@ export const ProjectsSection: React.FC = () => {
                       <div className="flex items-center justify-between font-mono text-xs text-slate-300">
                         <span className="flex items-center gap-2">
                           <AudioWaveform className="w-4 h-4 text-[#F36F68]" />
-                          <span>WHISPER SPEECH EXTRACTION</span>
+                          <span>SPEECH TRANSLATION PIPELINE</span>
                         </span>
-                        <span className="text-[#FFD84D] font-bold">SYNCHRONIZED TTS</span>
+                        <span className="text-[#FFD84D] font-bold">AUTOMATED WORKFLOW</span>
                       </div>
 
                       {/* Animated Multichannel Audio Wave */}
@@ -581,14 +607,14 @@ export const ProjectsSection: React.FC = () => {
                         </div>
 
                         <div className="flex items-center justify-between text-[11px] font-mono text-slate-300">
-                          <span>Original Track [Audio In]</span>
-                          <span className="text-[#FFD84D]">Multi-Language Synthesis [Voice Out]</span>
+                          <span>Original Audio Track [Input]</span>
+                          <span className="text-[#FFD84D]">Synthesized Voice [Output]</span>
                         </div>
                       </div>
 
                       <div className="p-3 rounded-xl bg-[#162A44] border border-white/15 flex items-center justify-between font-mono text-[11px] sm:text-xs text-slate-200">
-                        <span>Database: PostgreSQL + Prisma ORM</span>
-                        <span className="text-white font-bold">Redis High-Throughput Cache</span>
+                        <span>Architecture: Node.js & Next.js</span>
+                        <span className="text-white font-bold">Storage: PostgreSQL & Redis</span>
                       </div>
                     </div>
                   </div>
@@ -617,7 +643,7 @@ export const ProjectsSection: React.FC = () => {
                     <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
                       <div className="flex items-center gap-2">
                         <span className="px-3 py-1 rounded-full bg-[#162A44] text-[#D4FF00] font-black">
-                          AGRITECH DIRECT COMMERCE
+                          AGRITECH MARKETPLACE
                         </span>
                         <span className="font-bold text-[#162A44]/70">03 / 04</span>
                       </div>
@@ -639,12 +665,24 @@ export const ProjectsSection: React.FC = () => {
 
                     <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-[#162A44] leading-tight">
                       KRISHICART // <br />
-                      <span>GEOSPATIAL MARKETPLACE</span>
+                      <span>DIRECT FARM COMMERCE</span>
                     </h3>
 
                     <p className="text-[#252525] text-xs sm:text-sm leading-relaxed font-medium">
-                      Agriculture-based e-commerce platform eliminating middlemen between farmers and buyers with product cataloging, search engine, and geospatial mapping via <strong>OpenStreetMap / Leaflet</strong>.
+                      A direct agritech marketplace connecting local farmers with verified wholesale produce buyers, featuring transparent pricing, real-time listings, and interactive farm-to-buyer location mapping.
                     </p>
+
+                    {/* Recruiter-Friendly Highlight Chips */}
+                    <div className="grid grid-cols-2 gap-2.5 pt-0.5">
+                      <div className="p-2.5 sm:p-3 rounded-xl bg-white/70 border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
+                        <div className="font-display font-black text-xl sm:text-2xl text-[#162A44]">0% Fees</div>
+                        <div className="font-mono text-[10px] text-[#162A44] font-bold uppercase">Direct Farmer Trade</div>
+                      </div>
+                      <div className="p-2.5 sm:p-3 rounded-xl bg-white/70 border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
+                        <div className="font-display font-black text-xl sm:text-2xl text-[#162A44]">Live Maps</div>
+                        <div className="font-mono text-[10px] text-[#162A44] font-bold uppercase">Leaflet & OpenStreetMap</div>
+                      </div>
+                    </div>
 
                     <div className="flex flex-wrap gap-1.5 font-mono text-xs">
                       {["Vite", "Tailwind CSS", "Node.js", "Express.js", "Firebase", "Leaflet"].map((t) => (
@@ -672,7 +710,7 @@ export const ProjectsSection: React.FC = () => {
                         onClick={() => setActiveModalProject(krishi)}
                         className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full font-mono text-xs font-bold border-2 border-[#162A44] text-[#162A44] hover:bg-white transition-colors cursor-pointer"
                       >
-                        <span>SPECS & DETAILS →</span>
+                        <span>VIEW PROJECT DETAILS →</span>
                       </button>
                     </div>
                   </div>
@@ -683,29 +721,29 @@ export const ProjectsSection: React.FC = () => {
                       <div className="flex items-center justify-between font-mono text-xs border-b border-white/10 pb-2.5">
                         <span className="flex items-center gap-1.5 text-[#D4FF00] font-bold">
                           <MapPin className="w-4 h-4 text-[#D4FF00]" />
-                          <span>INTERACTIVE LEAFLET GEOMESH</span>
+                          <span>INTERACTIVE MARKETPLACE MAP</span>
                         </span>
-                        <span className="text-slate-300 font-bold">FIREBASE AUTH</span>
+                        <span className="text-slate-300 font-bold">VERIFIED PRODUCERS</span>
                       </div>
 
                       {/* Map Coordinate Simulation graphic */}
                       <div className="my-2 py-3 px-3.5 rounded-xl bg-[#101820]/90 border border-white/10 space-y-2">
                         <div className="flex items-center justify-between font-mono text-[11px]">
-                          <span className="text-[#D4FF00]">HYPERLOCAL MANDI ROUTING</span>
-                          <span className="text-slate-400">LAT: 23.2599° N // LON: 77.4126° E</span>
+                          <span className="text-[#D4FF00]">DIRECT TRADE PLATFORM</span>
+                          <span className="text-slate-400">REGIONAL MANDI ROUTING</span>
                         </div>
                         <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
                           <div className="w-[72%] bg-gradient-to-r from-[#D4FF00] to-[#1FA6A0] h-full rounded-full" />
                         </div>
                         <div className="flex justify-between font-mono text-[10px] text-slate-300">
                           <span>Real-Time Buyer-Farmer Pairing</span>
-                          <span className="text-white font-bold">0% INTERMEDIARY COMMISSIONS</span>
+                          <span className="text-white font-bold">ZERO MIDDLEMAN COMMISSIONS</span>
                         </div>
                       </div>
 
                       <div className="font-mono text-[11px] text-slate-300 flex items-center justify-between pt-1">
-                        <span>Direct Farmer Commerce</span>
-                        <span className="text-[#D4FF00] font-bold">Live Produce Indexing</span>
+                        <span>Live Produce Catalog</span>
+                        <span className="text-[#D4FF00] font-bold">Secure Authentication</span>
                       </div>
                     </div>
                   </div>
@@ -734,7 +772,7 @@ export const ProjectsSection: React.FC = () => {
                     <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
                       <div className="flex items-center gap-2">
                         <span className="px-3 py-1 rounded-full bg-[#F36F68] text-[#162A44] font-black">
-                          ML & AUDIO
+                          MACHINE LEARNING & AUDIO
                         </span>
                         <span className="text-slate-400">04 / 04</span>
                       </div>
@@ -759,8 +797,20 @@ export const ProjectsSection: React.FC = () => {
                     </h3>
 
                     <p className="text-slate-200 text-xs sm:text-sm leading-relaxed font-normal">
-                      A machine-learning based music recommendation system that predicts music mood and recommends suitable songs based on audio features.
+                      A machine-learning recommendation system that predicts song mood and curates personalized music recommendations based on acoustic features like tempo, energy, and rhythm.
                     </p>
+
+                    {/* Recruiter-Friendly Highlight Chips */}
+                    <div className="grid grid-cols-2 gap-2.5 pt-0.5">
+                      <div className="p-2.5 sm:p-3 rounded-xl bg-white/10 border border-white/15">
+                        <div className="font-display font-black text-xl sm:text-2xl text-[#FFD84D]">4 Moods</div>
+                        <div className="font-mono text-[10px] text-slate-300 font-bold uppercase">Happy, Energetic, Calm, Sad</div>
+                      </div>
+                      <div className="p-2.5 sm:p-3 rounded-xl bg-white/10 border border-white/15">
+                        <div className="font-display font-black text-xl sm:text-2xl text-[#F36F68]">KNN Model</div>
+                        <div className="font-mono text-[10px] text-slate-300 font-bold uppercase">Scikit-Learn Classifier</div>
+                      </div>
+                    </div>
 
                     <div className="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300">
                       {[
@@ -784,7 +834,7 @@ export const ProjectsSection: React.FC = () => {
                         onClick={() => setActiveModalProject(musicMood)}
                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-mono text-xs sm:text-sm font-bold bg-[#F36F68] text-[#162A44] hover:bg-[#FFD84D] transition-colors cursor-pointer shadow-md"
                       >
-                        <span>EXPLORE ARCHITECTURE</span>
+                        <span>VIEW PROJECT DETAILS</span>
                         <ArrowUpRight className="w-4 h-4" />
                       </button>
                     </div>
@@ -794,33 +844,33 @@ export const ProjectsSection: React.FC = () => {
                   <div className="lg:col-span-6">
                     <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#101820] border-2 border-white/15 p-4 sm:p-5 flex flex-col justify-between overflow-hidden shadow-2xl">
                       <div className="flex items-center justify-between font-mono text-xs text-[#FFD84D] font-bold border-b border-white/10 pb-2">
-                        <span>KNN ACOUSTIC FEATURE MATRIX</span>
-                        <span className="text-[10px] text-slate-300 uppercase">4 MOOD QUADRANTS</span>
+                        <span>ACOUSTIC MOOD CLASSIFICATION</span>
+                        <span className="text-[10px] text-slate-300 uppercase">4 MOOD CATEGORIES</span>
                       </div>
 
                       {/* 4 Mood Quadrants display */}
                       <div className="grid grid-cols-2 gap-2 my-2">
                         <div className="p-2 rounded-xl bg-white/5 border border-[#FFD84D]/30 flex items-center justify-between">
                           <span className="font-mono text-xs font-bold text-[#FFD84D]">HAPPY</span>
-                          <span className="text-[10px] font-mono text-slate-300">High Val / High Eng</span>
+                          <span className="text-[10px] font-mono text-slate-300">Upbeat & Bright Melody</span>
                         </div>
                         <div className="p-2 rounded-xl bg-white/5 border border-[#F36F68]/30 flex items-center justify-between">
                           <span className="font-mono text-xs font-bold text-[#F36F68]">ENERGETIC</span>
-                          <span className="text-[10px] font-mono text-slate-300">Fast BPM / High Eng</span>
+                          <span className="text-[10px] font-mono text-slate-300">High Tempo & Intensity</span>
                         </div>
                         <div className="p-2 rounded-xl bg-white/5 border border-[#1FA6A0]/30 flex items-center justify-between">
                           <span className="font-mono text-xs font-bold text-[#1FA6A0]">CALM</span>
-                          <span className="text-[10px] font-mono text-slate-300">Low Eng / High Val</span>
+                          <span className="text-[10px] font-mono text-slate-300">Gentle Rhythm & Acoustic</span>
                         </div>
                         <div className="p-2 rounded-xl bg-white/5 border border-[#315CFF]/30 flex items-center justify-between">
                           <span className="font-mono text-xs font-bold text-[#315CFF]">SAD</span>
-                          <span className="text-[10px] font-mono text-slate-300">Low Eng / Low Val</span>
+                          <span className="text-[10px] font-mono text-slate-300">Melancholic & Low Energy</span>
                         </div>
                       </div>
 
                       <div className="p-2.5 rounded-xl bg-[#162A44] border border-white/10 flex items-center justify-between font-mono text-[11px] text-slate-300">
-                        <span>API: JioSaavn Live Audio Stream</span>
-                        <span className="text-[#FFD84D] font-bold">Flask ML REST Endpoints</span>
+                        <span>Music Discovery: JioSaavn API</span>
+                        <span className="text-[#FFD84D] font-bold">Model Backend: Flask REST API</span>
                       </div>
                     </div>
                   </div>
@@ -849,6 +899,8 @@ export const ProjectsSection: React.FC = () => {
 // --- Expandable Drawer Component for Problem -> Solution -> Approach -> Technology ---
 interface ProjectExpandableDrawerProps {
   details: {
+    name: string;
+    purpose: string;
     problem: string;
     solution: string;
     approach: string;
@@ -900,12 +952,24 @@ const ProjectExpandableDrawer: React.FC<ProjectExpandableDrawerProps> = ({ detai
       <div className={`p-3.5 sm:p-5 md:p-6 rounded-3xl ${containerClasses} space-y-4 sm:space-y-5`}>
         {/* Drawer Header */}
         <div className="flex items-center justify-between border-b border-current/15 pb-3 font-mono text-xs">
-          <span className="font-black uppercase tracking-wider text-[11px] sm:text-xs">
-            // ARCHITECTURAL BREAKDOWN & WORKFLOW
+          <div className="flex items-center gap-2">
+            <span className="font-black uppercase tracking-wider text-[11px] sm:text-xs">
+              // {details.name.toUpperCase()} // PROJECT OVERVIEW
+            </span>
+          </div>
+          <span className="px-2.5 py-0.5 rounded bg-[#FFD84D] text-[#111111] font-bold text-[10px]">
+            RECRUITER OVERVIEW
           </span>
-          <span className="px-2 py-0.5 rounded bg-[#FFD84D] text-[#111111] font-bold text-[10px]">
-            CONCISE SPEC
-          </span>
+        </div>
+
+        {/* Short Purpose / What it does */}
+        <div className={`p-3.5 sm:p-4 rounded-2xl ${subBoxClasses} space-y-1`}>
+          <div className="font-mono text-[10px] sm:text-xs font-bold uppercase text-[#E85D2A] tracking-wider">
+            WHAT IT DOES // PURPOSE
+          </div>
+          <p className="text-xs sm:text-sm leading-relaxed font-medium">
+            {details.purpose}
+          </p>
         </div>
 
         {/* 4 Required Areas in an Asymmetric 2x2 Grid */}

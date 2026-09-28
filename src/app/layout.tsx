@@ -81,6 +81,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${syne.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if ('scrollRestoration' in history) {
+                  history.scrollRestoration = 'auto';
+                }
+                if (sessionStorage.getItem('portfolio_has_loaded') === 'true') {
+                  document.documentElement.classList.add('preload-skipped');
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
+      </head>
       <body className="bg-navy-900 text-cream-100 antialiased selection:bg-vividOrange selection:text-white">
         {children}
       </body>
