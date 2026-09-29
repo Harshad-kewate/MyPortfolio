@@ -23,6 +23,7 @@ export const ContactSection: React.FC = () => {
     name: "",
     email: "",
     message: "",
+    botField: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -47,8 +48,24 @@ export const ContactSection: React.FC = () => {
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formState.name.trim() || !formState.email.trim() || !formState.message.trim()) {
-      setFormError("Please fill out all fields before sending.");
+    const trimmedName = formState.name.trim();
+    const trimmedEmail = formState.email.trim();
+    const trimmedMessage = formState.message.trim();
+
+    // Prevent empty or invalid submissions
+    if (!trimmedName || trimmedName.length < 2) {
+      setFormError("Please provide your name (at least 2 characters).");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!trimmedEmail || !emailRegex.test(trimmedEmail)) {
+      setFormError("Please enter a valid email address (e.g. name@domain.com).");
+      return;
+    }
+
+    if (!trimmedMessage || trimmedMessage.length < 5) {
+      setFormError("Please enter a message with at least 5 characters.");
       return;
     }
 
@@ -56,32 +73,36 @@ export const ContactSection: React.FC = () => {
     setFormError("");
 
     try {
-      // Direct server-side API dispatch — does NOT open mailto: or third party mail clients
+      // Direct server-side API dispatch — securely delivers to kewateharshad@gmail.com
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: formState.name,
-          email: formState.email,
-          message: formState.message,
+          name: trimmedName,
+          email: trimmedEmail,
+          message: trimmedMessage,
+          botField: formState.botField,
         }),
       });
 
-      const data = await res.json();
+      const data = await res.json().catch(() => ({}));
 
       if (!res.ok) {
         throw new Error(data.error || "Failed to transmit message.");
       }
 
       setFormSubmitted(true);
-      setFormState({ name: "", email: "", message: "" });
+      setFormState({ name: "", email: "", message: "", botField: "" });
 
-      // Automatically reset status message after 7 seconds
+      // Automatically reset status message after 8 seconds
       setTimeout(() => {
         setFormSubmitted(false);
-      }, 7000);
+      }, 8000);
     } catch (err: any) {
-      setFormError(err.message || "An unexpected error occurred. Please try again.");
+      setFormError(
+        err.message ||
+          "An unexpected error occurred transmitting your message. Please try again or reach out directly to kewateharshad@gmail.com."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -199,19 +220,31 @@ export const ContactSection: React.FC = () => {
                 />
               </div>
 
+              {/* Anti-spam honeypot (hidden from human visitors) */}
+              <div className="hidden" aria-hidden="true">
+                <input
+                  type="text"
+                  name="botField"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={formState.botField}
+                  onChange={handleInputChange}
+                />
+              </div>
+
               {/* Error Message */}
               {formError && (
-                <div className="font-mono text-xs text-rose-800 bg-rose-100 border border-rose-300 px-3.5 py-2.5 rounded-xl font-bold">
+                <div role="alert" className="font-mono text-xs text-rose-800 bg-rose-100 border border-rose-300 px-3.5 py-2.5 rounded-xl font-bold">
                   {formError}
                 </div>
               )}
 
               {/* Success Notification — Stays on page */}
               {formSubmitted && (
-                <div className="p-4 rounded-xl bg-[#DCE5D5] border-2 border-[#18352F] text-[#18352F] font-mono text-xs flex items-center gap-2.5 shadow-sm">
+                <div role="status" className="p-4 rounded-xl bg-[#DCE5D5] border-2 border-[#18352F] text-[#18352F] font-mono text-xs flex items-center gap-2.5 shadow-sm">
                   <Check className="w-4 h-4 text-[#18352F] shrink-0" />
                   <span className="font-bold">
-                    Message sent successfully! Harshad has received your note and will follow up shortly.
+                    Message sent successfully! Harshad has received your note at kewateharshad@gmail.com and will follow up shortly.
                   </span>
                 </div>
               )}
