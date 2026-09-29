@@ -87,23 +87,23 @@ export default function Home() {
       {/* 02 // PROJECTS SECTION (Warm Editorial Cream #FFF3E6 + Deep Navy #162A44 + Soft Coral #F36F68) */}
       <ProjectsSection />
 
-      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Soft Sage) */}
+      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Champagne #F8E7C9) */}
       <FracturedDivider
         variant={3}
         fromColor="#FFF3E6"
-        toColor="#E7F0EA"
+        toColor="#F8E7C9"
         accentColor="#E85D2A"
         accentSecondary="#FFD84D"
         height={88}
       />
 
-      {/* 03 // TECHNOLOGY SECTION (Soft Sage #E7F0EA + Warm Cream #F5EBDD + Deep Navy #162A44) */}
+      {/* 03 // TECHNOLOGY SECTION (Champagne #F8E7C9 + Deep Navy #162A44) */}
       <SkillsSection />
 
       {/* Global Torn-Paper Seam 4: 03 Technology -> 04 Certifications (Warm Neutral) */}
       <FracturedDivider
         variant={4}
-        fromColor="#E7F0EA"
+        fromColor="#F8E7C9"
         toColor="#FFF4D6"
         accentColor="#FFD84D"
         accentSecondary="#E85D2A"

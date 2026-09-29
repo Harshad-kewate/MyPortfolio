@@ -374,22 +374,22 @@ export const ProjectsSection: React.FC = () => {
         <div
           ref={sliderRef}
           onScroll={handleScroll}
-          className="flex items-stretch gap-6 sm:gap-8 overflow-x-auto pb-8 pt-2 scroll-smooth no-scrollbar snap-x snap-mandatory"
+          className="flex items-stretch gap-5 sm:gap-6 overflow-x-auto pb-7 pt-2 scroll-smooth no-scrollbar snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >
           {/* ============================================================== */}
           {/* SLIDE 01: MONSOON MITRA — FEATURED ATMOSPHERIC AI */}
           {/* ============================================================== */}
           {monsoon && (
-            <div className="w-[88vw] min-[360px]:w-[86vw] sm:w-[82vw] lg:w-[980px] xl:w-[1040px] max-w-[90vw] shrink-0 snap-start select-none">
-              <div className="group relative h-full rounded-3xl bg-white border-2 border-[#162A44] p-4 sm:p-7 lg:p-8 shadow-[6px_6px_0px_0px_#162A44] sm:shadow-[7px_7px_0px_0px_#162A44] overflow-hidden hover:shadow-[9px_9px_0px_0px_#F36F68] transition-all flex flex-col justify-between">
+            <div className="w-[85vw] min-[360px]:w-[84vw] sm:w-[78vw] md:w-[74vw] lg:w-[840px] xl:w-[890px] max-w-[88vw] shrink-0 snap-start select-none">
+              <div className="group relative h-full rounded-3xl bg-white border-2 border-[#162A44] p-3.5 sm:p-5 lg:p-6 shadow-[5px_5px_0px_0px_#162A44] sm:shadow-[6px_6px_0px_0px_#162A44] overflow-hidden hover:shadow-[8px_8px_0px_0px_#F36F68] transition-all flex flex-col justify-between">
                 {/* Top Accent Stripe */}
-                <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#F36F68] via-[#FFD84D] to-[#1FA6A0]" />
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#F36F68] via-[#FFD84D] to-[#1FA6A0]" />
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 lg:gap-6 items-center">
                   {/* Large Telemetry Visual on Left (7 cols) */}
                   <div className="lg:col-span-7 order-2 lg:order-1">
-                    <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#162A44] border-2 border-[#162A44] p-3.5 sm:p-5 flex flex-col justify-between overflow-hidden shadow-inner group-hover:scale-[1.01] transition-transform duration-500">
+                    <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#162A44] border-2 border-[#162A44] p-3 sm:p-4 flex flex-col justify-between overflow-hidden shadow-inner group-hover:scale-[1.01] transition-transform duration-500">
                       <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
                         <div className="w-80 h-80 rounded-full border border-[#1FA6A0]/50 animate-pulse" />
                         <div className="absolute w-60 h-60 rounded-full border border-[#FFD84D]/40" />
@@ -399,31 +399,31 @@ export const ProjectsSection: React.FC = () => {
                       </div>
 
                       <div className="relative z-10 flex items-center justify-between font-mono text-xs text-slate-300">
-                        <span className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-[#FFD84D] font-bold text-[11px] sm:text-xs">
+                        <span className="flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-white/10 backdrop-blur-md text-[#FFD84D] font-bold text-[10px] sm:text-xs">
                           <Radio className="w-3.5 h-3.5 animate-pulse text-[#FFD84D]" />
                           <span>CLIMATE ML PREDICTION SYSTEM</span>
                         </span>
-                        <span className="text-white/80 font-mono text-[11px] sm:text-xs font-bold">13 YRS DATA</span>
+                        <span className="text-white/80 font-mono text-[10px] sm:text-xs font-bold">13 YRS DATA</span>
                       </div>
 
-                      <div className="relative z-10 p-3 sm:p-4 rounded-2xl bg-[#101820]/95 backdrop-blur-md border border-white/15 space-y-1.5 max-w-sm">
+                      <div className="relative z-10 p-2.5 sm:p-3.5 rounded-2xl bg-[#101820]/95 backdrop-blur-md border border-white/15 space-y-1.5 max-w-sm">
                         <div className="flex items-center justify-between font-mono text-[10px] text-slate-300">
                           <span>CORE PREDICTIVE CAPABILITY</span>
                           <span className="text-[#FFD84D] font-bold">VALIDATED MODEL</span>
                         </div>
-                        <div className="font-display font-bold text-white text-sm sm:text-base">
+                        <div className="font-display font-bold text-white text-xs sm:text-sm">
                           Monsoon Onset & Dry Spell Prediction
                         </div>
                         <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
                           <div className="w-[88%] bg-gradient-to-r from-[#F36F68] via-[#FFD84D] to-[#1FA6A0] h-full rounded-full" />
                         </div>
-                        <div className="flex justify-between font-mono text-[10px] text-slate-300 pt-0.5">
+                        <div className="flex justify-between font-mono text-[9px] sm:text-[10px] text-slate-300 pt-0.5">
                           <span>Time-Series Split (Zero Leakage)</span>
                           <span className="text-white font-bold">HIGH RELIABILITY</span>
                         </div>
                       </div>
 
-                      <div className="relative z-10 flex items-center justify-between font-mono text-[11px] text-slate-300 pt-2 border-t border-white/10">
+                      <div className="relative z-10 flex items-center justify-between font-mono text-[10px] sm:text-[11px] text-slate-300 pt-1.5 border-t border-white/10">
                         <span>ECMWF ERA5 CLIMATE DATA</span>
                         <span className="text-[#FFD84D] font-bold">0.99 ROC-AUC SCORE</span>
                       </div>
@@ -431,21 +431,21 @@ export const ProjectsSection: React.FC = () => {
                   </div>
 
                   {/* Information on Right (5 cols) */}
-                  <div className="lg:col-span-5 order-1 lg:order-2 space-y-4 sm:space-y-5">
+                  <div className="lg:col-span-5 order-1 lg:order-2 space-y-3 sm:space-y-4">
                     {/* Subtle interactive VIEW DETAILS option ABOVE Title */}
                     <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
                       <div className="flex items-center gap-2">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F36F68] text-[#162A44] font-black border border-[#162A44] shadow-[2px_2px_0px_#162A44]">
-                          <Star className="w-3.5 h-3.5 fill-[#162A44]" />
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#F36F68] text-[#162A44] font-black border border-[#162A44] shadow-[1.5px_1.5px_0px_#162A44] text-[10px] sm:text-[11px]">
+                          <Star className="w-3 h-3 fill-[#162A44]" />
                           <span>FEATURED PROJECT</span>
                         </span>
-                        <span className="text-[#252525]/70 font-bold">01 / 04</span>
+                        <span className="text-[#252525]/70 font-bold text-[10px] sm:text-[11px]">01 / 04</span>
                       </div>
 
                       <button
                         type="button"
                         onClick={() => toggleDetails("monsoon-mitra")}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full font-mono text-xs font-black bg-[#FFD84D] text-[#162A44] hover:bg-[#F36F68] hover:text-[#162A44] border-2 border-[#162A44] shadow-[2px_2px_0px_#162A44] transition-all cursor-pointer"
+                        className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full font-mono text-xs font-black bg-[#FFD84D] text-[#162A44] hover:bg-[#F36F68] hover:text-[#162A44] border-2 border-[#162A44] shadow-[2px_2px_0px_#162A44] transition-all cursor-pointer"
                         aria-expanded={expandedProjectId === "monsoon-mitra"}
                       >
                         <span>{expandedProjectId === "monsoon-mitra" ? "COLLAPSE DETAILS" : "VIEW DETAILS"}</span>
@@ -457,7 +457,7 @@ export const ProjectsSection: React.FC = () => {
                       </button>
                     </div>
 
-                    <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-[#162A44] leading-tight">
+                    <h3 className="font-display text-xl min-[360px]:text-2xl sm:text-3xl lg:text-[28px] font-black uppercase tracking-tight text-[#162A44] leading-tight">
                       MONSOON MITRA // <br />
                       <span className="text-[#F36F68]">CLIMATE ML PREDICTOR</span>
                     </h3>
@@ -467,34 +467,34 @@ export const ProjectsSection: React.FC = () => {
                     </p>
 
                     {/* Recruiter-Friendly Highlight Chips */}
-                    <div className="grid grid-cols-2 gap-2.5 pt-0.5">
-                      <div className="p-2.5 sm:p-3 rounded-xl bg-[#FFF3E6] border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
-                        <div className="font-display font-black text-xl sm:text-2xl text-[#F36F68]">13 Years</div>
-                        <div className="font-mono text-[10px] text-[#162A44] font-bold uppercase">Climate Data (ERA5)</div>
+                    <div className="grid grid-cols-2 gap-2 pt-0.5">
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-[#FFF3E6] border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
+                        <div className="font-display font-black text-lg sm:text-xl text-[#F36F68]">13 Years</div>
+                        <div className="font-mono text-[9px] sm:text-[10px] text-[#162A44] font-bold uppercase">Climate Data (ERA5)</div>
                       </div>
-                      <div className="p-2.5 sm:p-3 rounded-xl bg-[#FFF3E6] border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
-                        <div className="font-display font-black text-xl sm:text-2xl text-[#162A44]">0.99 ROC-AUC</div>
-                        <div className="font-mono text-[10px] text-[#162A44] font-bold uppercase">Onset Prediction Score</div>
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-[#FFF3E6] border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
+                        <div className="font-display font-black text-lg sm:text-xl text-[#162A44]">0.99 ROC-AUC</div>
+                        <div className="font-mono text-[9px] sm:text-[10px] text-[#162A44] font-bold uppercase">Onset Prediction Score</div>
                       </div>
                     </div>
 
                     {/* Tech stack badges */}
-                    <div className="flex flex-wrap gap-1.5 font-mono text-xs text-[#162A44]">
+                    <div className="flex flex-wrap gap-1 font-mono text-xs text-[#162A44]">
                       {["Python", "Scikit-Learn", "FastAPI", "Next.js", "ERA5 Data"].map((t) => (
-                        <span key={t} className="px-2 py-0.5 rounded-md bg-[#FFF3E6] border border-[#162A44]/30 font-bold text-[11px]">
+                        <span key={t} className="px-2 py-0.5 rounded-md bg-[#FFF3E6] border border-[#162A44]/30 font-bold text-[10px] sm:text-[11px]">
                           {t}
                         </span>
                       ))}
                     </div>
 
                     {/* Action Button */}
-                    <div className="pt-1">
+                    <div className="pt-0.5">
                       <button
                         onClick={() => setActiveModalProject(monsoon)}
-                        className="inline-flex items-center gap-2 px-5 py-3 rounded-full font-mono text-xs sm:text-sm font-black bg-[#162A44] text-[#FFF3E6] hover:bg-[#F36F68] hover:text-[#162A44] border-2 border-[#162A44] shadow-[3px_3px_0px_0px_#162A44] transition-all group-hover:translate-x-0.5 cursor-pointer"
+                        className="inline-flex items-center gap-2 px-4.5 py-2.5 rounded-full font-mono text-xs sm:text-sm font-black bg-[#162A44] text-[#FFF3E6] hover:bg-[#F36F68] hover:text-[#162A44] border-2 border-[#162A44] shadow-[2.5px_2.5px_0px_0px_#162A44] transition-all group-hover:translate-x-0.5 cursor-pointer"
                       >
                         <span>VIEW PROJECT DETAILS</span>
-                        <ArrowUpRight className="w-4 h-4" />
+                        <ArrowUpRight className="w-3.5 h-3.5" />
                       </button>
                     </div>
                   </div>
@@ -514,24 +514,24 @@ export const ProjectsSection: React.FC = () => {
           {/* SLIDE 02: POLYLINGO AI (Electric Blue + Deep Navy) */}
           {/* ============================================================== */}
           {polylingo && (
-            <div className="w-[88vw] min-[360px]:w-[86vw] sm:w-[82vw] lg:w-[980px] xl:w-[1040px] max-w-[90vw] shrink-0 snap-start select-none">
-              <div className="group relative h-full rounded-3xl bg-[#315CFF] text-white p-4 sm:p-7 lg:p-8 border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] overflow-hidden hover:shadow-[9px_9px_0px_0px_#162A44] transition-all flex flex-col justify-between">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+            <div className="w-[85vw] min-[360px]:w-[84vw] sm:w-[78vw] md:w-[74vw] lg:w-[840px] xl:w-[890px] max-w-[88vw] shrink-0 snap-start select-none">
+              <div className="group relative h-full rounded-3xl bg-[#315CFF] text-white p-3.5 sm:p-5 lg:p-6 border-2 border-[#162A44] shadow-[5px_5px_0px_0px_#162A44] overflow-hidden hover:shadow-[8px_8px_0px_0px_#162A44] transition-all flex flex-col justify-between">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 lg:gap-6 items-center">
                   {/* Info on Left (5 cols) */}
-                  <div className="lg:col-span-5 space-y-4 sm:space-y-5">
+                  <div className="lg:col-span-5 space-y-3 sm:space-y-4">
                     {/* Subtle interactive VIEW DETAILS option ABOVE Title */}
                     <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
                       <div className="flex items-center gap-2">
-                        <span className="px-3 py-1 rounded-full bg-white/20 text-white font-bold backdrop-blur-sm border border-white/20">
+                        <span className="px-2.5 py-0.5 rounded-full bg-white/20 text-white font-bold backdrop-blur-sm border border-white/20 text-[10px] sm:text-[11px]">
                           SPEECH AI & TRANSLATION
                         </span>
-                        <span className="text-white/70 font-bold">02 / 04</span>
+                        <span className="text-white/70 font-bold text-[10px] sm:text-[11px]">02 / 04</span>
                       </div>
 
                       <button
                         type="button"
                         onClick={() => toggleDetails("polylingo-ai")}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full font-mono text-xs font-black bg-[#FFD84D] text-[#162A44] hover:bg-white border-2 border-[#162A44] shadow-[2px_2px_0px_#162A44] transition-all cursor-pointer"
+                        className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full font-mono text-xs font-black bg-[#FFD84D] text-[#162A44] hover:bg-white border-2 border-[#162A44] shadow-[2px_2px_0px_#162A44] transition-all cursor-pointer"
                         aria-expanded={expandedProjectId === "polylingo-ai"}
                       >
                         <span>{expandedProjectId === "polylingo-ai" ? "COLLAPSE DETAILS" : "VIEW DETAILS"}</span>
@@ -543,7 +543,7 @@ export const ProjectsSection: React.FC = () => {
                       </button>
                     </div>
 
-                    <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white leading-tight">
+                    <h3 className="font-display text-xl min-[360px]:text-2xl sm:text-3xl lg:text-[28px] font-black uppercase tracking-tight text-white leading-tight">
                       POLYLINGO AI // <br />
                       <span>VOICE TRANSLATION</span>
                     </h3>
@@ -553,50 +553,50 @@ export const ProjectsSection: React.FC = () => {
                     </p>
 
                     {/* Recruiter-Friendly Highlight Chips */}
-                    <div className="grid grid-cols-2 gap-2.5 pt-0.5">
-                      <div className="p-2.5 sm:p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
-                        <div className="font-display font-black text-xl sm:text-2xl text-white">Whisper AI</div>
-                        <div className="font-mono text-[10px] text-white/80 font-bold uppercase">Speech Recognition</div>
+                    <div className="grid grid-cols-2 gap-2 pt-0.5">
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
+                        <div className="font-display font-black text-lg sm:text-xl text-white">Whisper AI</div>
+                        <div className="font-mono text-[9px] sm:text-[10px] text-white/80 font-bold uppercase">Speech Recognition</div>
                       </div>
-                      <div className="p-2.5 sm:p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
-                        <div className="font-display font-black text-xl sm:text-2xl text-[#FFD84D]">Sync Audio</div>
-                        <div className="font-mono text-[10px] text-white/80 font-bold uppercase">Multilingual Synthesis</div>
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
+                        <div className="font-display font-black text-lg sm:text-xl text-[#FFD84D]">Sync Audio</div>
+                        <div className="font-mono text-[9px] sm:text-[10px] text-white/80 font-bold uppercase">Multilingual Synthesis</div>
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap gap-1.5 font-mono text-xs text-white">
+                    <div className="flex flex-wrap gap-1 font-mono text-xs text-white">
                       {["Whisper STT", "OpenAI API", "PostgreSQL", "Prisma", "Node.js"].map((t) => (
-                        <span key={t} className="px-2 py-0.5 rounded-md bg-white/15 border border-white/25 backdrop-blur-sm text-[11px]">
+                        <span key={t} className="px-2 py-0.5 rounded-md bg-white/15 border border-white/25 backdrop-blur-sm text-[10px] sm:text-[11px]">
                           {t}
                         </span>
                       ))}
                     </div>
 
-                    <div className="pt-1">
+                    <div className="pt-0.5">
                       <button
                         onClick={() => setActiveModalProject(polylingo)}
-                        className="inline-flex items-center gap-2 px-5 py-3 rounded-full font-mono text-xs sm:text-sm font-black bg-white text-[#162A44] hover:bg-[#FFD84D] border-2 border-[#162A44] shadow-[3px_3px_0px_0px_#162A44] transition-all cursor-pointer"
+                        className="inline-flex items-center gap-2 px-4.5 py-2.5 rounded-full font-mono text-xs sm:text-sm font-black bg-white text-[#162A44] hover:bg-[#FFD84D] border-2 border-[#162A44] shadow-[2.5px_2.5px_0px_0px_#162A44] transition-all cursor-pointer"
                       >
                         <span>VIEW PROJECT DETAILS</span>
-                        <ArrowUpRight className="w-4 h-4 text-[#162A44]" />
+                        <ArrowUpRight className="w-3.5 h-3.5 text-[#162A44]" />
                       </button>
                     </div>
                   </div>
 
                   {/* Large Visual on Right (7 cols): Animated Spectrogram & Pipeline */}
                   <div className="lg:col-span-7">
-                    <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#101820] border-2 border-white/20 p-4 sm:p-6 flex flex-col justify-between overflow-hidden shadow-2xl group-hover:scale-[1.01] transition-transform duration-500">
+                    <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#101820] border-2 border-white/20 p-3 sm:p-4.5 flex flex-col justify-between overflow-hidden shadow-2xl group-hover:scale-[1.01] transition-transform duration-500">
                       <div className="flex items-center justify-between font-mono text-xs text-slate-300">
                         <span className="flex items-center gap-2">
                           <AudioWaveform className="w-4 h-4 text-[#F36F68]" />
                           <span>SPEECH TRANSLATION PIPELINE</span>
                         </span>
-                        <span className="text-[#FFD84D] font-bold">AUTOMATED WORKFLOW</span>
+                        <span className="text-[#FFD84D] font-bold text-[11px]">AUTOMATED WORKFLOW</span>
                       </div>
 
                       {/* Animated Multichannel Audio Wave */}
-                      <div className="py-4 sm:py-5 space-y-2.5">
-                        <div className="flex items-end gap-1.5 sm:gap-2 h-16 sm:h-20 justify-between">
+                      <div className="py-3 sm:py-4 space-y-2">
+                        <div className="flex items-end gap-1.5 sm:gap-2 h-14 sm:h-18 justify-between">
                           {[45, 80, 30, 95, 65, 100, 50, 85, 40, 75, 90, 60, 35, 85, 70, 95, 40, 60, 80, 50, 70].map((h, i) => (
                             <div
                               key={i}
@@ -606,13 +606,13 @@ export const ProjectsSection: React.FC = () => {
                           ))}
                         </div>
 
-                        <div className="flex items-center justify-between text-[11px] font-mono text-slate-300">
+                        <div className="flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-slate-300">
                           <span>Original Audio Track [Input]</span>
                           <span className="text-[#FFD84D]">Synthesized Voice [Output]</span>
                         </div>
                       </div>
 
-                      <div className="p-3 rounded-xl bg-[#162A44] border border-white/15 flex items-center justify-between font-mono text-[11px] sm:text-xs text-slate-200">
+                      <div className="p-2.5 rounded-xl bg-[#162A44] border border-white/15 flex items-center justify-between font-mono text-[10px] sm:text-[11px] text-slate-200">
                         <span>Architecture: Node.js & Next.js</span>
                         <span className="text-white font-bold">Storage: PostgreSQL & Redis</span>
                       </div>
@@ -634,24 +634,24 @@ export const ProjectsSection: React.FC = () => {
           {/* SLIDE 03: KRISHICART (Warm Yellow / Lime + Deep Navy) */}
           {/* ============================================================== */}
           {krishi && (
-            <div className="w-[88vw] min-[360px]:w-[86vw] sm:w-[82vw] lg:w-[980px] xl:w-[1040px] max-w-[90vw] shrink-0 snap-start select-none">
-              <div className="group relative h-full rounded-3xl bg-[#D4FF00] text-[#162A44] p-4 sm:p-7 lg:p-8 border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] flex flex-col justify-between hover:shadow-[9px_9px_0px_0px_#162A44] transition-all">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+            <div className="w-[85vw] min-[360px]:w-[84vw] sm:w-[78vw] md:w-[74vw] lg:w-[840px] xl:w-[890px] max-w-[88vw] shrink-0 snap-start select-none">
+              <div className="group relative h-full rounded-3xl bg-[#D4FF00] text-[#162A44] p-3.5 sm:p-5 lg:p-6 border-2 border-[#162A44] shadow-[5px_5px_0px_0px_#162A44] flex flex-col justify-between hover:shadow-[8px_8px_0px_0px_#162A44] transition-all">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 lg:gap-6 items-center">
                   {/* Left Column: Details & Actions (6 cols) */}
-                  <div className="lg:col-span-6 space-y-4">
+                  <div className="lg:col-span-6 space-y-3 sm:space-y-3.5">
                     {/* Subtle interactive VIEW DETAILS option ABOVE Title */}
                     <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
                       <div className="flex items-center gap-2">
-                        <span className="px-3 py-1 rounded-full bg-[#162A44] text-[#D4FF00] font-black">
+                        <span className="px-2.5 py-0.5 rounded-full bg-[#162A44] text-[#D4FF00] font-black text-[10px] sm:text-[11px]">
                           AGRITECH MARKETPLACE
                         </span>
-                        <span className="font-bold text-[#162A44]/70">03 / 04</span>
+                        <span className="font-bold text-[#162A44]/70 text-[10px] sm:text-[11px]">03 / 04</span>
                       </div>
 
                       <button
                         type="button"
                         onClick={() => toggleDetails("krishi-cart")}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full font-mono text-xs font-black bg-[#162A44] text-[#D4FF00] hover:bg-white hover:text-[#162A44] border-2 border-[#162A44] shadow-[2px_2px_0px_#162A44] transition-all cursor-pointer"
+                        className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full font-mono text-xs font-black bg-[#162A44] text-[#D4FF00] hover:bg-white hover:text-[#162A44] border-2 border-[#162A44] shadow-[2px_2px_0px_#162A44] transition-all cursor-pointer"
                         aria-expanded={expandedProjectId === "krishi-cart"}
                       >
                         <span>{expandedProjectId === "krishi-cart" ? "COLLAPSE DETAILS" : "VIEW DETAILS"}</span>
@@ -663,7 +663,7 @@ export const ProjectsSection: React.FC = () => {
                       </button>
                     </div>
 
-                    <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-[#162A44] leading-tight">
+                    <h3 className="font-display text-xl min-[360px]:text-2xl sm:text-3xl lg:text-[28px] font-black uppercase tracking-tight text-[#162A44] leading-tight">
                       KRISHICART // <br />
                       <span>DIRECT FARM COMMERCE</span>
                     </h3>
@@ -673,75 +673,75 @@ export const ProjectsSection: React.FC = () => {
                     </p>
 
                     {/* Recruiter-Friendly Highlight Chips */}
-                    <div className="grid grid-cols-2 gap-2.5 pt-0.5">
-                      <div className="p-2.5 sm:p-3 rounded-xl bg-white/70 border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
-                        <div className="font-display font-black text-xl sm:text-2xl text-[#162A44]">0% Fees</div>
-                        <div className="font-mono text-[10px] text-[#162A44] font-bold uppercase">Direct Farmer Trade</div>
+                    <div className="grid grid-cols-2 gap-2 pt-0.5">
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-white/70 border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
+                        <div className="font-display font-black text-lg sm:text-xl text-[#162A44]">0% Fees</div>
+                        <div className="font-mono text-[9px] sm:text-[10px] text-[#162A44] font-bold uppercase">Direct Farmer Trade</div>
                       </div>
-                      <div className="p-2.5 sm:p-3 rounded-xl bg-white/70 border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
-                        <div className="font-display font-black text-xl sm:text-2xl text-[#162A44]">Live Maps</div>
-                        <div className="font-mono text-[10px] text-[#162A44] font-bold uppercase">Leaflet & OpenStreetMap</div>
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-white/70 border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
+                        <div className="font-display font-black text-lg sm:text-xl text-[#162A44]">Live Maps</div>
+                        <div className="font-mono text-[9px] sm:text-[10px] text-[#162A44] font-bold uppercase">Leaflet & OpenStreetMap</div>
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap gap-1.5 font-mono text-xs">
+                    <div className="flex flex-wrap gap-1 font-mono text-xs">
                       {["Vite", "Tailwind CSS", "Node.js", "Express.js", "Firebase", "Leaflet"].map((t) => (
-                        <span key={t} className="px-2.5 py-1 rounded-md bg-[#162A44]/10 border border-[#162A44]/20 font-bold text-[#162A44] text-[11px]">
+                        <span key={t} className="px-2 py-0.5 rounded-md bg-[#162A44]/10 border border-[#162A44]/20 font-bold text-[#162A44] text-[10px] sm:text-[11px]">
                           {t}
                         </span>
                       ))}
                     </div>
 
-                    <div className="pt-2 flex flex-wrap items-center gap-3">
+                    <div className="pt-1 flex flex-wrap items-center gap-2.5">
                       {krishi.githubUrl && (
                         <a
                           href={krishi.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full font-mono text-xs font-bold bg-[#162A44] text-white hover:bg-[#F36F68] hover:text-[#162A44] transition-colors shadow-md"
+                          className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-full font-mono text-xs font-bold bg-[#162A44] text-white hover:bg-[#F36F68] hover:text-[#162A44] transition-colors shadow-md"
                         >
-                          <Github className="w-4 h-4" />
-                          <span>OPEN GITHUB REPOSITORY</span>
-                          <ArrowUpRight className="w-4 h-4" />
+                          <Github className="w-3.5 h-3.5" />
+                          <span>GITHUB</span>
+                          <ArrowUpRight className="w-3.5 h-3.5" />
                         </a>
                       )}
 
                       <button
                         onClick={() => setActiveModalProject(krishi)}
-                        className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full font-mono text-xs font-bold border-2 border-[#162A44] text-[#162A44] hover:bg-white transition-colors cursor-pointer"
+                        className="inline-flex items-center gap-1 px-3.5 py-2 rounded-full font-mono text-xs font-bold border-2 border-[#162A44] text-[#162A44] hover:bg-white transition-colors cursor-pointer"
                       >
-                        <span>VIEW PROJECT DETAILS →</span>
+                        <span>VIEW DETAILS →</span>
                       </button>
                     </div>
                   </div>
 
                   {/* Right Column: Visual Map Simulation (6 cols) */}
                   <div className="lg:col-span-6">
-                    <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#162A44] text-white p-4 sm:p-5 flex flex-col justify-between overflow-hidden shadow-2xl border-2 border-[#162A44]">
-                      <div className="flex items-center justify-between font-mono text-xs border-b border-white/10 pb-2.5">
-                        <span className="flex items-center gap-1.5 text-[#D4FF00] font-bold">
-                          <MapPin className="w-4 h-4 text-[#D4FF00]" />
+                    <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#162A44] text-white p-3 sm:p-4 flex flex-col justify-between overflow-hidden shadow-2xl border-2 border-[#162A44]">
+                      <div className="flex items-center justify-between font-mono text-xs border-b border-white/10 pb-2">
+                        <span className="flex items-center gap-1.5 text-[#D4FF00] font-bold text-[11px] sm:text-xs">
+                          <MapPin className="w-3.5 h-3.5 text-[#D4FF00]" />
                           <span>INTERACTIVE MARKETPLACE MAP</span>
                         </span>
-                        <span className="text-slate-300 font-bold">VERIFIED PRODUCERS</span>
+                        <span className="text-slate-300 font-bold text-[10px] sm:text-[11px]">VERIFIED PRODUCERS</span>
                       </div>
 
                       {/* Map Coordinate Simulation graphic */}
-                      <div className="my-2 py-3 px-3.5 rounded-xl bg-[#101820]/90 border border-white/10 space-y-2">
-                        <div className="flex items-center justify-between font-mono text-[11px]">
+                      <div className="my-2 py-2.5 px-3 rounded-xl bg-[#101820]/90 border border-white/10 space-y-1.5">
+                        <div className="flex items-center justify-between font-mono text-[10px] sm:text-[11px]">
                           <span className="text-[#D4FF00]">DIRECT TRADE PLATFORM</span>
                           <span className="text-slate-400">REGIONAL MANDI ROUTING</span>
                         </div>
                         <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
                           <div className="w-[72%] bg-gradient-to-r from-[#D4FF00] to-[#1FA6A0] h-full rounded-full" />
                         </div>
-                        <div className="flex justify-between font-mono text-[10px] text-slate-300">
+                        <div className="flex justify-between font-mono text-[9px] sm:text-[10px] text-slate-300">
                           <span>Real-Time Buyer-Farmer Pairing</span>
                           <span className="text-white font-bold">ZERO MIDDLEMAN COMMISSIONS</span>
                         </div>
                       </div>
 
-                      <div className="font-mono text-[11px] text-slate-300 flex items-center justify-between pt-1">
+                      <div className="font-mono text-[10px] sm:text-[11px] text-slate-300 flex items-center justify-between pt-1">
                         <span>Live Produce Catalog</span>
                         <span className="text-[#D4FF00] font-bold">Secure Authentication</span>
                       </div>
@@ -763,24 +763,24 @@ export const ProjectsSection: React.FC = () => {
           {/* SLIDE 04: MUSIC MOOD RECOMMENDATION SYSTEM (Deep Navy + Audio ML) */}
           {/* ============================================================== */}
           {musicMood && (
-            <div className="w-[88vw] min-[360px]:w-[86vw] sm:w-[82vw] lg:w-[980px] xl:w-[1040px] max-w-[90vw] shrink-0 snap-start select-none">
-              <div className="group relative h-full rounded-3xl bg-[#162A44] text-white p-4 sm:p-7 lg:p-8 border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#F36F68] flex flex-col justify-between hover:border-[#F36F68] transition-all">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+            <div className="w-[85vw] min-[360px]:w-[84vw] sm:w-[78vw] md:w-[74vw] lg:w-[840px] xl:w-[890px] max-w-[88vw] shrink-0 snap-start select-none">
+              <div className="group relative h-full rounded-3xl bg-[#162A44] text-white p-3.5 sm:p-5 lg:p-6 border-2 border-[#162A44] shadow-[5px_5px_0px_0px_#F36F68] flex flex-col justify-between hover:border-[#F36F68] transition-all">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 lg:gap-6 items-center">
                   {/* Left Column: Details & Actions (6 cols) */}
-                  <div className="lg:col-span-6 space-y-4">
+                  <div className="lg:col-span-6 space-y-3 sm:space-y-3.5">
                     {/* Subtle interactive VIEW DETAILS option ABOVE Title */}
                     <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
                       <div className="flex items-center gap-2">
-                        <span className="px-3 py-1 rounded-full bg-[#F36F68] text-[#162A44] font-black">
+                        <span className="px-2.5 py-0.5 rounded-full bg-[#F36F68] text-[#162A44] font-black text-[10px] sm:text-[11px]">
                           MACHINE LEARNING & AUDIO
                         </span>
-                        <span className="text-slate-400">04 / 04</span>
+                        <span className="text-slate-400 text-[10px] sm:text-[11px]">04 / 04</span>
                       </div>
 
                       <button
                         type="button"
                         onClick={() => toggleDetails("music-mood-recommendation")}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full font-mono text-xs font-black bg-[#FFD84D] text-[#162A44] hover:bg-[#F36F68] border-2 border-white shadow-[2px_2px_0px_#F36F68] transition-all cursor-pointer"
+                        className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full font-mono text-xs font-black bg-[#FFD84D] text-[#162A44] hover:bg-[#F36F68] border-2 border-white shadow-[2px_2px_0px_#F36F68] transition-all cursor-pointer"
                         aria-expanded={expandedProjectId === "music-mood-recommendation"}
                       >
                         <span>{expandedProjectId === "music-mood-recommendation" ? "COLLAPSE DETAILS" : "VIEW DETAILS"}</span>
@@ -792,7 +792,7 @@ export const ProjectsSection: React.FC = () => {
                       </button>
                     </div>
 
-                    <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white leading-tight">
+                    <h3 className="font-display text-xl min-[360px]:text-2xl sm:text-3xl lg:text-[28px] font-black uppercase tracking-tight text-white leading-tight">
                       MUSIC MOOD RECOMMENDATION SYSTEM
                     </h3>
 
@@ -801,18 +801,18 @@ export const ProjectsSection: React.FC = () => {
                     </p>
 
                     {/* Recruiter-Friendly Highlight Chips */}
-                    <div className="grid grid-cols-2 gap-2.5 pt-0.5">
-                      <div className="p-2.5 sm:p-3 rounded-xl bg-white/10 border border-white/15">
-                        <div className="font-display font-black text-xl sm:text-2xl text-[#FFD84D]">4 Moods</div>
-                        <div className="font-mono text-[10px] text-slate-300 font-bold uppercase">Happy, Energetic, Calm, Sad</div>
+                    <div className="grid grid-cols-2 gap-2 pt-0.5">
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-white/10 border border-white/15">
+                        <div className="font-display font-black text-lg sm:text-xl text-[#FFD84D]">4 Moods</div>
+                        <div className="font-mono text-[9px] sm:text-[10px] text-slate-300 font-bold uppercase">Happy, Energetic, Calm, Sad</div>
                       </div>
-                      <div className="p-2.5 sm:p-3 rounded-xl bg-white/10 border border-white/15">
-                        <div className="font-display font-black text-xl sm:text-2xl text-[#F36F68]">KNN Model</div>
-                        <div className="font-mono text-[10px] text-slate-300 font-bold uppercase">Scikit-Learn Classifier</div>
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-white/10 border border-white/15">
+                        <div className="font-display font-black text-lg sm:text-xl text-[#F36F68]">KNN Model</div>
+                        <div className="font-mono text-[9px] sm:text-[10px] text-slate-300 font-bold uppercase">Scikit-Learn Classifier</div>
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap gap-1.5 font-mono text-xs text-slate-300">
+                    <div className="flex flex-wrap gap-1 font-mono text-xs text-slate-300">
                       {[
                         "Python",
                         "KNN",
@@ -823,28 +823,28 @@ export const ProjectsSection: React.FC = () => {
                         "Tailwind CSS",
                         "JioSaavn API",
                       ].map((t) => (
-                        <span key={t} className="px-2.5 py-1 rounded-md bg-white/10 border border-white/15 text-[11px]">
+                        <span key={t} className="px-2 py-0.5 rounded-md bg-white/10 border border-white/15 text-[10px] sm:text-[11px]">
                           {t}
                         </span>
                       ))}
                     </div>
 
-                    <div className="pt-2 flex items-center gap-3">
+                    <div className="pt-1 flex items-center gap-3">
                       <button
                         onClick={() => setActiveModalProject(musicMood)}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-mono text-xs sm:text-sm font-bold bg-[#F36F68] text-[#162A44] hover:bg-[#FFD84D] transition-colors cursor-pointer shadow-md"
+                        className="inline-flex items-center gap-2 px-4.5 py-2.5 rounded-full font-mono text-xs sm:text-sm font-bold bg-[#F36F68] text-[#162A44] hover:bg-[#FFD84D] transition-colors cursor-pointer shadow-md"
                       >
                         <span>VIEW PROJECT DETAILS</span>
-                        <ArrowUpRight className="w-4 h-4" />
+                        <ArrowUpRight className="w-3.5 h-3.5" />
                       </button>
                     </div>
                   </div>
 
                   {/* Right Column: Audio Mood Spectrum & Feature Radar (6 cols) */}
                   <div className="lg:col-span-6">
-                    <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#101820] border-2 border-white/15 p-4 sm:p-5 flex flex-col justify-between overflow-hidden shadow-2xl">
+                    <div className="relative aspect-[16/10] w-full rounded-2xl bg-[#101820] border-2 border-white/15 p-3 sm:p-4 flex flex-col justify-between overflow-hidden shadow-2xl">
                       <div className="flex items-center justify-between font-mono text-xs text-[#FFD84D] font-bold border-b border-white/10 pb-2">
-                        <span>ACOUSTIC MOOD CLASSIFICATION</span>
+                        <span className="text-[11px] sm:text-xs">ACOUSTIC MOOD CLASSIFICATION</span>
                         <span className="text-[10px] text-slate-300 uppercase">4 MOOD CATEGORIES</span>
                       </div>
 
@@ -852,25 +852,25 @@ export const ProjectsSection: React.FC = () => {
                       <div className="grid grid-cols-2 gap-2 my-2">
                         <div className="p-2 rounded-xl bg-white/5 border border-[#FFD84D]/30 flex items-center justify-between">
                           <span className="font-mono text-xs font-bold text-[#FFD84D]">HAPPY</span>
-                          <span className="text-[10px] font-mono text-slate-300">Upbeat & Bright Melody</span>
+                          <span className="text-[10px] font-mono text-slate-300">Upbeat Melody</span>
                         </div>
                         <div className="p-2 rounded-xl bg-white/5 border border-[#F36F68]/30 flex items-center justify-between">
                           <span className="font-mono text-xs font-bold text-[#F36F68]">ENERGETIC</span>
-                          <span className="text-[10px] font-mono text-slate-300">High Tempo & Intensity</span>
+                          <span className="text-[10px] font-mono text-slate-300">High Intensity</span>
                         </div>
                         <div className="p-2 rounded-xl bg-white/5 border border-[#1FA6A0]/30 flex items-center justify-between">
                           <span className="font-mono text-xs font-bold text-[#1FA6A0]">CALM</span>
-                          <span className="text-[10px] font-mono text-slate-300">Gentle Rhythm & Acoustic</span>
+                          <span className="text-[10px] font-mono text-slate-300">Gentle Rhythm</span>
                         </div>
                         <div className="p-2 rounded-xl bg-white/5 border border-[#315CFF]/30 flex items-center justify-between">
                           <span className="font-mono text-xs font-bold text-[#315CFF]">SAD</span>
-                          <span className="text-[10px] font-mono text-slate-300">Melancholic & Low Energy</span>
+                          <span className="text-[10px] font-mono text-slate-300">Low Energy</span>
                         </div>
                       </div>
 
-                      <div className="p-2.5 rounded-xl bg-[#162A44] border border-white/10 flex items-center justify-between font-mono text-[11px] text-slate-300">
+                      <div className="p-2 rounded-xl bg-[#162A44] border border-white/10 flex items-center justify-between font-mono text-[10px] sm:text-[11px] text-slate-300">
                         <span>Music Discovery: JioSaavn API</span>
-                        <span className="text-[#FFD84D] font-bold">Model Backend: Flask REST API</span>
+                        <span className="text-[#FFD84D] font-bold">Flask REST API</span>
                       </div>
                     </div>
                   </div>
@@ -949,22 +949,22 @@ const ProjectExpandableDrawer: React.FC<ProjectExpandableDrawerProps> = ({ detai
       transition={{ duration: prefersReduced ? 0.05 : 0.35, ease: [0.16, 1, 0.3, 1] }}
       className="overflow-hidden"
     >
-      <div className={`p-3.5 sm:p-5 md:p-6 rounded-3xl ${containerClasses} space-y-4 sm:space-y-5`}>
+      <div className={`p-3 sm:p-4 md:p-5 rounded-2xl ${containerClasses} space-y-3 sm:space-y-4`}>
         {/* Drawer Header */}
-        <div className="flex items-center justify-between border-b border-current/15 pb-3 font-mono text-xs">
+        <div className="flex items-center justify-between border-b border-current/15 pb-2.5 font-mono text-xs">
           <div className="flex items-center gap-2">
             <span className="font-black uppercase tracking-wider text-[11px] sm:text-xs">
               // {details.name.toUpperCase()} // PROJECT OVERVIEW
             </span>
           </div>
-          <span className="px-2.5 py-0.5 rounded bg-[#FFD84D] text-[#111111] font-bold text-[10px]">
+          <span className="px-2 py-0.5 rounded bg-[#FFD84D] text-[#111111] font-bold text-[10px]">
             RECRUITER OVERVIEW
           </span>
         </div>
 
         {/* Short Purpose / What it does */}
-        <div className={`p-3.5 sm:p-4 rounded-2xl ${subBoxClasses} space-y-1`}>
-          <div className="font-mono text-[10px] sm:text-xs font-bold uppercase text-[#E85D2A] tracking-wider">
+        <div className={`p-3 sm:p-3.5 rounded-xl ${subBoxClasses} space-y-1`}>
+          <div className="font-mono text-[10px] sm:text-[11px] font-bold uppercase text-[#E85D2A] tracking-wider">
             WHAT IT DOES // PURPOSE
           </div>
           <p className="text-xs sm:text-sm leading-relaxed font-medium">
@@ -973,11 +973,11 @@ const ProjectExpandableDrawer: React.FC<ProjectExpandableDrawerProps> = ({ detai
         </div>
 
         {/* 4 Required Areas in an Asymmetric 2x2 Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
           {/* 1. PROBLEM */}
-          <div className={`p-4 sm:p-5 rounded-2xl ${subBoxClasses} space-y-2`}>
+          <div className={`p-3 sm:p-3.5 rounded-xl ${subBoxClasses} space-y-1.5`}>
             <div className="flex items-center gap-2 font-mono text-xs font-black uppercase text-[#F36F68] tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-[#F36F68]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#F36F68]" />
               <span>1. PROBLEM</span>
             </div>
             <p className="text-xs sm:text-sm leading-relaxed font-medium">
@@ -986,9 +986,9 @@ const ProjectExpandableDrawer: React.FC<ProjectExpandableDrawerProps> = ({ detai
           </div>
 
           {/* 2. SOLUTION */}
-          <div className={`p-4 sm:p-5 rounded-2xl ${subBoxClasses} space-y-2`}>
+          <div className={`p-3 sm:p-3.5 rounded-xl ${subBoxClasses} space-y-1.5`}>
             <div className="flex items-center gap-2 font-mono text-xs font-black uppercase text-[#1FA6A0] tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-[#1FA6A0]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1FA6A0]" />
               <span>2. SOLUTION</span>
             </div>
             <p className="text-xs sm:text-sm leading-relaxed font-medium">
@@ -997,16 +997,16 @@ const ProjectExpandableDrawer: React.FC<ProjectExpandableDrawerProps> = ({ detai
           </div>
 
           {/* 3. APPROACH (Rendered as short clear workflow steps) */}
-          <div className={`p-4 sm:p-5 rounded-2xl ${subBoxClasses} space-y-2.5`}>
+          <div className={`p-3 sm:p-3.5 rounded-xl ${subBoxClasses} space-y-2`}>
             <div className="flex items-center gap-2 font-mono text-xs font-black uppercase text-[#315CFF] tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-[#315CFF]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#315CFF]" />
               <span>3. APPROACH // WORKFLOW</span>
             </div>
             {details.approach.includes(" → ") ? (
               <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
                 {details.approach.split(" → ").map((step, idx, arr) => (
                   <React.Fragment key={idx}>
-                    <span className={`inline-flex items-center px-2.5 py-1 rounded-lg font-mono text-[11px] sm:text-xs font-bold ${workflowPillClasses}`}>
+                    <span className={`inline-flex items-center px-2 py-0.5 rounded-md font-mono text-[10px] sm:text-[11px] font-bold ${workflowPillClasses}`}>
                       {step}
                     </span>
                     {idx < arr.length - 1 && (
@@ -1023,16 +1023,16 @@ const ProjectExpandableDrawer: React.FC<ProjectExpandableDrawerProps> = ({ detai
           </div>
 
           {/* 4. TECHNOLOGY */}
-          <div className={`p-4 sm:p-5 rounded-2xl ${subBoxClasses} space-y-2.5`}>
+          <div className={`p-3 sm:p-3.5 rounded-xl ${subBoxClasses} space-y-2`}>
             <div className="flex items-center gap-2 font-mono text-xs font-black uppercase text-[#FFD84D] tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-[#FFD84D]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FFD84D]" />
               <span>4. TECHNOLOGY</span>
             </div>
-            <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-0.5">
+            <div className="flex flex-wrap gap-1.5 pt-0.5">
               {details.technologies.map((techName) => (
                 <span
                   key={techName}
-                  className={`inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl font-mono text-[11px] sm:text-xs font-bold ${pillClasses} transition-transform hover:scale-102`}
+                  className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-lg font-mono text-[10px] sm:text-[11px] font-bold ${pillClasses} transition-transform hover:scale-102`}
                 >
                   {TechIcons[techName] || <Layers className="w-3.5 h-3.5 shrink-0" />}
                   <span>{techName}</span>

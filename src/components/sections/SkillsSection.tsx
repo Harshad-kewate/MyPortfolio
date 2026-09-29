@@ -202,7 +202,7 @@ export const SkillsSection: React.FC = () => {
   return (
     <section
       id="stack"
-      className="relative py-24 sm:py-32 px-4 sm:px-8 md:px-12 bg-[#E7F0EA] text-[#162A44] overflow-hidden"
+      className="relative py-24 sm:py-32 px-4 sm:px-8 md:px-12 bg-[#F8E7C9] text-[#162A44] overflow-hidden"
     >
       {/* Editorial Fractured Geometric Borders at the Section Perimeter */}
       {/* Top Fractured Paper Contour Line & Accent Flecks */}
@@ -223,9 +223,9 @@ export const SkillsSection: React.FC = () => {
           />
         </svg>
 
-        {/* Small Orange & Yellow Accent Fragments Floating Along Edge */}
+        {/* Small Orange & Champagne Accent Fragments Floating Along Edge */}
         <div className="absolute top-2 left-[12%] w-3 h-3 bg-[#E85D2A] rotate-45 border border-[#162A44] shadow-[1px_1px_0px_#162A44]" />
-        <div className="absolute top-3 left-[48%] w-2.5 h-2.5 bg-[#FFD84D] -rotate-12 border border-[#162A44]" />
+        <div className="absolute top-3 left-[48%] w-2.5 h-2.5 bg-[#EED5A6] -rotate-12 border border-[#162A44]" />
         <div className="absolute top-1 right-[18%] w-3.5 h-2 bg-[#315CFF] rotate-12 border border-[#162A44]" />
       </div>
 
@@ -246,7 +246,7 @@ export const SkillsSection: React.FC = () => {
             className="opacity-40"
           />
         </svg>
-        <div className="absolute bottom-2 left-[24%] w-2.5 h-2.5 bg-[#FFD84D] rotate-12 border border-[#162A44]" />
+        <div className="absolute bottom-2 left-[24%] w-2.5 h-2.5 bg-[#EED5A6] rotate-12 border border-[#162A44]" />
         <div className="absolute bottom-3 right-[32%] w-3 h-3 bg-[#E85D2A] -rotate-45 border border-[#162A44] shadow-[1px_1px_0px_#162A44]" />
       </div>
 
@@ -284,7 +284,7 @@ export const SkillsSection: React.FC = () => {
         {/* Section Identifier */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-6 font-mono text-xs">
           <div className="flex items-center gap-3">
-            <span className="px-2.5 py-1 rounded-md bg-[#FFD84D] text-[#111111] font-black tracking-wider border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
+            <span className="px-2.5 py-1 rounded-md bg-[#EED5A6] text-[#162A44] font-black tracking-wider border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
               03
             </span>
             <span className="uppercase tracking-widest text-[#162A44] font-black">
@@ -311,15 +311,15 @@ export const SkillsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* BENTO-STYLE EDITORIAL TECHNOLOGY MATRIX (Warm Cream Surface #F5EBDD) */}
-        <div className="relative rounded-3xl bg-[#F5EBDD] border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] sm:shadow-[8px_8px_0px_0px_#162A44] p-4 sm:p-7 md:p-8 overflow-hidden">
+        {/* BENTO-STYLE EDITORIAL TECHNOLOGY MATRIX (Warm Champagne Surface #FFFBF3) */}
+        <div className="relative rounded-3xl bg-[#FFFBF3] border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] sm:shadow-[8px_8px_0px_0px_#162A44] p-4 sm:p-7 md:p-8 overflow-hidden">
           {/* Subtle Technical Corner Accents & Slivers */}
           <div className="absolute top-2.5 left-3 text-xs font-mono font-bold text-[#162A44]/30 select-none pointer-events-none">+</div>
           <div className="absolute top-2.5 right-3 text-xs font-mono font-bold text-[#162A44]/30 select-none pointer-events-none">+</div>
           <div className="absolute bottom-2.5 left-3 text-xs font-mono font-bold text-[#162A44]/30 select-none pointer-events-none">+</div>
           <div className="absolute bottom-2.5 right-3 text-xs font-mono font-bold text-[#162A44]/30 select-none pointer-events-none">+</div>
           <div className="absolute top-0 right-0 w-16 h-16 bg-[#E85D2A]/10 -rotate-45 translate-x-8 -translate-y-8 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-12 h-12 bg-[#FFD84D]/20 rotate-12 -translate-x-6 translate-y-6 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-12 h-12 bg-[#EED5A6]/40 rotate-12 -translate-x-6 translate-y-6 pointer-events-none" />
 
           {/* Editorial Bento Header Bar */}
           <div className="flex flex-wrap items-center justify-between gap-3 mb-5 sm:mb-6 pb-3 sm:pb-4 border-b-2 border-[#162A44]/15 relative z-10">
@@ -368,8 +368,8 @@ export const SkillsSection: React.FC = () => {
                   <div
                     className={`h-full p-3.5 sm:p-4 rounded-2xl border-2 border-[#162A44] flex flex-col justify-between transition-all ${
                       isSelected
-                        ? "bg-white text-[#111111] shadow-[5px_5px_0px_0px_#E85D2A] ring-2 ring-[#E85D2A]"
-                        : "bg-[#FFD84D] text-[#111111] shadow-[3px_3px_0px_0px_#162A44] hover:shadow-[5px_5px_0px_0px_#162A44]"
+                        ? "bg-[#FFFFFF] text-[#111111] shadow-[5px_5px_0px_0px_#E85D2A] ring-2 ring-[#E85D2A]"
+                        : "bg-[#F5DEC0] text-[#111111] shadow-[3px_3px_0px_0px_#162A44] hover:shadow-[5px_5px_0px_0px_#162A44] hover:bg-[#F8E7C9]"
                     }`}
                   >
                     {/* Top Row: Index + Technical Category Tag */}
@@ -382,7 +382,7 @@ export const SkillsSection: React.FC = () => {
 
                     {/* Middle Row: Crisp 24px Logo in Tile + Name & Category */}
                     <div className="flex items-center gap-3 py-1">
-                      <div className="shrink-0 p-2 rounded-xl bg-white/80 border border-[#162A44]/20 shadow-sm flex items-center justify-center">
+                      <div className="shrink-0 p-2 rounded-xl bg-white border border-[#162A44]/20 shadow-sm flex items-center justify-center">
                         {tech.svg}
                       </div>
                       <div className="min-w-0 flex-1">
@@ -415,7 +415,7 @@ export const SkillsSection: React.FC = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.98 }}
               transition={{ duration: 0.2 }}
-              className="mt-8 p-4 sm:p-6 rounded-2xl bg-[#F5EBDD] text-[#111111] border-2 border-[#162A44] shadow-[5px_5px_0px_0px_#162A44] sm:shadow-[8px_8px_0px_0px_#162A44] max-w-2xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative"
+              className="mt-8 p-4 sm:p-6 rounded-2xl bg-[#FFFBF3] text-[#111111] border-2 border-[#162A44] shadow-[5px_5px_0px_0px_#162A44] sm:shadow-[8px_8px_0px_0px_#162A44] max-w-2xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative"
             >
               <div className="space-y-1">
                 <div className="flex items-center gap-2 font-mono text-[10px] text-[#162A44]/80 font-bold uppercase tracking-wider">
@@ -427,7 +427,7 @@ export const SkillsSection: React.FC = () => {
                 <div className="font-display font-black text-xl text-[#111111] flex items-center gap-2.5">
                   <div className="shrink-0 scale-110 origin-center">{activeTech.svg}</div>
                   <span>{activeTech.name}</span>
-                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#162A44] text-[#FFD84D]">
+                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#162A44] text-[#F8E7C9]">
                     VERIFIED
                   </span>
                   <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#E85D2A] text-white">
@@ -450,7 +450,7 @@ export const SkillsSection: React.FC = () => {
 
               <button
                 onClick={() => setActiveTech(null)}
-                className="self-start sm:self-center p-2 rounded-lg bg-[#162A44] text-[#FFD84D] hover:bg-black transition-colors"
+                className="self-start sm:self-center p-2 rounded-lg bg-[#162A44] text-[#F8E7C9] hover:bg-[#E85D2A] hover:text-white transition-colors"
                 title="Close inspector"
               >
                 <X className="w-4 h-4" />
