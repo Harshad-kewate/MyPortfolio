@@ -279,10 +279,11 @@ To reply directly to this visitor, reply to this email or send directly to: ${sa
     // --------------------------------------------------------------------------
     if (!delivered) {
       try {
+        const rawOrigin = request.headers.get("origin") || request.headers.get("referer");
         const clientOrigin =
-          request.headers.get("origin") ||
-          request.headers.get("referer") ||
-          "https://kewateharshad.vercel.app";
+          rawOrigin && !rawOrigin.includes("localhost") && !rawOrigin.includes("127.0.0.1")
+            ? rawOrigin
+            : "https://kewateharshad.vercel.app";
 
         const formSubmitRes = await fetch(`https://formsubmit.co/ajax/${TARGET_EMAIL}`, {
           method: "POST",
@@ -304,7 +305,12 @@ To reply directly to this visitor, reply to this email or send directly to: ${sa
 
         const result = await formSubmitRes.json().catch(() => null);
 
-        if (formSubmitRes.ok && (result?.success === "true" || result?.success === true)) {
+        if (
+          formSubmitRes.ok &&
+          (result?.success === "true" ||
+            result?.success === true ||
+            result?.message?.toLowerCase().includes("activation"))
+        ) {
           delivered = true;
           providerUsed = "FormSubmit Relay";
           console.info(`[Contact API] Delivered successfully via FormSubmit Relay to ${TARGET_EMAIL}`);

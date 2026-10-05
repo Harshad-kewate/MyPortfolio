@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { CheckCircle2, X } from "lucide-react";
+import { CheckCircle2, X, ArrowUpRight, Cpu, Layers } from "lucide-react";
 
 interface TechBox {
   id: string;
@@ -25,7 +25,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: -1.8,
     duration: 4.1,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.006 2.748h5.814v.824H3.882S0 5.78 0 11.905c0 6.126 3.4 5.92 3.4 5.92h2.033v-2.853s-.11-3.4 3.344-3.4h5.768s3.236.054 3.236-3.18V2.656S18.25 0 11.914 0zm-3.29 1.86a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1zm3.462 22.14c6.094 0 5.714-2.656 5.714-2.656l-.006-2.748h-5.814v-.824h8.138s3.882.447 3.882-5.678c0-6.126-3.4-5.92-3.4-5.92h-2.033v2.853s.11 3.4-3.344 3.4H9.405s-3.236-.054-3.236 3.18v5.733s-.472 2.656 5.865 2.656zm3.29-1.86a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z" />
       </svg>
     ),
@@ -39,7 +39,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: 1.5,
     duration: 4.8,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0" fill="none" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0" fill="none" stroke="#111111" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <circle cx="6" cy="6" r="3.2" fill="#111111" />
         <circle cx="18" cy="9" r="3.5" fill="#111111" />
         <circle cx="10" cy="18" r="3.2" fill="#111111" />
@@ -58,7 +58,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: -2.2,
     duration: 4.4,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 1.5L2.5 7v10L12 22.5l9.5-5.5V7L12 1.5zm0 2.3l6.9 4-2.6 1.5-6.9-4 2.6-1.5zM4.5 8.7l6.5 3.8v7.5l-6.5-3.8V8.7zm8.5 11.3v-7.5l6.5-3.8v7.5l-6.5 3.8z" />
       </svg>
     ),
@@ -72,7 +72,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: 2.1,
     duration: 5.2,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0 fill-[#111111]" aria-hidden="true">
         <rect x="2.5" y="4" width="4" height="16" rx="1.5" />
         <rect x="10" y="8" width="4" height="12" rx="1.5" />
         <rect x="17.5" y="2" width="4" height="18" rx="1.5" />
@@ -88,7 +88,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: -1.2,
     duration: 3.8,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1 4.5l5.5 7.5h-4.5l2 7.5-6.5-9h4.5l-1-6z" />
       </svg>
     ),
@@ -102,7 +102,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: 1.8,
     duration: 4.6,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M11 5C7.7 5 5 7.7 5 11s2.7 6 6 6c2.3 0 4.2-1.3 5.2-3.2h-2.4C13.2 14.5 12.2 15 11 15c-2.2 0-4-1.8-4-4s1.8-4 4-4c1.2 0 2.2.5 2.8 1.2h2.4C15.2 6.3 13.3 5 11 5zm5 4v2h-2v2h2v2h2v-2h2v-2h-2V9h-2zm5 0v2h-1v2h1v2h2v-2h2v-2h-2V9h-2z" />
       </svg>
     ),
@@ -116,7 +116,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: -2.5,
     duration: 5.3,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c4.14 0 7.7-2.52 9.24-6.14h-3.32C16.68 17.58 14.53 19 12 19c-3.86 0-7-3.14-7-7s3.14-7 7-7c2.53 0 4.68 1.42 5.92 3.14h3.32C19.7 4.52 16.14 2 12 2z" />
       </svg>
     ),
@@ -130,7 +130,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: 1.2,
     duration: 4.5,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 2C8.69 2 6 4.69 6 8c0 1.5.55 2.87 1.47 3.93C5.96 12.8 5 14.52 5 16.5 5 19.54 7.46 22 10.5 22h3c3.04 0 5.5-2.46 5.5-5.5 0-1.98-.96-3.7-2.47-4.57C17.45 10.87 18 9.5 18 8c0-3.31-2.69-6-6-6zm0 2.5c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5S8.5 9.93 8.5 8s1.57-3.5 3.5-3.5zm-1.5 9.5h3c1.66 0 3 1.34 3 3s-1.34 3-3 3h-3c-1.66 0-3-1.34-3-3s1.34-3 3-3z" />
       </svg>
     ),
@@ -144,7 +144,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: -1.9,
     duration: 5.1,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 2C6.48 2 2 3.79 2 6v12c0 2.21 4.48 4 10 4s10-1.79 10-4V6c0-2.21-4.48-4-10-4zm0 2c4.42 0 8 1.34 8 2s-3.58 2-8 2-8-1.34-8-2 3.58-2 8-2zm8 14c0 .66-3.58 2-8 2s-8-1.34-8-2v-2.23c2.09 1.37 5.06 2.23 8 2.23s5.91-.86 8-2.23V18zm0-4.5c0 .66-3.58 2-8 2s-8-1.34-8-2v-2.23c2.09 1.37 5.06 2.23 8 2.23s5.91-.86 8-2.23v2.23z" />
       </svg>
     ),
@@ -158,7 +158,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: -1.4,
     duration: 5.4,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0 fill-[#111111]" aria-hidden="true">
         <rect x="3" y="11" width="4.5" height="10" rx="1.2" />
         <rect x="9.75" y="7" width="4.5" height="14" rx="1.2" />
         <rect x="16.5" y="3" width="4.5" height="18" rx="1.2" />
@@ -174,7 +174,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: 2.2,
     duration: 4.4,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M21.6 10.4l-8-8c-.8-.8-2-.8-2.8 0L8.7 4.5l3.5 3.5c.8-.3 1.8-.1 2.4.5.6.6.8 1.6.5 2.4l3.4 3.4c.8-.3 1.8-.1 2.4.5.9.9.9 2.5 0 3.4s-2.5.9-3.4 0c-.7-.7-.8-1.7-.5-2.5l-3.2-3.2v4.8c.4.3.7.8.7 1.4 0 1.2-1 2.2-2.2 2.2s-2.2-1-2.2-2.2c0-.6.3-1.1.7-1.4V8.6c-.4-.3-.7-.8-.7-1.4 0-.8.4-1.5 1.1-1.9L8.4 2.8 2.4 8.8c-.8.8-.8 2 0 2.8l8 8c.8.8 2 .8 2.8 0l8.4-8.4c.8-.8.8-2 0-2.8z" />
       </svg>
     ),
@@ -188,7 +188,7 @@ const TECHNOLOGIES: TechBox[] = [
     rotation: 1.9,
     duration: 5.1,
     svg: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 shrink-0 fill-[#111111]" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0 fill-[#111111]" aria-hidden="true">
         <path d="M12 1.5C12 1.5 6.5 6.2 6.5 13.2c0 4.1 3 7.5 5.5 8.8v-10h1v10c2.5-1.3 5.5-4.7 5.5-8.8C18.5 6.2 12 1.5 12 1.5zm0 17.5c-.2 0-.3-.1-.4-.2-.9-.8-3.1-3.1-3.1-5.6 0-3.3 2.5-5.7 3.5-6.5v12.3z" />
       </svg>
     ),
@@ -198,6 +198,15 @@ const TECHNOLOGIES: TechBox[] = [
 export const SkillsSection: React.FC = () => {
   const [activeTech, setActiveTech] = useState<TechBox | null>(null);
   const prefersReduced = useReducedMotion();
+
+  const getTech = (id: string) => TECHNOLOGIES.find((t) => t.id === id);
+
+  const powerbi = getTech("powerbi");
+  const git = getTech("git");
+
+  const backendTechs = ["fastapi", "cpp", "c"].map(getTech).filter(Boolean) as TechBox[];
+  const databaseTechs = ["postgresql", "sql", "mongodb"].map(getTech).filter(Boolean) as TechBox[];
+  const aiMlTechs = ["python", "scikit-learn", "numpy", "pandas"].map(getTech).filter(Boolean) as TechBox[];
 
   return (
     <section
@@ -307,107 +316,428 @@ export const SkillsSection: React.FC = () => {
             </span>
           </h2>
           <p className="mt-3 text-base sm:text-lg text-[#162A44]/85 font-medium leading-relaxed max-w-xl">
-            Languages, frameworks, and libraries used across machine learning models and practical software engineering projects.
+            A comprehensive overview of tools, languages, and frameworks divided across specialized engineering layers.
           </p>
         </div>
 
-        {/* BENTO-STYLE EDITORIAL TECHNOLOGY MATRIX (Warm Champagne Surface #FFFBF3) */}
-        <div className="relative rounded-3xl bg-[#FFFBF3] border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] sm:shadow-[8px_8px_0px_0px_#162A44] p-4 sm:p-7 md:p-8 overflow-hidden">
-          {/* Subtle Technical Corner Accents & Slivers */}
-          <div className="absolute top-2.5 left-3 text-xs font-mono font-bold text-[#162A44]/30 select-none pointer-events-none">+</div>
-          <div className="absolute top-2.5 right-3 text-xs font-mono font-bold text-[#162A44]/30 select-none pointer-events-none">+</div>
-          <div className="absolute bottom-2.5 left-3 text-xs font-mono font-bold text-[#162A44]/30 select-none pointer-events-none">+</div>
-          <div className="absolute bottom-2.5 right-3 text-xs font-mono font-bold text-[#162A44]/30 select-none pointer-events-none">+</div>
-          <div className="absolute top-0 right-0 w-16 h-16 bg-[#E85D2A]/10 -rotate-45 translate-x-8 -translate-y-8 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-12 h-12 bg-[#EED5A6]/40 rotate-12 -translate-x-6 translate-y-6 pointer-events-none" />
+        {/* ASYMMETRIC EDITORIAL "TECH ECOSYSTEM" BENTO COMPOSITION */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 relative z-10">
+          {/* ============================================================== */}
+          {/* 1. FRONTEND — WIDER EDITORIAL MODULE (LIGHT SURFACE) */}
+          {/* ============================================================== */}
+          {powerbi && (
+            <div className="lg:col-span-7 rounded-3xl bg-[#FFFBF3] text-[#162A44] border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] p-5 sm:p-6 flex flex-col justify-between">
+              {/* Header */}
+              <div className="flex items-start justify-between gap-3 pb-3 mb-4 border-b-2 border-[#162A44]/15">
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="px-2 py-0.5 rounded font-mono text-[10px] font-black tracking-wider bg-[#162A44] text-[#F8E7C9] border border-[#162A44]">
+                      01
+                    </span>
+                    <span className="font-mono text-[10px] uppercase font-bold tracking-widest text-[#162A44]/70">
+                      CATEGORY // 01
+                    </span>
+                  </div>
+                  <h3 className="font-display text-xl sm:text-2xl font-black uppercase tracking-tight text-[#162A44]">
+                    FRONTEND
+                  </h3>
+                  <p className="font-mono text-[11px] text-[#162A44]/75 mt-0.5">
+                    Visual Dashboards, Client-Facing Interfaces & Interactive Data Reporting
+                  </p>
+                </div>
 
-          {/* Editorial Bento Header Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-3 mb-5 sm:mb-6 pb-3 sm:pb-4 border-b-2 border-[#162A44]/15 relative z-10">
-            <div className="flex items-center gap-2 font-mono text-xs text-[#162A44] font-black">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#E85D2A] animate-pulse" />
-              <span className="uppercase tracking-wider">// CORE TECHNOLOGIES & TOOLS</span>
+                <span className="shrink-0 px-2.5 py-1 rounded-full font-mono text-[10px] font-black bg-[#F8E7C9] text-[#162A44] border border-[#162A44]/30 hidden sm:inline-block">
+                  UI & ANALYTICS
+                </span>
+              </div>
+
+              {/* Power BI Expanded Feature Card */}
+              <motion.div
+                whileHover={prefersReduced ? undefined : { scale: 1.01, y: -2 }}
+                whileTap={{ scale: 0.99 }}
+                onClick={() => setActiveTech(activeTech?.id === powerbi.id ? null : powerbi)}
+                className={`group p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer select-none ${
+                  activeTech?.id === powerbi.id
+                    ? "bg-white text-[#111111] border-[#E85D2A] ring-2 ring-[#E85D2A] shadow-[4px_4px_0px_0px_#E85D2A]"
+                    : "bg-[#F5DEC0] text-[#111111] border-[#162A44]/25 hover:border-[#162A44] hover:bg-[#F8E7C9] shadow-[3px_3px_0px_0px_#162A44]/20"
+                }`}
+              >
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div className="flex items-center gap-3.5">
+                    {/* Slightly larger, clearly visible 28px logo */}
+                    <div className="shrink-0 w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-white border-2 border-[#162A44]/20 shadow-sm flex items-center justify-center p-2.5 group-hover:scale-105 transition-transform">
+                      {powerbi.svg}
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="font-display font-black text-lg sm:text-xl uppercase tracking-tight text-[#111111]">
+                          {powerbi.name}
+                        </span>
+                        <span className="px-2 py-0.5 rounded bg-[#162A44] text-[#F8E7C9] font-mono text-[9px] font-bold">
+                          DASHBOARD
+                        </span>
+                      </div>
+                      <div className="font-mono text-xs font-semibold text-[#162A44]/80 mt-0.5">
+                        {powerbi.role}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap sm:flex-col items-start sm:items-end gap-1.5 font-mono text-[10px] text-[#162A44]">
+                    <span className="px-2 py-0.5 rounded-md bg-white border border-[#162A44]/15 font-bold">
+                      Interactive Dashboards
+                    </span>
+                    <span className="px-2 py-0.5 rounded-md bg-white border border-[#162A44]/15 font-bold">
+                      Business Simulation Analysis
+                    </span>
+                  </div>
+                </div>
+
+                <div className="pt-3 mt-3 border-t border-[#162A44]/15 flex items-center justify-between font-mono text-[10px] text-[#162A44]/75">
+                  <span>Applied in: <u className="font-bold underline-offset-2">{powerbi.project}</u></span>
+                  <span className="font-bold text-xs flex items-center gap-1 text-[#E85D2A]">
+                    <span>INSPECT SPEC</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
+              </motion.div>
             </div>
-            <div className="font-mono text-[10px] sm:text-[11px] text-[#162A44]/70 font-bold hidden sm:flex items-center gap-2">
-              <span>12 KEY TECHNOLOGIES</span>
-              <span>•</span>
-              <span>BENTO GRID</span>
+          )}
+
+          {/* ============================================================== */}
+          {/* 5. TOOLS & PLATFORMS — COMPACT SUPPORTING MODULE (DARK SURFACE) */}
+          {/* ============================================================== */}
+          {git && (
+            <div className="lg:col-span-5 rounded-3xl bg-[#162A44] text-white border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#111111] p-5 sm:p-6 flex flex-col justify-between">
+              {/* Header */}
+              <div className="flex items-start justify-between gap-3 pb-3 mb-4 border-b-2 border-white/15">
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="px-2 py-0.5 rounded font-mono text-[10px] font-black tracking-wider bg-[#FFD84D] text-[#162A44] border border-[#162A44]">
+                      05
+                    </span>
+                    <span className="font-mono text-[10px] uppercase font-bold tracking-widest text-slate-300">
+                      CATEGORY // 05
+                    </span>
+                  </div>
+                  <h3 className="font-display text-xl sm:text-2xl font-black uppercase tracking-tight text-white">
+                    TOOLS & PLATFORMS
+                  </h3>
+                  <p className="font-mono text-[11px] text-slate-300 mt-0.5">
+                    Version Control, Collaborative Branching & Deployment
+                  </p>
+                </div>
+
+                <span className="shrink-0 px-2 py-1 rounded-full font-mono text-[10px] font-bold bg-white/10 text-[#FFD84D] border border-white/15 hidden sm:inline-block">
+                  SUPPORTING
+                </span>
+              </div>
+
+              {/* Git & GitHub Technology Item */}
+              <motion.div
+                whileHover={prefersReduced ? undefined : { scale: 1.01, y: -2 }}
+                whileTap={{ scale: 0.99 }}
+                onClick={() => setActiveTech(activeTech?.id === git.id ? null : git)}
+                className={`group p-4 sm:p-5 rounded-2xl border-2 transition-all cursor-pointer select-none ${
+                  activeTech?.id === git.id
+                    ? "bg-white text-[#111111] border-[#FFD84D] ring-2 ring-[#FFD84D] shadow-[4px_4px_0px_0px_#FFD84D]"
+                    : "bg-[#101820]/90 text-white border-white/20 hover:border-white/50 hover:bg-[#101820] shadow-[3px_3px_0px_0px_rgba(255,255,255,0.1)]"
+                }`}
+              >
+                <div className="flex items-center gap-3.5">
+                  <div className="shrink-0 w-12 h-12 rounded-xl bg-white border border-white/20 shadow-sm flex items-center justify-center p-2 group-hover:scale-105 transition-transform">
+                    {git.svg}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2">
+                      <span className={`font-display font-black text-lg uppercase tracking-tight truncate ${
+                        activeTech?.id === git.id ? "text-[#111111]" : "text-white"
+                      }`}>
+                        {git.name}
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-[#E85D2A] text-white font-mono text-[9px] font-bold">
+                        VCS
+                      </span>
+                    </div>
+                    <div className={`font-mono text-xs font-semibold truncate mt-0.5 ${
+                      activeTech?.id === git.id ? "text-[#162A44]/80" : "text-slate-300"
+                    }`}>
+                      {git.role}
+                    </div>
+                  </div>
+                </div>
+
+                <div className={`pt-3 mt-3 border-t flex items-center justify-between font-mono text-[10px] ${
+                  activeTech?.id === git.id ? "border-[#162A44]/15 text-[#162A44]/80" : "border-white/10 text-slate-300"
+                }`}>
+                  <span className="truncate">{git.project}</span>
+                  <span className="font-bold flex items-center gap-1 text-[#FFD84D]">
+                    <span>INSPECT</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
+              </motion.div>
+            </div>
+          )}
+
+          {/* ============================================================== */}
+          {/* 2. BACKEND — BALANCED PAIR (DARK SURFACE) */}
+          {/* ============================================================== */}
+          <div className="lg:col-span-6 rounded-3xl bg-[#162A44] text-white border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#111111] p-5 sm:p-6 flex flex-col justify-between">
+            {/* Header */}
+            <div className="flex items-start justify-between gap-3 pb-3 mb-4 border-b-2 border-white/15">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="px-2 py-0.5 rounded font-mono text-[10px] font-black tracking-wider bg-[#E85D2A] text-white border border-[#162A44]">
+                    02
+                  </span>
+                  <span className="font-mono text-[10px] uppercase font-bold tracking-widest text-slate-300">
+                    CATEGORY // 02
+                  </span>
+                </div>
+                <h3 className="font-display text-xl sm:text-2xl font-black uppercase tracking-tight text-white">
+                  BACKEND
+                </h3>
+                <p className="font-mono text-[11px] text-slate-300 mt-0.5">
+                  High-Performance REST APIs, Systems Logic & Core Memory
+                </p>
+              </div>
+
+              <span className="shrink-0 px-2.5 py-1 rounded-full font-mono text-[10px] font-bold bg-white/10 text-white border border-white/15 hidden sm:inline-block">
+                3 TECHNOLOGIES
+              </span>
+            </div>
+
+            {/* 3 Technologies Subgrid */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {backendTechs.map((tech) => {
+                const isSelected = activeTech?.id === tech.id;
+                return (
+                  <motion.div
+                    key={tech.id}
+                    whileHover={prefersReduced ? undefined : { scale: 1.02, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => setActiveTech(isSelected ? null : tech)}
+                    className="cursor-pointer select-none"
+                  >
+                    <div
+                      className={`h-full p-3.5 rounded-2xl border-2 flex flex-col justify-between transition-all ${
+                        isSelected
+                          ? "bg-white text-[#111111] border-[#E85D2A] ring-2 ring-[#E85D2A] shadow-[3px_3px_0px_0px_#E85D2A]"
+                          : "bg-[#101820]/90 text-white border-white/20 hover:border-white/50 hover:bg-[#101820] shadow-[2px_2px_0px_0px_rgba(255,255,255,0.1)]"
+                      }`}
+                    >
+                      <div className="flex sm:flex-col items-center sm:items-start gap-2.5 sm:gap-2">
+                        <div className="shrink-0 w-11 h-11 rounded-xl bg-white border border-[#162A44]/20 shadow-sm flex items-center justify-center p-2">
+                          {tech.svg}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <div className={`font-display font-black text-sm sm:text-base uppercase tracking-tight truncate ${
+                            isSelected ? "text-[#111111]" : "text-white"
+                          }`}>
+                            {tech.name}
+                          </div>
+                          <div className={`font-mono text-[9px] sm:text-[10px] font-bold truncate mt-0.5 ${
+                            isSelected ? "text-[#162A44]/80" : "text-slate-300"
+                          }`}>
+                            {tech.category}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className={`pt-2 mt-2 border-t flex items-center justify-between font-mono text-[9px] ${
+                        isSelected ? "border-[#162A44]/15 text-[#162A44]/80" : "border-white/10 text-slate-300"
+                      }`}>
+                        <span className="truncate">{tech.role.split("&")[0].trim()}</span>
+                        <span className="font-bold ml-1 text-[#E85D2A]">→</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
 
-          {/* 12-Item Balanced Editorial Bento Grid */}
-          <div className="grid grid-cols-2 min-[540px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 relative z-10">
-            {TECHNOLOGIES.map((tech, idx) => {
-              const isSelected = activeTech?.id === tech.id;
+          {/* ============================================================== */}
+          {/* 3. DATABASE — BALANCED PAIR (LIGHT SURFACE) */}
+          {/* ============================================================== */}
+          <div className="lg:col-span-6 rounded-3xl bg-[#FFFBF3] text-[#162A44] border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] p-5 sm:p-6 flex flex-col justify-between">
+            {/* Header */}
+            <div className="flex items-start justify-between gap-3 pb-3 mb-4 border-b-2 border-[#162A44]/15">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="px-2 py-0.5 rounded font-mono text-[10px] font-black tracking-wider bg-[#162A44] text-[#F8E7C9] border border-[#162A44]">
+                    03
+                  </span>
+                  <span className="font-mono text-[10px] uppercase font-bold tracking-widest text-[#162A44]/70">
+                    CATEGORY // 03
+                  </span>
+                </div>
+                <h3 className="font-display text-xl sm:text-2xl font-black uppercase tracking-tight text-[#162A44]">
+                  DATABASE
+                </h3>
+                <p className="font-mono text-[11px] text-[#162A44]/75 mt-0.5">
+                  Relational Schemas, Document Stores & Structured Queries
+                </p>
+              </div>
 
-              return (
-                <motion.div
-                  key={tech.id}
-                  style={{ rotate: tech.rotation * 0.3 }}
-                  animate={
-                    prefersReduced
-                      ? undefined
-                      : {
-                          y: [-2, 2, -2],
-                        }
-                  }
-                  transition={{
-                    repeat: Infinity,
-                    duration: tech.duration,
-                    ease: "easeInOut",
-                  }}
-                  whileHover={{
-                    scale: 1.03,
-                    rotate: 0,
-                    y: -4,
-                    zIndex: 20,
-                  }}
-                  whileTap={{ scale: 0.97 }}
-                  onClick={() => setActiveTech(isSelected ? null : tech)}
-                  className="cursor-pointer select-none"
-                >
-                  <div
-                    className={`h-full p-3.5 sm:p-4 rounded-2xl border-2 border-[#162A44] flex flex-col justify-between transition-all ${
-                      isSelected
-                        ? "bg-[#FFFFFF] text-[#111111] shadow-[5px_5px_0px_0px_#E85D2A] ring-2 ring-[#E85D2A]"
-                        : "bg-[#F5DEC0] text-[#111111] shadow-[3px_3px_0px_0px_#162A44] hover:shadow-[5px_5px_0px_0px_#162A44] hover:bg-[#F8E7C9]"
-                    }`}
+              <span className="shrink-0 px-2.5 py-1 rounded-full font-mono text-[10px] font-bold bg-[#F8E7C9] text-[#162A44] border border-[#162A44]/30 hidden sm:inline-block">
+                3 TECHNOLOGIES
+              </span>
+            </div>
+
+            {/* 3 Technologies Subgrid */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {databaseTechs.map((tech) => {
+                const isSelected = activeTech?.id === tech.id;
+                return (
+                  <motion.div
+                    key={tech.id}
+                    whileHover={prefersReduced ? undefined : { scale: 1.02, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => setActiveTech(isSelected ? null : tech)}
+                    className="cursor-pointer select-none"
                   >
-                    {/* Top Row: Index + Technical Category Tag */}
-                    <div className="flex items-center justify-between pb-2 mb-2 border-b border-[#162A44]/15">
-                      <span className="font-mono text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-[#162A44]/80">
-                        0{idx + 1} // {tech.category.split(" ")[0]}
-                      </span>
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#162A44]/60" />
-                    </div>
-
-                    {/* Middle Row: Crisp 24px Logo in Tile + Name & Category */}
-                    <div className="flex items-center gap-3 py-1">
-                      <div className="shrink-0 p-2 rounded-xl bg-white border border-[#162A44]/20 shadow-sm flex items-center justify-center">
-                        {tech.svg}
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <div className="font-display font-black text-sm sm:text-base uppercase tracking-tight text-[#111111] leading-tight truncate">
-                          {tech.name}
+                    <div
+                      className={`h-full p-3.5 rounded-2xl border-2 flex flex-col justify-between transition-all ${
+                        isSelected
+                          ? "bg-white text-[#111111] border-[#162A44] ring-2 ring-[#162A44] shadow-[3px_3px_0px_0px_#162A44]"
+                          : "bg-[#F5DEC0] text-[#111111] border-[#162A44]/25 hover:border-[#162A44] hover:bg-[#F8E7C9] shadow-[2px_2px_0px_0px_#162A44]/25"
+                      }`}
+                    >
+                      <div className="flex sm:flex-col items-center sm:items-start gap-2.5 sm:gap-2">
+                        <div className="shrink-0 w-11 h-11 rounded-xl bg-white border border-[#162A44]/20 shadow-sm flex items-center justify-center p-2">
+                          {tech.svg}
                         </div>
-                        <div className="font-mono text-[10px] sm:text-[11px] font-bold text-[#162A44]/80 tracking-tight truncate mt-0.5">
-                          {tech.category}
+                        <div className="min-w-0 flex-1">
+                          <div className="font-display font-black text-sm sm:text-base uppercase tracking-tight text-[#111111] truncate">
+                            {tech.name}
+                          </div>
+                          <div className="font-mono text-[9px] sm:text-[10px] font-bold text-[#162A44]/80 truncate mt-0.5">
+                            {tech.category}
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Bottom Row: Role / usage hint */}
-                    <div className="pt-2 mt-2 border-t border-[#162A44]/10 flex items-center justify-between font-mono text-[9px] sm:text-[10px] text-[#162A44]/75">
-                      <span className="truncate">{tech.role.split("&")[0].trim()}</span>
-                      <span className="text-[11px] font-bold shrink-0 ml-1">→</span>
+                      <div className="pt-2 mt-2 border-t border-[#162A44]/15 flex items-center justify-between font-mono text-[9px] text-[#162A44]/75">
+                        <span className="truncate">{tech.role.split("&")[0].trim()}</span>
+                        <span className="font-bold ml-1 text-[#162A44]">→</span>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* ============================================================== */}
+          {/* 4. AI / ML & DATA — VISUALLY STRONGER FEATURE MODULE (HERO DARK) */}
+          {/* ============================================================== */}
+          <div className="lg:col-span-12 rounded-3xl bg-[#101820] text-white border-2 border-[#162A44] shadow-[8px_8px_0px_0px_#E85D2A] p-5 sm:p-7 relative overflow-hidden">
+            {/* Top Accent Stripe */}
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#E85D2A] via-[#FFD84D] to-[#315CFF]" />
+
+            {/* Feature Header */}
+            <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b-2 border-white/15 relative z-10">
+              <div>
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className="px-2.5 py-0.5 rounded font-mono text-xs font-black tracking-wider bg-[#E85D2A] text-white border border-white/20">
+                    04
+                  </span>
+                  <span className="font-mono text-xs uppercase font-black tracking-widest text-[#FFD84D]">
+                    // PRIMARY CORE FEATURE
+                  </span>
+                  <span className="w-2 h-2 rounded-full bg-[#E85D2A] animate-pulse" />
+                </div>
+                <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tight text-white leading-tight">
+                  AI / ML & DATA
+                </h3>
+                <p className="font-mono text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl">
+                  Atmospheric Time-Series Modeling, Probability Calibration, Vector Mathematics & High-Throughput Data Pipelines
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2 font-mono text-xs">
+                <span className="px-3 py-1.5 rounded-full font-black bg-[#FFD84D] text-[#162A44] border-2 border-[#162A44] shadow-[2px_2px_0px_0px_#162A44]">
+                  4 CORE ML ENGINES
+                </span>
+              </div>
+            </div>
+
+            {/* 4 Technologies in AI / ML & DATA Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 relative z-10">
+              {aiMlTechs.map((tech) => {
+                const isSelected = activeTech?.id === tech.id;
+                return (
+                  <motion.div
+                    key={tech.id}
+                    whileHover={prefersReduced ? undefined : { scale: 1.02, y: -3 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => setActiveTech(isSelected ? null : tech)}
+                    className="cursor-pointer select-none"
+                  >
+                    <div
+                      className={`h-full p-4 rounded-2xl border-2 flex flex-col justify-between transition-all ${
+                        isSelected
+                          ? "bg-white text-[#111111] border-[#FFD84D] ring-2 ring-[#FFD84D] shadow-[4px_4px_0px_0px_#FFD84D]"
+                          : "bg-[#162A44] text-white border-white/20 hover:border-[#FFD84D]/60 hover:bg-[#1A3250] shadow-[3px_3px_0px_0px_rgba(232,93,42,0.3)]"
+                      }`}
+                    >
+                      <div>
+                        {/* Top indicator tag */}
+                        <div className="flex items-center justify-between pb-2 mb-2 border-b border-white/10">
+                          <span className={`font-mono text-[9px] font-black uppercase tracking-wider ${
+                            isSelected ? "text-[#162A44]" : "text-[#FFD84D]"
+                          }`}>
+                            ML STACK // {tech.name.toUpperCase()}
+                          </span>
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#E85D2A]" />
+                        </div>
+
+                        {/* Logo + Name */}
+                        <div className="flex items-center gap-3 py-1">
+                          <div className="shrink-0 w-12 h-12 rounded-xl bg-white border border-[#162A44]/20 shadow-sm flex items-center justify-center p-2 group-hover:scale-105 transition-transform">
+                            {tech.svg}
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <div className={`font-display font-black text-base sm:text-lg uppercase tracking-tight truncate ${
+                              isSelected ? "text-[#111111]" : "text-white"
+                            }`}>
+                              {tech.name}
+                            </div>
+                            <div className={`font-mono text-[10px] font-bold truncate mt-0.5 ${
+                              isSelected ? "text-[#162A44]/80" : "text-slate-300"
+                            }`}>
+                              {tech.category}
+                            </div>
+                          </div>
+                        </div>
+
+                        <p className={`font-mono text-[11px] leading-relaxed mt-2.5 line-clamp-2 ${
+                          isSelected ? "text-[#162A44]" : "text-slate-200"
+                        }`}>
+                          {tech.role}
+                        </p>
+                      </div>
+
+                      <div className={`pt-2.5 mt-3 border-t flex items-center justify-between font-mono text-[10px] ${
+                        isSelected ? "border-[#162A44]/15 text-[#162A44]/80" : "border-white/10 text-slate-300"
+                      }`}>
+                        <span className="truncate">{tech.project.split("//")[0].trim()}</span>
+                        <span className="font-bold flex items-center gap-1 text-[#FFD84D]">
+                          <span>DETAILS</span>
+                          <ArrowUpRight className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         </div>
 
-        {/* Active Inspection Detail Card (Reveals on tap/click) */}
+        {/* ACTIVE INSPECTION DETAIL DRAWER (Reveals upon click) */}
         <AnimatePresence>
           {activeTech && (
             <motion.div
@@ -415,26 +745,25 @@ export const SkillsSection: React.FC = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.98 }}
               transition={{ duration: 0.2 }}
-              className="mt-8 p-4 sm:p-6 rounded-2xl bg-[#FFFBF3] text-[#111111] border-2 border-[#162A44] shadow-[5px_5px_0px_0px_#162A44] sm:shadow-[8px_8px_0px_0px_#162A44] max-w-2xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative"
+              className="mt-8 p-5 sm:p-6 rounded-3xl bg-[#FFFBF3] text-[#111111] border-2 border-[#162A44] shadow-[6px_6px_0px_0px_#162A44] sm:shadow-[8px_8px_0px_0px_#162A44] max-w-2xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-20"
             >
-              <div className="space-y-1">
+              <div className="space-y-1.5">
                 <div className="flex items-center gap-2 font-mono text-[10px] text-[#162A44]/80 font-bold uppercase tracking-wider">
                   <span>{activeTech.category}</span>
                   <span>•</span>
                   <span>ID: {activeTech.id.toUpperCase()}</span>
                 </div>
 
-                <div className="font-display font-black text-xl text-[#111111] flex items-center gap-2.5">
-                  <div className="shrink-0 scale-110 origin-center">{activeTech.svg}</div>
+                <div className="font-display font-black text-xl sm:text-2xl text-[#111111] flex items-center gap-3">
+                  <div className="shrink-0 w-10 h-10 rounded-xl bg-white border border-[#162A44]/20 shadow-sm flex items-center justify-center p-1.5">
+                    {activeTech.svg}
+                  </div>
                   <span>{activeTech.name}</span>
                   <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#162A44] text-[#F8E7C9]">
                     VERIFIED
                   </span>
                   <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#E85D2A] text-white">
                     CORE
-                  </span>
-                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#315CFF] text-white">
-                    PROD
                   </span>
                 </div>
 
@@ -450,7 +779,7 @@ export const SkillsSection: React.FC = () => {
 
               <button
                 onClick={() => setActiveTech(null)}
-                className="self-start sm:self-center p-2 rounded-lg bg-[#162A44] text-[#F8E7C9] hover:bg-[#E85D2A] hover:text-white transition-colors"
+                className="self-start sm:self-center p-2.5 rounded-xl bg-[#162A44] text-[#F8E7C9] hover:bg-[#E85D2A] hover:text-white transition-colors cursor-pointer"
                 title="Close inspector"
               >
                 <X className="w-4 h-4" />
