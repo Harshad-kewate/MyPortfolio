@@ -235,7 +235,7 @@ export const SkillsSection: React.FC = () => {
   const aiMlTechs = ["python", "scikit-learn", "numpy", "pandas"].map(getTech).filter(Boolean) as TechBox[];
   const toolsTechs = ["git"].map(getTech).filter(Boolean) as TechBox[];
 
-  const renderTechChip = (tech: TechBox, isDarkContainer: boolean) => {
+  const renderTechChip = (tech: TechBox) => {
     const isSelected = activeTech?.id === tech.id;
     return (
       <motion.button
@@ -245,27 +245,19 @@ export const SkillsSection: React.FC = () => {
         whileTap={{ scale: 0.98 }}
         onClick={() => setActiveTech(isSelected ? null : tech)}
         className={`group w-full flex items-center gap-2.5 px-3 py-2 sm:px-3 sm:py-2.5 rounded-xl border text-left transition-all cursor-pointer select-none ${
-          isDarkContainer
-            ? isSelected
-              ? "bg-white text-[#111111] border-[#FFD84D] ring-2 ring-[#FFD84D] shadow-[2px_2px_0px_0px_#FFD84D]"
-              : "bg-[#1E3452]/90 hover:bg-[#233D60] text-white border-white/15 hover:border-white/40 shadow-[1px_1px_0px_0px_rgba(0,0,0,0.25)]"
-            : isSelected
-              ? "bg-white text-[#111111] border-[#E85D2A] ring-2 ring-[#E85D2A] shadow-[2px_2px_0px_0px_#E85D2A]"
-              : "bg-white/95 hover:bg-white text-[#162A44] border-[#162A44]/20 hover:border-[#162A44] shadow-[1px_1px_0px_0px_#162A44]/15"
+          isSelected
+            ? "bg-[#111111] text-[#F8E7C9] border-[#F8E7C9] ring-2 ring-[#F8E7C9] shadow-[2px_2px_0px_0px_#F8E7C9]"
+            : "bg-[#111111] hover:bg-[#1A1A1A] text-[#F8E7C9] border-[#F8E7C9]/25 hover:border-[#F8E7C9] shadow-[1px_1px_0px_0px_rgba(0,0,0,0.3)]"
         }`}
       >
-        {/* Small, clearly recognizable logo tile */}
-        <div className="shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white border border-[#162A44]/20 shadow-xs flex items-center justify-center p-1 transition-transform group-hover:scale-105">
+        {/* Small, clearly recognizable logo tile in Yellow #F8E7C9 with Black icon */}
+        <div className="shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#F8E7C9] border border-[#F8E7C9]/40 shadow-xs flex items-center justify-center p-1 transition-transform group-hover:scale-105">
           {tech.svg}
         </div>
 
-        {/* Readable technology name */}
+        {/* Readable technology name in Yellow #F8E7C9 */}
         <div className="min-w-0 flex-1">
-          <span
-            className={`font-display font-black text-xs sm:text-sm uppercase tracking-tight block truncate ${
-              isDarkContainer && !isSelected ? "text-white" : "text-[#111111]"
-            }`}
-          >
+          <span className="font-display font-black text-xs sm:text-sm uppercase tracking-tight block truncate text-[#F8E7C9]">
             {tech.name}
           </span>
         </div>
@@ -405,7 +397,7 @@ export const SkillsSection: React.FC = () => {
 
               {/* Technologies List */}
               <div className="flex flex-col gap-2">
-                {frontendTechs.map((t) => renderTechChip(t, false))}
+                {frontendTechs.map((t) => renderTechChip(t))}
               </div>
             </div>
           </div>
@@ -432,7 +424,7 @@ export const SkillsSection: React.FC = () => {
 
               {/* Technologies List */}
               <div className="flex flex-col gap-2">
-                {backendTechs.map((t) => renderTechChip(t, true))}
+                {backendTechs.map((t) => renderTechChip(t))}
               </div>
             </div>
           </div>
@@ -459,7 +451,7 @@ export const SkillsSection: React.FC = () => {
 
               {/* Technologies List */}
               <div className="flex flex-col gap-2">
-                {databaseTechs.map((t) => renderTechChip(t, false))}
+                {databaseTechs.map((t) => renderTechChip(t))}
               </div>
             </div>
           </div>
@@ -490,7 +482,7 @@ export const SkillsSection: React.FC = () => {
 
               {/* 4 Technologies in a Balanced 2x2 Subgrid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {aiMlTechs.map((t) => renderTechChip(t, true))}
+                {aiMlTechs.map((t) => renderTechChip(t))}
               </div>
             </div>
           </div>
@@ -517,10 +509,10 @@ export const SkillsSection: React.FC = () => {
 
               {/* Technology Item + Workflow Tag */}
               <div className="flex flex-col gap-2">
-                {toolsTechs.map((t) => renderTechChip(t, true))}
+                {toolsTechs.map((t) => renderTechChip(t))}
                 <div className="px-3 py-2 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between font-mono text-[10px] text-slate-300">
                   <span className="truncate">Branching, CI/CD & Collaboration</span>
-                  <span className="text-[#FFD84D] font-bold text-[9px] ml-1 shrink-0">VCS</span>
+                  <span className="text-[#F8E7C9] font-bold text-[9px] ml-1 shrink-0">VCS</span>
                 </div>
               </div>
             </div>
@@ -545,7 +537,7 @@ export const SkillsSection: React.FC = () => {
                 </div>
 
                 <div className="font-display font-black text-lg sm:text-xl text-[#111111] flex items-center gap-2.5">
-                  <div className="shrink-0 w-8 h-8 rounded-lg bg-white border border-[#162A44]/20 shadow-xs flex items-center justify-center p-1.5">
+                  <div className="shrink-0 w-8 h-8 rounded-lg bg-[#F8E7C9] border border-[#F8E7C9]/40 shadow-xs flex items-center justify-center p-1.5">
                     {activeTech.svg}
                   </div>
                   <span>{activeTech.name}</span>
