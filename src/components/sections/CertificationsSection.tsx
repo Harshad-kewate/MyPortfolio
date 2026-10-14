@@ -21,12 +21,29 @@ export const CertificationsSection: React.FC = () => {
 
   const total = verifiedCerts.length;
 
+  const scrollToSlide = (index: number) => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const children = Array.from(container.children) as HTMLElement[];
+    if (children[index]) {
+      const targetLeft = children[index].offsetLeft - container.offsetLeft;
+      container.scrollTo({
+        left: targetLeft,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : total - 1));
+    const newIndex = currentIndex > 0 ? currentIndex - 1 : total - 1;
+    setCurrentIndex(newIndex);
+    scrollToSlide(newIndex);
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev < total - 1 ? prev + 1 : 0));
+    const newIndex = currentIndex < total - 1 ? currentIndex + 1 : 0;
+    setCurrentIndex(newIndex);
+    scrollToSlide(newIndex);
   };
 
   // Keyboard accessibility
@@ -37,18 +54,29 @@ export const CertificationsSection: React.FC = () => {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [total]);
+  }, [currentIndex, total]);
 
-  // Smooth scroll to card when index changes
-  useEffect(() => {
-    if (sliderRef.current) {
-      const cardWidth = 360; // approximate card width + gap
-      sliderRef.current.scrollTo({
-        left: currentIndex * cardWidth,
-        behavior: "smooth",
-      });
+  // Sync active counter with touch swipe on mobile devices
+  const handleScroll = () => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const scrollLeft = container.scrollLeft;
+    const children = Array.from(container.children) as HTMLElement[];
+    if (children.length === 0) return;
+
+    let closestIndex = 0;
+    let minDiff = Infinity;
+    children.forEach((child, index) => {
+      const diff = Math.abs(child.offsetLeft - container.offsetLeft - scrollLeft);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closestIndex = index;
+      }
+    });
+    if (closestIndex !== currentIndex) {
+      setCurrentIndex(closestIndex);
     }
-  }, [currentIndex]);
+  };
 
   const handleOpenCertificate = (url: string) => {
     if (url && url !== "#") {
@@ -119,6 +147,7 @@ export const CertificationsSection: React.FC = () => {
         {/* HORIZONTAL SLIDER CONTAINER */}
         <div
           ref={sliderRef}
+          onScroll={handleScroll}
           className="flex items-stretch gap-6 overflow-x-auto pb-8 pt-2 scroll-smooth no-scrollbar snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >

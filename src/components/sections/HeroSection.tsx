@@ -37,11 +37,11 @@ export const HeroSection: React.FC = () => {
 
             {/* Giant Bold Headline — Safe Typography & Independent Layout */}
             <div className="space-y-2">
-              <h1 className="font-display text-3xl min-[360px]:text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black uppercase tracking-tight text-[#18352F] leading-[0.98] sm:leading-[0.95] break-normal select-none">
+              <h1 className="font-display text-[28px] min-[360px]:text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black uppercase tracking-tight text-[#18352F] leading-[0.98] sm:leading-[0.95] break-normal select-none">
                 <span className="inline-block whitespace-nowrap">HARSHAD</span>{" "}
                 <span className="inline-block whitespace-nowrap text-[#E85D2A]">KEWATE</span>
               </h1>
-              <p className="font-mono text-base sm:text-xl md:text-2xl font-bold tracking-tight text-[#18352F]/90 pt-1">
+              <p className="font-mono text-sm min-[360px]:text-base sm:text-xl md:text-2xl font-bold tracking-tight text-[#18352F]/90 pt-1">
                 AI & MACHINE LEARNING STUDENT
               </p>
             </div>
