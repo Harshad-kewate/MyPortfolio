@@ -87,26 +87,26 @@ export default function Home() {
       {/* 02 // PROJECTS SECTION (Warm Editorial Cream #FFF3E6 + Deep Navy #162A44 + Soft Coral #F36F68) */}
       <ProjectsSection />
 
-      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Champagne #F8E7C9) */}
+      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Lavender #B8A1E3) */}
       <FracturedDivider
         variant={3}
         fromColor="#FFF3E6"
-        toColor="#F8E7C9"
-        accentColor="#E85D2A"
-        accentSecondary="#FFD84D"
+        toColor="#B8A1E3"
+        accentColor="#F16B5B"
+        accentSecondary="#D7F36B"
         height={88}
       />
 
-      {/* 03 // TECHNOLOGY SECTION (Champagne #F8E7C9 + Deep Navy #162A44) */}
+      {/* 03 // TECHNOLOGY SECTION (Lavender #B8A1E3 + Dark Charcoal #171717) */}
       <SkillsSection />
 
-      {/* Global Torn-Paper Seam 4: 03 Technology -> 04 Certifications (Warm Neutral) */}
+      {/* Global Torn-Paper Seam 4: 03 Technology -> 04 Certifications (Warm Neutral #FFF4D6) */}
       <FracturedDivider
         variant={4}
-        fromColor="#F8E7C9"
+        fromColor="#B8A1E3"
         toColor="#FFF4D6"
-        accentColor="#FFD84D"
-        accentSecondary="#E85D2A"
+        accentColor="#D7F36B"
+        accentSecondary="#F16B5B"
         height={88}
       />
 

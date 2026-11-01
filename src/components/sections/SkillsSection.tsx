@@ -228,7 +228,7 @@ export const SkillsSection: React.FC = () => {
           whileTap={{ scale: 0.95 }}
           onClick={() => setActiveModalTech(tech)}
           aria-label={`View ${tech.name} details`}
-          className="w-12 h-12 sm:w-13 sm:h-13 rounded-xl bg-[#FFF9EF] border-2 border-[#171717] hover:border-[#C6A15B] shadow-[2px_2px_0px_0px_rgba(23,23,23,0.35)] hover:shadow-[3px_3px_0px_0px_#C6A15B] transition-all flex items-center justify-center p-2.5 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C6A15B]"
+          className="w-12 h-12 sm:w-13 sm:h-13 rounded-xl bg-[#FFFDF9] border-2 border-[#171717] hover:border-[#D7F36B] shadow-[2px_2px_0px_0px_#171717] hover:shadow-[3px_3px_0px_0px_#D7F36B] transition-all flex items-center justify-center p-2.5 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D7F36B]"
         >
           {tech.svg}
         </motion.button>
@@ -238,11 +238,12 @@ export const SkillsSection: React.FC = () => {
           role="tooltip"
           className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover/tech:opacity-100 group-focus-within/tech:opacity-100 pointer-events-none transition-all duration-200 transform group-hover/tech:-translate-y-1 z-30 select-none"
         >
-          <div className="px-2.5 py-1 rounded-md bg-[#FFF9EF] text-[#171717] border border-[#171717] shadow-lg font-mono text-[10px] sm:text-[11px] font-black tracking-wider uppercase whitespace-nowrap">
+          <div className="px-2.5 py-1 rounded-md bg-[#171717] text-[#D7F36B] border border-[#171717] shadow-lg font-mono text-[10px] sm:text-[11px] font-black tracking-wider uppercase whitespace-nowrap flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#F16B5B] shrink-0" />
             {tech.name}
           </div>
           {/* Tooltip downward caret */}
-          <div className="w-2 h-2 bg-[#FFF9EF] border-r border-b border-[#171717] rotate-45 mx-auto -mt-1" />
+          <div className="w-2 h-2 bg-[#171717] border-r border-b border-[#171717] rotate-45 mx-auto -mt-1" />
         </div>
       </div>
     );
@@ -251,7 +252,7 @@ export const SkillsSection: React.FC = () => {
   return (
     <section
       id="stack"
-      className="relative py-16 sm:py-24 px-4 sm:px-8 md:px-12 bg-[#F8E7C9] text-[#171717] overflow-hidden"
+      className="relative py-24 sm:py-32 px-4 sm:px-8 md:px-12 bg-[#B8A1E3] text-[#171717] overflow-hidden"
     >
       {/* Editorial Fractured Geometric Borders at the Section Perimeter */}
       <div className="absolute top-0 left-0 right-0 pointer-events-none select-none z-20 overflow-hidden">
@@ -267,12 +268,12 @@ export const SkillsSection: React.FC = () => {
             stroke="#171717"
             strokeWidth="1.5"
             strokeDasharray="6 6"
-            className="opacity-35"
+            className="opacity-30"
           />
         </svg>
-        <div className="absolute top-2 left-[12%] w-2.5 h-2.5 bg-[#C6A15B] rotate-45 border border-[#171717]" />
-        <div className="absolute top-2.5 left-[48%] w-2 h-2 bg-[#FFF9EF] -rotate-12 border border-[#171717]" />
-        <div className="absolute top-1 right-[18%] w-3 h-2 bg-[#C6A15B] rotate-12 border border-[#171717]" />
+        <div className="absolute top-2 left-[12%] w-2.5 h-2.5 bg-[#D7F36B] rotate-45 border border-[#171717]" />
+        <div className="absolute top-2.5 left-[48%] w-2 h-2 bg-[#F16B5B] -rotate-12 border border-[#171717]" />
+        <div className="absolute top-1 right-[18%] w-3 h-2 bg-[#FFFDF9] rotate-12 border border-[#171717]" />
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 pointer-events-none select-none z-20 overflow-hidden">
@@ -288,189 +289,172 @@ export const SkillsSection: React.FC = () => {
             stroke="#171717"
             strokeWidth="1.5"
             strokeDasharray="6 6"
-            className="opacity-35"
+            className="opacity-30"
           />
         </svg>
-        <div className="absolute bottom-2 left-[24%] w-2 h-2 bg-[#FFF9EF] rotate-12 border border-[#171717]" />
-        <div className="absolute bottom-2.5 right-[32%] w-2.5 h-2.5 bg-[#C6A15B] -rotate-45 border border-[#171717]" />
+        <div className="absolute bottom-2 left-[24%] w-2 h-2 bg-[#F16B5B] rotate-12 border border-[#171717]" />
+        <div className="absolute bottom-2.5 right-[32%] w-2.5 h-2.5 bg-[#D7F36B] -rotate-45 border border-[#171717]" />
+        <div className="absolute bottom-2 right-[12%] w-2 h-2 bg-[#FFFDF9] rotate-45 border border-[#171717]" />
       </div>
 
       {/* Background Graphic Watermark */}
-      <div className="absolute top-4 right-[-1%] font-display text-[100px] sm:text-[180px] font-black text-[#171717]/[0.03] select-none pointer-events-none leading-none tracking-tighter">
+      <div className="absolute top-6 right-[-1%] font-display text-[120px] sm:text-[220px] font-black text-[#171717]/[0.045] select-none pointer-events-none leading-none tracking-tighter">
         STACK
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Identifier */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-4 font-mono text-xs">
-          <div className="flex items-center gap-2.5">
-            <span className="px-2.5 py-1 rounded-md bg-[#FFF9EF] text-[#171717] font-black tracking-wider border-2 border-[#171717] shadow-[2px_2px_0px_0px_#171717]">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b-2 border-[#171717]/20 font-mono text-xs">
+          <div className="flex items-center gap-3">
+            <span className="px-2.5 py-1 rounded-md bg-[#171717] text-[#D7F36B] font-black tracking-wider border-2 border-[#171717] shadow-[2px_2px_0px_0px_#171717]">
               03
             </span>
             <span className="uppercase tracking-widest text-[#171717] font-black">
               // TECHNICAL SKILLS & STACK
             </span>
-            <span className="w-2 h-2 rounded-full bg-[#C6A15B] animate-pulse" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#F16B5B] animate-pulse" />
           </div>
 
-          <span className="font-mono text-xs font-bold text-[#171717]/70 hidden sm:inline">
+          <span className="font-mono text-xs font-bold text-[#171717]/75 hidden sm:inline">
             CLICK OR TAP LOGO TO INSPECT DETAILS
           </span>
         </div>
 
-        {/* Section Heading: Compact & Balanced */}
-        <div className="mb-6 sm:mb-8 max-w-2xl">
-          <h2 className="font-display text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#171717] leading-[0.95] break-normal">
+        {/* Section Heading: Full Scale & Matching Site Presence */}
+        <div className="mb-10 sm:mb-14 max-w-3xl">
+          <h2 className="font-display text-2xl min-[360px]:text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black uppercase tracking-tight text-[#171717] leading-[0.95] break-normal">
             <span className="inline-block whitespace-nowrap">TECHNOLOGY</span> <br />
-            <span className="inline-block whitespace-nowrap text-[#171717] underline decoration-[#C6A15B] decoration-4 underline-offset-4">
+            <span className="inline-block whitespace-nowrap text-[#171717] underline decoration-[#D7F36B] decoration-4 sm:decoration-6 underline-offset-4 sm:underline-offset-8">
               ECOSYSTEM.
             </span>
           </h2>
-          <p className="mt-2 text-xs sm:text-sm text-[#171717]/85 font-medium leading-relaxed max-w-lg">
-            14 verified technologies arranged across 5 specialized system layers. Hover or tap any logo for specifications.
+          <p className="mt-3 text-base sm:text-lg text-[#171717]/85 font-medium leading-relaxed max-w-2xl">
+            14 production-tested technologies arranged across 5 specialized system layers. Hover or tap any logo for specifications.
           </p>
         </div>
 
-        {/* COMPACT BENTO GRID (5 CATEGORIES DISPLAYING ONLY LOGOS) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-3.5 sm:gap-4 relative z-10">
+        {/* COMPACT BENTO GRID (NATURALLY FIT BOXES WITHOUT EXCESSIVE EMPTY SPACE) */}
+        <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-3.5 sm:gap-4 lg:gap-5 relative z-10">
           {/* ============================================================== */}
           {/* 1. FRONTEND — 3 LOGOS */}
           {/* ============================================================== */}
-          <div className="lg:col-span-4 rounded-2xl bg-[#171717] text-[#FFF9EF] border-2 border-[#171717] shadow-[3px_3px_0px_0px_rgba(23,23,23,0.3)] p-4 sm:p-4.5 flex flex-col justify-between">
-            <div>
-              {/* Category Header */}
-              <div className="flex items-center justify-between pb-2 mb-3 border-b border-white/10">
-                <div className="flex items-center gap-2">
-                  <span className="px-1.5 py-0.5 rounded font-mono text-[9px] font-black tracking-wider bg-[#C6A15B] text-[#171717]">
-                    01
-                  </span>
-                  <h3 className="font-display text-xs sm:text-sm font-black uppercase tracking-tight text-[#FFF9EF]">
-                    FRONTEND
-                  </h3>
-                </div>
-                <span className="font-mono text-[9px] sm:text-[10px] font-bold text-[#F8E7C9]/60 uppercase tracking-wider">
-                  3 LOGOS
+          <div className="md:col-span-2 lg:col-span-4 rounded-2xl bg-[#171717] text-[#FFFDF9] border-2 border-[#171717] shadow-[4px_4px_0px_0px_rgba(23,23,23,0.35)] p-4 sm:p-5 flex flex-col justify-start">
+            <div className="flex items-center justify-between pb-2.5 mb-3.5 border-b border-white/10">
+              <div className="flex items-center gap-2">
+                <span className="px-1.5 py-0.5 rounded font-mono text-[9px] font-black tracking-wider bg-[#D7F36B] text-[#171717]">
+                  01
                 </span>
+                <h3 className="font-display text-xs sm:text-sm font-black uppercase tracking-tight text-[#FFFDF9]">
+                  FRONTEND
+                </h3>
               </div>
+              <span className="font-mono text-[9px] sm:text-[10px] font-bold text-[#D7F36B]/80 uppercase tracking-wider">
+                3 LOGOS
+              </span>
+            </div>
 
-              {/* Logos Row */}
-              <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
-                {frontendTechs.map(renderTechIcon)}
-              </div>
+            <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+              {frontendTechs.map(renderTechIcon)}
             </div>
           </div>
 
           {/* ============================================================== */}
           {/* 2. BACKEND — 3 LOGOS */}
           {/* ============================================================== */}
-          <div className="lg:col-span-4 rounded-2xl bg-[#171717] text-[#FFF9EF] border-2 border-[#171717] shadow-[3px_3px_0px_0px_rgba(23,23,23,0.3)] p-4 sm:p-4.5 flex flex-col justify-between">
-            <div>
-              {/* Category Header */}
-              <div className="flex items-center justify-between pb-2 mb-3 border-b border-white/10">
-                <div className="flex items-center gap-2">
-                  <span className="px-1.5 py-0.5 rounded font-mono text-[9px] font-black tracking-wider bg-[#C6A15B] text-[#171717]">
-                    02
-                  </span>
-                  <h3 className="font-display text-xs sm:text-sm font-black uppercase tracking-tight text-[#FFF9EF]">
-                    BACKEND
-                  </h3>
-                </div>
-                <span className="font-mono text-[9px] sm:text-[10px] font-bold text-[#F8E7C9]/60 uppercase tracking-wider">
-                  3 LOGOS
+          <div className="md:col-span-2 lg:col-span-4 rounded-2xl bg-[#171717] text-[#FFFDF9] border-2 border-[#171717] shadow-[4px_4px_0px_0px_rgba(23,23,23,0.35)] p-4 sm:p-5 flex flex-col justify-start">
+            <div className="flex items-center justify-between pb-2.5 mb-3.5 border-b border-white/10">
+              <div className="flex items-center gap-2">
+                <span className="px-1.5 py-0.5 rounded font-mono text-[9px] font-black tracking-wider bg-[#D7F36B] text-[#171717]">
+                  02
                 </span>
+                <h3 className="font-display text-xs sm:text-sm font-black uppercase tracking-tight text-[#FFFDF9]">
+                  BACKEND
+                </h3>
               </div>
+              <span className="font-mono text-[9px] sm:text-[10px] font-bold text-[#D7F36B]/80 uppercase tracking-wider">
+                3 LOGOS
+              </span>
+            </div>
 
-              {/* Logos Row */}
-              <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
-                {backendTechs.map(renderTechIcon)}
-              </div>
+            <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+              {backendTechs.map(renderTechIcon)}
             </div>
           </div>
 
           {/* ============================================================== */}
           {/* 3. DATABASE — 3 LOGOS */}
           {/* ============================================================== */}
-          <div className="lg:col-span-4 rounded-2xl bg-[#171717] text-[#FFF9EF] border-2 border-[#171717] shadow-[3px_3px_0px_0px_rgba(23,23,23,0.3)] p-4 sm:p-4.5 flex flex-col justify-between">
-            <div>
-              {/* Category Header */}
-              <div className="flex items-center justify-between pb-2 mb-3 border-b border-white/10">
-                <div className="flex items-center gap-2">
-                  <span className="px-1.5 py-0.5 rounded font-mono text-[9px] font-black tracking-wider bg-[#C6A15B] text-[#171717]">
-                    03
-                  </span>
-                  <h3 className="font-display text-xs sm:text-sm font-black uppercase tracking-tight text-[#FFF9EF]">
-                    DATABASE
-                  </h3>
-                </div>
-                <span className="font-mono text-[9px] sm:text-[10px] font-bold text-[#F8E7C9]/60 uppercase tracking-wider">
-                  3 LOGOS
+          <div className="md:col-span-2 lg:col-span-4 rounded-2xl bg-[#171717] text-[#FFFDF9] border-2 border-[#171717] shadow-[4px_4px_0px_0px_rgba(23,23,23,0.35)] p-4 sm:p-5 flex flex-col justify-start">
+            <div className="flex items-center justify-between pb-2.5 mb-3.5 border-b border-white/10">
+              <div className="flex items-center gap-2">
+                <span className="px-1.5 py-0.5 rounded font-mono text-[9px] font-black tracking-wider bg-[#D7F36B] text-[#171717]">
+                  03
                 </span>
+                <h3 className="font-display text-xs sm:text-sm font-black uppercase tracking-tight text-[#FFFDF9]">
+                  DATABASE
+                </h3>
               </div>
+              <span className="font-mono text-[9px] sm:text-[10px] font-bold text-[#D7F36B]/80 uppercase tracking-wider">
+                3 LOGOS
+              </span>
+            </div>
 
-              {/* Logos Row */}
-              <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
-                {databaseTechs.map(renderTechIcon)}
-              </div>
+            <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+              {databaseTechs.map(renderTechIcon)}
             </div>
           </div>
 
           {/* ============================================================== */}
           {/* 4. AI / ML & DATA — 4 LOGOS (FEATURE MODULE) */}
           {/* ============================================================== */}
-          <div className="lg:col-span-8 rounded-2xl bg-[#171717] text-[#FFF9EF] border-2 border-[#171717] shadow-[3px_3px_0px_0px_#C6A15B] p-4 sm:p-4.5 relative overflow-hidden flex flex-col justify-between">
-            {/* Top Muted Gold Accent Hairline */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C6A15B] via-[#F8E7C9] to-[#C6A15B]" />
+          <div className="md:col-span-4 lg:col-span-7 rounded-2xl bg-[#171717] text-[#FFFDF9] border-2 border-[#171717] shadow-[4px_4px_0px_0px_#D7F36B] p-4 sm:p-5 relative overflow-hidden flex flex-col justify-start">
+            {/* Top Chartreuse + Tomato Hairline */}
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#D7F36B] via-[#B8A1E3] to-[#F16B5B]" />
 
-            <div>
-              {/* Category Header */}
-              <div className="flex items-center justify-between pb-2 mb-3 border-b border-white/10">
-                <div className="flex items-center gap-2">
-                  <span className="px-1.5 py-0.5 rounded font-mono text-[9px] font-black tracking-wider bg-[#C6A15B] text-[#171717]">
-                    04
-                  </span>
-                  <h3 className="font-display text-xs sm:text-sm font-black uppercase tracking-tight text-[#FFF9EF]">
-                    AI / ML & DATA
-                  </h3>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C6A15B] animate-pulse hidden sm:inline-block" />
-                </div>
-                <span className="font-mono text-[9px] sm:text-[10px] font-bold text-[#C6A15B] uppercase tracking-wider">
-                  CORE FOCUS // 4 LOGOS
+            <div className="flex items-center justify-between pb-2.5 mb-3.5 border-b border-white/10">
+              <div className="flex items-center gap-2">
+                <span className="px-1.5 py-0.5 rounded font-mono text-[9px] font-black tracking-wider bg-[#F16B5B] text-white">
+                  04
                 </span>
+                <h3 className="font-display text-xs sm:text-sm font-black uppercase tracking-tight text-[#FFFDF9]">
+                  AI / ML & DATA
+                </h3>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D7F36B] animate-pulse hidden sm:inline-block" />
               </div>
+              <span className="font-mono text-[9px] sm:text-[10px] font-bold text-[#D7F36B] uppercase tracking-wider">
+                CORE FOCUS // 4 LOGOS
+              </span>
+            </div>
 
-              {/* 4 Logos in a clean row */}
-              <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
-                {aiMlTechs.map(renderTechIcon)}
-              </div>
+            <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+              {aiMlTechs.map(renderTechIcon)}
             </div>
           </div>
 
           {/* ============================================================== */}
           {/* 5. TOOLS & PLATFORMS — 1 LOGO */}
           {/* ============================================================== */}
-          <div className="lg:col-span-4 rounded-2xl bg-[#171717] text-[#FFF9EF] border-2 border-[#171717] shadow-[3px_3px_0px_0px_rgba(23,23,23,0.3)] p-4 sm:p-4.5 flex flex-col justify-between">
-            <div>
-              {/* Category Header */}
-              <div className="flex items-center justify-between pb-2 mb-3 border-b border-white/10">
-                <div className="flex items-center gap-2">
-                  <span className="px-1.5 py-0.5 rounded font-mono text-[9px] font-black tracking-wider bg-[#C6A15B] text-[#171717]">
-                    05
-                  </span>
-                  <h3 className="font-display text-xs sm:text-sm font-black uppercase tracking-tight text-[#FFF9EF]">
-                    TOOLS & PLATFORMS
-                  </h3>
-                </div>
-                <span className="font-mono text-[9px] sm:text-[10px] font-bold text-[#F8E7C9]/60 uppercase tracking-wider">
-                  1 LOGO
+          <div className="md:col-span-2 lg:col-span-5 rounded-2xl bg-[#171717] text-[#FFFDF9] border-2 border-[#171717] shadow-[4px_4px_0px_0px_rgba(23,23,23,0.35)] p-4 sm:p-5 flex flex-col justify-start">
+            <div className="flex items-center justify-between pb-2.5 mb-3.5 border-b border-white/10">
+              <div className="flex items-center gap-2">
+                <span className="px-1.5 py-0.5 rounded font-mono text-[9px] font-black tracking-wider bg-[#D7F36B] text-[#171717]">
+                  05
                 </span>
+                <h3 className="font-display text-xs sm:text-sm font-black uppercase tracking-tight text-[#FFFDF9]">
+                  TOOLS & PLATFORMS
+                </h3>
               </div>
+              <span className="font-mono text-[9px] sm:text-[10px] font-bold text-[#D7F36B]/80 uppercase tracking-wider">
+                1 LOGO
+              </span>
+            </div>
 
-              {/* 1 Logo + Subtle VCS Tag */}
-              <div className="flex items-center gap-3">
-                {toolsTechs.map(renderTechIcon)}
-                <div className="px-2.5 py-1.5 rounded-lg bg-white/5 border border-white/10 font-mono text-[9px] sm:text-[10px] text-[#F8E7C9]/80 truncate">
-                  <span>VCS & CI/CD WORKFLOWS</span>
-                </div>
+            {/* 1 Logo + Compact Organic Tag */}
+            <div className="flex items-center gap-3">
+              {toolsTechs.map(renderTechIcon)}
+              <div className="px-3 py-2 rounded-xl bg-white/5 border border-white/10 font-mono text-[9px] sm:text-[10px] text-[#FFFDF9]/80 truncate">
+                <span className="text-[#D7F36B] font-bold">VCS & COLLABORATION</span>
+                <span className="block text-white/50 text-[8px] sm:text-[9px]">Git & GitHub Workflows</span>
               </div>
             </div>
           </div>
@@ -485,7 +469,7 @@ export const SkillsSection: React.FC = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.15 }}
               onClick={() => setActiveModalTech(null)}
-              className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-[#171717]/65 backdrop-blur-xs"
+              className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-[#171717]/70 backdrop-blur-xs"
               role="dialog"
               aria-modal="true"
               aria-label={`${activeModalTech.name} details`}
@@ -496,15 +480,15 @@ export const SkillsSection: React.FC = () => {
                 exit={prefersReduced ? { scale: 1, opacity: 0 } : { scale: 0.94, opacity: 0, y: 8 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
                 onClick={(e) => e.stopPropagation()}
-                className="relative w-full max-w-md rounded-2xl bg-[#FFF9EF] text-[#171717] border-2 border-[#171717] shadow-[6px_6px_0px_0px_#171717] sm:shadow-[8px_8px_0px_0px_#171717] p-5 sm:p-6 overflow-hidden"
+                className="relative w-full max-w-md rounded-2xl bg-[#FFFDF9] text-[#171717] border-2 border-[#171717] shadow-[8px_8px_0px_0px_#171717] p-5 sm:p-6 overflow-hidden"
               >
                 {/* Top Bar with Category, Verified Tag, and Close Button */}
                 <div className="flex items-center justify-between pb-3 mb-4 border-b-2 border-[#171717]/15">
                   <div className="flex items-center gap-2 font-mono text-[10px] font-bold">
-                    <span className="px-2 py-0.5 rounded bg-[#171717] text-[#FFF9EF] uppercase tracking-wider">
+                    <span className="px-2 py-0.5 rounded bg-[#B8A1E3] text-[#171717] uppercase tracking-wider font-black">
                       {activeModalTech.category}
                     </span>
-                    <span className="text-[#C6A15B] font-black uppercase">
+                    <span className="text-[#F16B5B] font-black uppercase">
                       • VERIFIED STACK
                     </span>
                   </div>
@@ -512,7 +496,7 @@ export const SkillsSection: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setActiveModalTech(null)}
-                    className="p-1.5 rounded-lg bg-[#171717] text-[#FFF9EF] hover:bg-[#C6A15B] hover:text-[#171717] transition-colors cursor-pointer shrink-0 focus:outline-none focus:ring-2 focus:ring-[#C6A15B]"
+                    className="p-1.5 rounded-lg bg-[#171717] text-[#FFFDF9] hover:bg-[#F16B5B] hover:text-white transition-colors cursor-pointer shrink-0 focus:outline-none focus:ring-2 focus:ring-[#D7F36B]"
                     title="Close details (Esc)"
                     aria-label="Close details"
                   >
@@ -522,7 +506,7 @@ export const SkillsSection: React.FC = () => {
 
                 {/* Technology Identity */}
                 <div className="flex items-center gap-3.5 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#F8E7C9] border-2 border-[#171717] shadow-sm flex items-center justify-center p-2.5 shrink-0">
+                  <div className="w-13 h-13 rounded-xl bg-[#B8A1E3]/25 border-2 border-[#171717] shadow-sm flex items-center justify-center p-2.5 shrink-0">
                     {activeModalTech.svg}
                   </div>
                   <div>
@@ -536,18 +520,19 @@ export const SkillsSection: React.FC = () => {
                 </div>
 
                 {/* Concise Engineering Purpose / Usage */}
-                <div className="space-y-2.5 bg-white/70 rounded-xl p-3.5 border border-[#171717]/15 mb-4">
-                  <div className="font-mono text-[10px] text-[#C6A15B] font-black uppercase tracking-wider">
+                <div className="space-y-2 bg-[#B8A1E3]/15 rounded-xl p-3.5 border border-[#171717]/15 mb-4">
+                  <div className="font-mono text-[10px] text-[#171717] font-black uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#F16B5B]" />
                     ROLE & ENGINEERING SPECIFICATION
                   </div>
-                  <p className="font-mono text-xs text-[#171717] leading-relaxed font-semibold">
+                  <p className="font-mono text-xs text-[#171717] leading-relaxed font-bold">
                     // {activeModalTech.role}
                   </p>
                 </div>
 
                 {/* Practical Coursework & Project Application */}
                 <div className="flex items-start gap-2 font-mono text-xs text-[#171717] font-bold">
-                  <CheckCircle2 className="w-4 h-4 text-[#171717] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#F16B5B] shrink-0 mt-0.5" />
                   <span>
                     Applied in: <u className="underline-offset-2 text-[#171717]">{activeModalTech.project}</u>
                   </span>
