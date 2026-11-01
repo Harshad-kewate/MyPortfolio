@@ -66,8 +66,8 @@ export default function Home() {
         variant={1}
         fromColor="#F4EFE6"
         toColor="#DCE8F2"
-        accentColor="#E52420"
-        accentSecondary="#FFD928"
+        accentColor="#F12222"
+        accentSecondary="#FFD92F"
         height={84}
       />
 
@@ -79,34 +79,34 @@ export default function Home() {
         variant={2}
         fromColor="#DCE8F2"
         toColor="#FFF3E6"
-        accentColor="#F36F68"
-        accentSecondary="#FFD84D"
+        accentColor="#F12222"
+        accentSecondary="#FFD92F"
         height={84}
       />
 
       {/* 02 // PROJECTS SECTION (Warm Editorial Cream #FFF3E6 + Deep Navy #162A44 + Soft Coral #F36F68) */}
       <ProjectsSection />
 
-      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Lavender #B8A1E3) */}
+      {/* Global Torn-Paper Seam 3: 02 Projects -> 03 Technology (Warm Cream #FFF3D6) */}
       <FracturedDivider
         variant={3}
         fromColor="#FFF3E6"
-        toColor="#B8A1E3"
-        accentColor="#F16B5B"
-        accentSecondary="#D7F36B"
+        toColor="#FFF3D6"
+        accentColor="#F12222"
+        accentSecondary="#FFD92F"
         height={88}
       />
 
-      {/* 03 // TECHNOLOGY SECTION (Lavender #B8A1E3 + Dark Charcoal #171717) */}
+      {/* 03 // TECHNOLOGY SECTION (Warm Cream #FFF3D6 + Deep Black #080808) */}
       <SkillsSection />
 
       {/* Global Torn-Paper Seam 4: 03 Technology -> 04 Certifications (Warm Neutral #FFF4D6) */}
       <FracturedDivider
         variant={4}
-        fromColor="#B8A1E3"
+        fromColor="#FFF3D6"
         toColor="#FFF4D6"
-        accentColor="#D7F36B"
-        accentSecondary="#F16B5B"
+        accentColor="#FFD92F"
+        accentSecondary="#F12222"
         height={88}
       />
 
@@ -118,8 +118,8 @@ export default function Home() {
         variant={5}
         fromColor="#FFF4D6"
         toColor="#F5EBDD"
-        accentColor="#E85D2A"
-        accentSecondary="#FFD84D"
+        accentColor="#F12222"
+        accentSecondary="#FFD92F"
         height={92}
       />
 
@@ -131,8 +131,8 @@ export default function Home() {
         variant={6}
         fromColor="#F5EBDD"
         toColor="#18352F"
-        accentColor="#E85D2A"
-        accentSecondary="#FFD84D"
+        accentColor="#F12222"
+        accentSecondary="#FFD92F"
         height={88}
       />
 
@@ -144,8 +144,8 @@ export default function Home() {
         variant={7}
         fromColor="#18352F"
         toColor="#101820"
-        accentColor="#E52420"
-        accentSecondary="#FFD928"
+        accentColor="#F12222"
+        accentSecondary="#FFD92F"
         height={84}
       />
 
